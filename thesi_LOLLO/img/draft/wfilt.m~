@@ -1,0 +1,12 @@
+
+
+%Generate chunk time filter window (cosine raised like)
+chunkLength = 1000
+cosLength = 0.16.*chunkLength;
+x=(0:cosLength-1);
+windowFilter(1:chunkLength) = 1;  
+windowFilter(1:cosLength) = 0.5.*(1+ cos(2*pi*(x+cosLength)/(2*cosLength)));
+x=(1:cosLength);
+windowFilter(chunkLength-cosLength+1:chunkLength(band)) = 0.5.*(1+ cos(2*pi*x/(2*cosLength)));
+    
+x=[1:chunkLength];

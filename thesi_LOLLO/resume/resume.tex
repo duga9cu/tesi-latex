@@ -1,0 +1,167 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[italian]{babel}
+\usepackage{color}
+\usepackage{colortbl}
+
+
+%MARGIN SETTINGS
+%
+\addtolength{\topmargin}{-2.5cm}
+\addtolength{\textheight}{4.5cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\hoffset}{-1cm}
+%
+%PDFLatex SETTING
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+%
+\title{\textsc{Sintesi di risposte all'impulso multicanale dai risultati di programmi di simulazione acustica}}
+\author{}
+\date{}
+
+
+\begin{document}
+%
+\pagestyle{empty}
+%
+%TITLE
+\begin{center}
+  \LARGE UNIVERSIT\`A DEGLI STUDI DI PARMA\\
+\vspace{0.2cm}
+\Large FACOLT\`A DI INGEGNERIA\\
+\vspace{0.3cm}
+\normalsize CORSO DI LAUREA SPECIALISTICA\\ IN INGEGNERIA ELETTRONICA\\
+\vspace{0.3cm}
+\normalsize ANNO ACCADEMICO 2005/2006\\
+\vspace{0.3cm}
+\rule{4cm}{.1pt}\\
+\vspace{0.3cm}
+\Large \textsc{Sintesi di risposte all'impulso multicanale\\ dai risultati di programmi di simulazione acustica}
+\end{center}
+%
+%\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{ll}
+\parbox[c]{10cm}{\hspace*{0.8cm}\emph{Relatore :}} & \\
+\parbox[c]{10cm}{\hspace*{0.8cm}Chiar.mo Prof. Angelo Farina} & \\
+\parbox[c]{10cm}{} & \\
+\parbox[c]{10cm}{\hspace*{0.8cm}\emph{Correlatori :}}    & \\
+\parbox[c]{10cm}{\hspace*{0.8cm}Dott. Ing. Andrea Capra} & \parbox[c]{10cm}{\emph{Tesi di laurea di:}}\\
+\parbox[c]{10cm}{\hspace*{0.8cm}Dott. Paolo Martignon}   & \parbox[c]{10cm}{Simone Campanini}\\
+\end{tabular}
+%\vspace{0.4cm}
+%\rule{4cm}{.1pt}\\
+\end{center}
+\vspace{0.8cm}
+
+Questo lavoro ha il suo punto di partenza nella richiesta, da parte del Comune di Parma, di un progetto 
+di correzione acustica per la chiesa di San Vitale; successivamente si \`e sviluppato in altre due
+direzioni: l'analisi acustica di un abitacolo d'automobile e la scrittura di un programma per la
+sintesi delle risposte all'impulso. Quindi all'\emph{analisi}, si \`e affiancata l'\emph{elaborazione}
+dei dati provenienti dal medesimo software di simulazione del campo sonoro, \emph{Ramsete}, efficace
+strumento di progettazione acustica.\\ 
+Il progetto \emph{San Vitale} \`e motivato dall'interesse del committente di poter impiegare l'edificio
+per concerti di musica antica, caratterizzata da insiemi vocali e strumentali di ridotte dimensioni; si
+trattava dunque di rilevare i parametri acustici del locale e di progettare un allestimento tale da 
+portare questi ultimi a valori adeguati al genere di eventi che si intendono rappresentare: vista la cubatura
+dell'ambiente, si sono ritenuti obiettivi ragionevoli un tempo di riverbero $T_{20}$ non superiore
+a 2.2 secondi ed un indice di chiarezza $C_{80}$ tra 0 e 4 dB. In entrambi i casi si tratta di valori medi.\\
+Le misure dello stato di fatto hanno mostrato valori di $T_{20}$ abbastanza elevati, nell'ordine, in media, 
+di 4 secondi, dunque,
+con l'aiuto del software \emph{Ramsete}, si sono studiati una serie di interventi volti a migliorare la
+diffusione di onde dirette e riflessioni precoci e ad abbassare il tempo di riverbero. Struttura essenziale
+in tutti gli stati di progetto elaborati \`e la camera d'orchestra, alle quali sono state sinergicamente affiancate 
+controsoffittature e pannellature laterali, in tutti i casi rimovibili, a tutela dell'ambiente circostante,
+il cui utilizzo a fini concertistici non \`e esclusivo. La soluzione che ha prodotto il comportamento 
+acustico voluto, per\`o, \`e quella risultata esteticamente pi\`u invasiva, motivo per cui il committente 
+ha preferito a questa un allestimento dall'aspetto pi\`u sobrio, costituito dalla sola camera d'orchestra
+(visibile in figura~\ref{fig:churchmodel}). 
+Per contenere comunque il tempo di riverbero si \`e pensato di collocare dei tendaggi pesanti sulle cappelle 
+laterali: cos\`i facendo, le simulazioni hanno restituito un valore medio di $T_{20}$ pari a 2.5 secondi. La
+distribuzione dell'indice di chiarezza nell'uditorio ed all'interno della camera \`e risultata adeguata.\\
+%
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=6cm]{../img/drawings/sv-sdf-wireframe.pdf}
+%  \includegraphics[width=6cm]{../img/drawings/sv-final-wireframe-cutted.pdf}
+  \includegraphics[width=6cm]{../img/drawings/sv-final-wireframe-cutted-detail.pdf}
+  \caption{\emph{Chiesa di San Vitale}: modello tridimensionale e particolare della camera d'orchestra.}
+  \label{fig:churchmodel}
+\end{figure}
+%
+Le simulazioni acustiche di un abitacolo appartengono, in realt\`a, ad un progetto pi\`u ampio, il cui scopo
+era di valutare una tecnica ibrida di simulazione acustica: le tecniche di \emph{ray} o \emph{beam tracing},
+infatti, non possono dare risultati attendibili quando le dimensioni dell'ambiente sono confrontabili con
+quelle delle lunghezze d'onda allo studio, da cui l'idea di simulare il comportamento nella banda da 
+20 a 500 Hz mediante soluzione
+col metodo degli elementi finiti delle equazioni d'onda e la parte restante dello spettro udibile con
+\emph{Ramsete}. Nel presente lavoro ci si \`e occupati solo di quest'ultima elaborazione. Cio che si \`e
+ottenuto \`e stata una serie di risposte all'impulso sintetiche (una per ogni coppia ricevitore/sorgente), 
+prodotte sommando i risultati a spettro parziale delle due tecniche. Nonostante la grande semplificazione
+operata nell'assegnamento dei materiali al modello e nonostante la direttivit\`a delle sorgenti si ritenga
+largamente approssimata per via dell'indisponibilit\`a dei \emph{baloon} caratteristici degli altoparlanti 
+dell'abitacolo, lo spettro delle risposta all'impulso sintetizzata ha mostrato un ottimo accordo con
+quelle misurate, adottate come riferimento.\\
+Durante lo svolgimento dei progetti di cui sopra, ed in particolare del progetto \emph{San Vitale}, al
+termine di ogni sessione di simulazioni sono stati compiuti sia un raffronto dei descrittori acustici
+oggettivi con gli obiettivi, sia una ascolto di musica anecoica auralizzata con la risposta all'impulso
+del sistema simulato: lo strumento impiegato inizialmente allo scopo \`e stato \emph{AudioConverter},
+incluso nel pacchetto \emph{Ramsete}. Pur essendo tale software ampiamente collaudato ed attendibile nel
+calcolo dei parametri acustici, ci si \`e immediatamente resi conto dello scarso realismo all'ascolto delle
+risposte all'impulso da esso generate, imputabile al particolare algoritmo di sintesi cui fa ricorso;
+tale algoritmo, inoltre, provoca la comparsa di innaturali frastagliamenti nei transitori all'esecuzione di 
+\emph{Acoustic Quality Test}. Si \`e allora deciso di scrivere un nuovo programma avente come principale
+scopo la generazione di risposte all'impulso udibili a partire dai dati prodotti dal simulatore
+prive della percezione di innaturalezza cui si faceva riferimento poc'anzi.
+%Il progetto di un software di sintesi delle risposte all'impulso a partire dall'equivalente energetico
+%calcolato da un programma di previsione acustica come \emph{Ramsete} non \`e un applicazione nuova: in
+%particolare il pacchetto \emph{Ramsete} gi\`a da lungo tempo \`e dotato del programma \emph{AudioConverter}
+%che svolge esattamente quest'operazione. Pur essendo largamente collaudato ed attendibile nel calcolo dei
+%parametri acustici, \emph{AudioConverter} ha almeno un paio di difetti intrinseci all'algoritmo di
+%sintesi: lo scarso realismo all'ascolto delle risposte all'impulso prodotte e la comparsa di innaturali
+%frastagliamenti nei transitori all'esecuzione di \emph{Acoustic Quality Test} con queste ultime. Si \`e,
+%in questa sede, cercato di scrivere un programma, denominato \emph{getIR}, tale da sintetizzare risposte
+%all'impulso senza i problemi di cui sopra. 
+In estrema sintesi, produrre una risposta all'impulso udibile\footnote{Un 
+file \textsf{wav}, sostanzialmente.} a partire dalla matrice di dieci risposte
+all'impulso \emph{energetiche}\footnote{Dette \emph{ecogrammi}, uno per ogni banda
+d'ottava.} generata da \emph{Ramsete} significa: ridurne il tempo di campionamento
+poich\'e \emph{Ramsete} opera, di norma con tempi dell'ordine del millisecondo,
+introdurre informazioni di fase altrimenti assenti e compiere un'ulteriore interpolazione in frequenza.
+Tutti questi problemi vengono risolti in \emph{AudioConverter} col metodo dell'interpolazione tramite
+rumore bianco, infatti il \emph{vuoto} tra un campione di ogni ecogramma ed il successivo che compare 
+abbassando il tempo di campionamento viene colmato con
+uno spezzone (\emph{burst}) di rumore modulato in ampiezza con la radice quadrata del campione \emph{energetico}
+corrispondente; 
+il tutto viene infine sommato ed opportunamente corretto, ricavando
+cos\`i la risposta all'impulso cercata. Le forti discontinuit\`a presenti nel rumore, per\`o, sono la
+causa dell'artificiosit\`a all'ascolto, si \`e quindi pensato di sostituire tale rumore con \emph{burst}
+costruiti dalla somma di 12 segnali sinusoidali ognuno con fase casuale le cui lunghezza e frequenza sono funzione 
+della banda rappresentata. 
+L'intero algoritmo \`e stato successivamente esteso in modo da poter generare anche risposte all'impulso
+caratterizzate spazialmente, secondo le tecniche binaurale (2 canali) ed \emph{Ambisonic} (4 canali,
+standard \emph{B-Format}); ci\`o \`e stato reso possibile dalle informazioni geometriche sulle prime
+riflessioni che, su richiesta dell'utente, \emph{Ramsete} consente di salvare. Per realizzare i moduli
+multicanale, infatti, si \`e intervenuti solo nell'algoritmo di generazione della \emph{testa} della
+risposta all'impulso, nella quale ogni riflessione \`e modellata o con una $\delta$ \emph{di Dirac} ideale, o
+con un impulso qualsiasi successivamente filtrato (nel caso binaurale si \`e impiegato il set di
+\emph{Head Related Transfer Function} del progetto \emph{Listen} dell'\emph{IRCAM} di Parigi);
+la coda \`e, invece, prodotta con la tecnica \emph{sinus-burst}, curando di mantenere statisticamente
+indipendente ogni canale.\\
+Nonostante il calcolo dei parametri acustici mostri ancora un eccesso di energia nella coda
+riverberante della risposta all'impulso sintetizzata - peraltro risolvibile, con tutta probabilit\`a,
+tramite applicazione di opportuni fattori correttivi alle ampiezze -, il risultato di maggior realismo 
+all'ascolto si ritiene pienamente centrato.
+
+%\vspace{0.5cm}
+%\begin{figure}[htbp]
+%  \centering
+%  \includegraphics[width=10cm]{../img/step45270a}
+%  \caption{Risposta al gradino $45^{\circ}$ - $270^{\circ}$ (base dei tempi: 500 ms/div).}
+%  \label{fig:step45270}
+%\end{figure}
+
+\end{document}

@@ -1,0 +1,423 @@
+\documentclass[10pt]{beamer}
+\mode<presentation>{%
+  %\usetheme[hideothersubsections,
+  %           right,width=22mm]{Goettingen}
+  %Madrid, PaloAlto, Singapore
+  \usetheme{Madrid}
+}
+
+\usepackage{graphicx}
+
+\title[Sintesi di risposte all'impulso multicanale]{Sintesi di risposte all'impulso multicanale\\ dai risultati di programmi\\ di simulazione acustica\\}
+\author[S. Campanini]{Simone Campanini}
+\institute{}
+%\institute{Universit\`a degli Studi di Parma\\ Facolt\`a di Ingegneria}
+%\titlegraphic{\includegraphics[width=20mm]{USTL}}
+\date{Anno Accademico 2005/2006}
+
+
+\AtBeginSection[]  % "Beamer, do the following at the start of every section"
+{
+\begin{frame}<beamer> 
+\frametitle{Sommario} % make a frame titled "Outline"
+\tableofcontents[currentsection]  % show TOC and highlight current section
+\end{frame}
+}
+
+\begin{document}
+
+%\begin{frame}<handout:0>
+%  \titlepage
+%\end{frame}
+
+\begin{frame}
+
+  \setbeamercolor{block body}{fg=white,bg=structure.fg!75!black}
+  \setbeamerfont{block body}{size=\large}
+
+  \begin{center}
+    \large Universit\`a degli Studi di Parma \\ 
+    \vskip 0.1cm
+    \large Facolt\`a di Ingegneria\\
+    \vskip 0.3cm
+    \small Corso di Laurea Specialistica in Ingegneria Elettronica
+    \vskip 0.4cm
+    \begin{block}{}
+      \begin{center}
+      Sintesi di risposte all'impulso multicanale\\ dai risultati di programmi\\ di simulazione acustica\\ 
+      \end{center}
+    \end{block}
+
+    \vskip 0.5cm
+    \begin{columns}
+      \column{6cm}
+      \small
+      Relatore:\\
+      Chiar.mo Prof. Angelo Farina\\
+      \vskip 0.2cm
+      Correlatori:\\
+      Dott. Ing Andrea Capra\\
+      Dott. Paolo Martignon
+      
+      \column{4cm}
+      \small
+      Tesi di laurea di:\\
+      Simone Campanini
+    \end{columns}
+    \vskip 0.8cm
+    
+    Anno Accademico 2005/2006
+  \end{center}
+\end{frame}
+
+\section{Progetto \em San Vitale}
+
+\begin{frame}
+  \frametitle{Obiettivi del progetto}
+
+  \begin{columns}
+
+    \column{4.5cm}
+    \includegraphics[width = 4cm]{../img/photos/SanVitale-300dpi.jpg}
+
+    \column{6cm}
+    \begin{itemize}
+      \item Impiego del luogo come sede possibile per concerti di musica antica\\
+            $T_{20} \rightarrow 2.5$ s, $C_{80} \rightarrow 3 \div 4$ dB
+      \item Rispetto del patrimonio artistico ivi conservato
+    \end{itemize}
+
+    \pause
+    \vskip 0.3cm
+    \begin{block}{Flusso di progetto:}
+    
+      \begin{enumerate}
+         \item rilievo dei parametri acustici
+         \item identificazione del tipo di correzioni da apportare
+         \item proposta al committente di una serie di progetti alternativi
+      \end{enumerate}
+
+    \end{block}
+
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Il modello tridimensionale}
+
+  \begin{center}
+    \includegraphics[width=8cm]{../img/drawings/sv-sdf-wireframe.pdf}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{La camera d'orchestra}
+
+  \begin{center}
+    \includegraphics[width=8cm]{../img/drawings/sv-final-wireframe-cutted-detail.pdf}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Confronto $C_{80}$}
+  \begin{center}
+    Stato di Fatto\\
+    \vskip 0.3cm
+%    \includegraphics[width = 6cm]{../img/maps/sv-sdf-c80-1k.pdf}
+    \includegraphics[width = 6.5cm]{graph/sv-sdf-c80-1k-slides.pdf}
+    \vskip 0.3cm
+    Stato di Progetto 5 \\
+%    \includegraphics[width = 6cm]{../img/maps/sv-sdp5-c80-1k.pdf}
+    \includegraphics[width = 6.5cm]{graph/sv-sdp5-c80-1k-slides.pdf}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+%  \frametitle{Confronto $L_\mathrm{eq}$}
+  \frametitle{Confronto \em Sound Pressure Level \em}
+  \begin{center}
+    Stato di Fatto\\
+%    \includegraphics[width = 6cm]{../img/maps/sv-sdf-Leq-A.pdf}\\
+    \includegraphics[width = 6.5cm]{graph/sv-sdf-Leq-A-slides.pdf}
+    \vskip 0.3cm
+    Stato di Progetto 5 \\
+%    \includegraphics[width = 6cm]{../img/maps/sv-sdp5-Leq-A.pdf}
+    \includegraphics[width = 6.5cm]{graph/sv-sdp5-Leq-A-slides.pdf}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Il tempo di riverbero $T_{20}$}
+
+  \begin{center}
+%     \begin{tabular}{l r r r r r r r}
+%      $f_\textrm{cb}$ &  \emph{125} &  \emph{250} &  \emph{500} & \emph{1000} & \emph{2000} & \emph{4000} & \emph{8000} \\
+%      \hline
+%      \emph{SdF}      & 4.76 & 4.60 & 4.34 & 4.13 & 3.74 & 2.98 & 2.02 \\  %medio 3.80
+%      \emph{SdP 1}    & 4.21 & 4.08 & 3.87 & 3.70 & 3.35 & 2.68 & 1.77 \\ %medio 3.38
+%      \emph{SdP 2}    & 3.96 & 3.83 & 3.61 & 3.44 & 3.11 & 2.47 & 1.61 \\ %medio 3.14
+%      \emph{SdP 3}    & 3.50 & 3.38 & 3.19 & 3.05 & 2.75 & 2.16 & 1.32 \\ %medio 2.76
+%      \emph{SdP 4}    & 3.29 & 3.18 & 3.01 & 2.90 & 2.60 & 2.03 & 1.22 \\ %medio 2.60
+%                      &      &      &      & \Downarrow &  & &\\
+%      \emph{SdP 5}    & 2.31 & 2.08 & 1.90 & 1.78 & 1.66 & 1.43 & 1.00 \\  %medio 1.74
+%   \end{tabular}
+
+    \includegraphics[width = 10cm]{graph/t20avg.pdf}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{L'allestimento completo}
+
+  \begin{center}
+    \includegraphics[width = 8cm]{../img/photos/Soluzione4_Laterale.jpg}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Caratteristiche del progetto approvato}
+
+  \begin{center}
+    \em Sound Pressure Level \em\\
+%    \includegraphics[width = 6cm]{../img/maps/sv-final-Leq-A.pdf}\\
+    \includegraphics[width = 6.5cm]{graph/sv-final-Leq-A-slides.pdf}\\
+    \vskip 0.3cm
+
+    Indice di chiarezza $C_{80}$ \\
+%    \includegraphics[width = 6cm]{../img/maps/sv-final-c80-1k.pdf}\\
+    \includegraphics[width = 6.5cm]{graph/sv-final-c80-1k-slides.pdf}\\
+    \vskip 0.3cm
+
+    Tempo di riverberazione medio: $T_{20} = 2.55$ s
+  \end{center}
+
+\end{frame}
+
+
+\section{Simulazioni acustiche con tecnica ibrida.}
+
+\begin{frame}
+  \frametitle{I limiti della tecnica \emph{beam-tracing}}
+
+  Non \`e possibile modellare col metodo geometrico un qualsiasi ambiente.\\
+
+  \begin{block}{Condizione necessaria:}
+    \begin{displaymath}
+      \lambda \ll \min (l_x, l_y, l_x)
+    \end{displaymath}
+  \end{block}
+  
+  \pause
+
+  \begin{center}
+    \includegraphics[width = 6cm]{../img/mercedes/3dmodel-redraw.png}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Il processo di sintesi ibrida}
+
+  \begin{center}
+%    \includegraphics[width = 6cm]{../img/mercedes/hybridSimulationsFlowDiag.pdf}
+    \includegraphics[width = 6cm]{graph/hybridSimulationsFlowDiag-slides.pdf}
+  \end{center}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{I risultati}
+
+  \begin{center}
+    Risposte all'impulso a confronto\\
+    \includegraphics[width = 5cm]{../img/mercedes/simvsreal.pdf}\\
+    \pause
+    \vskip 0.3cm
+
+    Spettri delle risposte all'impulso \\
+    \includegraphics[width = 5cm]{../img/mercedes/realvssim-spectrum.pdf}\\
+  \end{center}
+
+
+\end{frame}
+
+\section{La sintesi di risposte all'impulso multicanale: il caso \em getIR.}
+
+\begin{frame}
+   \frametitle{Il problema della sintesi - I}
+   Tutti i programmi di \em ray \em oppure \em beam tracing \em  producono
+   risposte all'impulso energetiche (\em ecogrammi \em).
+   \vskip 0.5cm
+   \begin{center}
+     \includegraphics[width = 7cm]{../img/echo.pdf}
+   \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Il problema della sintesi - II}
+  Per ottenere una risposta all'impulso udibile bisogna compiere una
+  duplice interpolazione:
+  \begin{itemize}
+     \item nel tempo
+     \item in frequenza
+  \end{itemize}
+%      \vskip 0.5cm
+   \pause
+   \begin{center}
+     \includegraphics[width = 7cm]{../img/vacuum.pdf}
+   \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Perch\'e un altro software di sintesi di IR?}
+  Il pacchetto \emph{Ramsete} contiene l'ampiamente collaudato \emph{AudioConverter}.\\
+  \vskip 0.7cm
+  L'algoritmo a \emph{rumore bianco} presenta almeno due difetti intrinseci:
+  \begin{block}{}
+    \begin{itemize}
+    \item scarso realismo all'ascolto delle IR prodotte
+    \item anomali \emph{frastagliamenti} nei transitori all'esecuzione di 
+      \emph{Acoustic Quality Test}
+    \end{itemize}
+  \end{block}
+
+  \pause
+
+  \vskip 0.7cm
+  Un'alternativa: il \em burst \em sinusoidale
+
+  \begin{columns}
+    \column{5cm}
+    \begin{block}{Vantaggi:}
+      Sono segnali continui
+    \end{block}
+
+    \begin{block}{Svantaggi:}
+      Sono segnali a banda stretta
+    \end{block}
+
+    \pause
+
+    \column{5cm}
+    \begin{block}{Soluzione:}
+      Ogni \em burst \em sar\`a formato dalla somma di pi\`u segnali a frequenze
+      differenti $\rightarrow$ 12 semitoni per ogni banda.
+    \end{block}
+
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Il raccordo tra \em burst \em consecutivi}
+
+    \begin{center}    
+      \begin{block}{Problema:}
+	\centering
+	\includegraphics[width = 8cm]{../img/sin-joint.pdf}
+      \end{block}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Il raccordo tra \em burst \em consecutivi}
+
+    \begin{center}    
+      \begin{block}{Soluzione:}
+	\centering
+	\includegraphics[width = 8cm]{../img/windowing.pdf}
+      \end{block}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Schema del processo di sintesi}
+
+  \begin{center}    
+    \includegraphics[width = 12cm]{graph/chunks_slides.pdf}
+    \vskip 0.3cm
+    La IR a banda larga si ottiene sommando tutte le righe della matrice.
+
+  \end{center}
+\end{frame}  
+
+\begin{frame}
+  \frametitle{Sintesi multicanale}
+
+  Tra gli obiettivi del software vi \`e la sintesi di IR multicanale,
+  in particolare:
+  
+  \begin{block}{}
+    \begin{itemize}
+      \item binaurale (2 canali)
+      \item B-Format  (4 canali)
+    \end{itemize}
+  \end{block}
+  \pause
+  \begin{columns}
+    \column{6cm}
+    \includegraphics[width = 6cm]{graph/echodett_slides.pdf}
+    \column{4cm}
+    Le informazioni spaziali vanno introdotte nella testa della IR
+  \end{columns}
+\end{frame}
+
+
+%\begin{frame}
+%  \frametitle{Introduzione di informazioni spaziali}
+
+%    \begin{center}    
+%      Dettaglio di un ecogramma: onda diretta e riflessioni precoci:
+%      \vskip 0.3cm
+%      \includegraphics[width = 8cm]{../img/echodett.pdf}
+%    \end{center}
+%\end{frame}
+
+\begin{frame}
+  \frametitle{Risultati}
+  
+  Attualmente \em getIR \em \`e in grado di generare risposte all'impulso  
+
+  \begin{block}{}
+    \begin{itemize}
+      \item monoaurali 
+      \item binaurali  
+      \item B-Format
+    \end{itemize}
+  \end{block}
+  
+  nelle quali si riscontra ancora un eccesso di energia nella coda riverberante.\\
+  \vskip 1cm
+  \pause
+  Tuttavia la sensazione di \em artificiosit\`a \em, grazie al nuovo
+  algoritmo, \`e praticamente scomparsa.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Obiettivi futuri}
+  
+  Per i risultati sinora ottenuti, la strada della sintesi tramite \em burst \em 
+  sinusoidali pare decisamente promettente.\\
+  \vskip 0.3cm
+  \begin{block}{}
+  Nell'immediato, \`e prioritario lo studio di opportuni coefficienti o funzioni 
+  di correzione tali da bilanciare il rapporto energetico tra testa e coda
+  riverberante della IR.\\
+  \end{block}
+  \vskip 0.3cm
+  L'interpolazione in frequenza \`e buona alle basse frequenze, meno alle alte:
+  l'aumento della gamma di frequenze costituenti il \em burst \em proporzionalmente
+  alla larghezza della banda d'ottava pu\`o essere una valida soluzione.
+%  Si ritiene che un ulteriore miglioramento all'algoritmo potr\`a essere dato
+%  dall'aumento delle frequez 
+%  dall'adozione di un \em numero variabile \em di IR campione per ogni banda
+%  d'ottava, direttamente proporzionale all'ampiezza della banda stessa.
+  
+\end{frame}
+
+\end{document}

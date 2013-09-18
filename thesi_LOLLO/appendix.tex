@@ -1,0 +1,279 @@
+\chapter{Appendice}
+\label{se:appendix}
+
+In questa appendice finale si trovano tutte le definizioni teoriche indispensabili alla comprensione dell'elaborato qui presentato ma il cui studio è considerato prerequisito e quindi noto. Viene dunque riportato un breve riassunto delle nozioni fondamentali in modo da fornire un quadro generale ristretto ma comunque sufficiente per affrontare serenamente la lettura.
+
+\section{Propagazione di onde sonore}
+\label{sec:wavesprop}
+
+Un'onda sonora\footnote{Vedi \cite{amea}, capitolo 3.}, come risaputo, \`e una 
+perturbazione della pressione atmosferica 
+avente la propriet\`a di propagarsi; affinch\'e questo possa avvenire occorrono
+due elementi indispensabili: una causa ed un mezzo. Il primo potr\`a essere un
+sistema meccanico oscillante con sufficiente 
+frequenza\footnote{Un'onda di pressione
+   perch\'e venga percepita dall'apparato uditivo umano deve avere frequenza compresa
+   tra 20 Hz e 20000 Hz circa, a seconda dell'individuo.}, mentre il secondo \`e,
+in generale, un fluido, di norma l'aria.\\
+La descrizione fisica della propagazione delle onde suddette avviene tramite 3
+leggi fondamentali che di seguito si riassumono:
+
+\begin{description}
+  \item[L'equazione di Eulero.]  Siano $p$ la pressione sonora, $\mathbf{u}$ il vettore velocit\`a
+        istantanea di una particella di fluido e $\rho_0$ la densit\`a dell'aria in condizioni normali,
+	allora si ha:
+
+        \begin{equation}
+	  \label{eq:eulerlaw}
+	  \nabla p = - \rho_0 \frac{\partial \mathbf{u}}{\partial t}.
+	\end{equation}
+
+	La relazione~\ref{eq:eulerlaw} altro non \`e che l'equivalente fluidodinamico della seconda legge
+        newtoniana della dinamica, da cui deriva, ed esprime in sostanza le condizioni di equilibrio
+	dinamico delle forze agenti su un elemento di fluido.
+
+ \item[L'equazione di continuit\`a.] Se si esprime con $\delta$ la variazione relativa di densit\`a, o 
+      \emph{condensazione}\footnote{\`E data da
+
+          \begin{displaymath}
+	     \delta = \frac{\rho - \rho_0}{\rho}
+          \end{displaymath}
+
+	  dove $\rho$ \`e densit\`a dell'elemento di fluido considerato.}, del mezzo
+      e con $\mathbf{s}$ il vettore spostamento, per un generico elemento di fluido vale la legge
+
+      \begin{equation}
+	\label{eq:continuity}
+	\delta = - \nabla \cdot \mathbf{s},
+      \end{equation}
+
+      che sintetizza il principio secondo cui il flusso netto di massa, ossia la differenza tra quello
+      entrante e quello uscente, deve essere uguagliato dalla variazione di massa di fluido
+      contenuta dall'elemento.
+
+ \item[L'equazione di stato termodinamico.] Ipotizzando ragionevolmente variazioni di stato talmente
+      rapide da poter essere ritenute adiabatiche ed indicando con $p_0$ il valore della pressione sonora
+      a riposo e con $\gamma$ il rapporto tra i calori specifici del gas, rispettivamente, a pressione e
+      volume costante, il comportamento termodinamico del fluido in questione \`e dato da
+
+      \begin{equation}
+	\label{eq:statelaw}
+	\frac{1}{p_0} \frac{\partial p}{\partial t} = \gamma \frac{\partial \delta}{\partial t}.
+      \end{equation}
+
+\end{description}
+
+Dalle relazioni~\ref{eq:eulerlaw}, \ref{eq:continuity} e~\ref{eq:statelaw}, dopo qualche passaggio, si
+ricava l'\emph{equazione di propagazione delle onde sonore}:
+
+\begin{equation}
+  \label{eq:wavelaw}
+  \nabla^2 p = \frac{1}{c^2} \frac{\partial^2 p}{\partial t^2},
+\end{equation}
+
+in cui $c$ \`e la velocit\`a di propagazione dell'onda sonora nel gas, definita come
+
+\begin{equation}
+  \label{eq:soundspeed}
+  c = \sqrt{\gamma \frac{p_0}{\rho_0}}.
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Intensit\`a, densit\`a di energia e potenza}
+\label{sec:power}
+
+Di seguito si riportano le definizioni di alcune grandezze fondamentali\footnote{Per i dettagli si
+    rimanda sempre a~\cite{amea}.}:
+
+\begin{description}
+
+  \item[Intensit\`a sonora.] \`E la quantit\`a di energia che fluisce, nell'unit\`a di tempo, attraverso una
+       superficie di area unitaria perpendicolare alla direzione di propagazione dell'onda. L'\emph{intensit\`a
+       istantanea} \`e data da
+
+       \begin{equation}
+	 \label{eq:istint}
+         I = p_m u_m \cos^2 \left[ \omega \left( t - \frac{x}{c} \right) \right],
+       \end{equation}
+
+       dove $p_m$ e $u_m$ sono i valori di picco di pressione e velocit\`a relative alla direzione di
+       propagazione considerata, mentre l'\emph{intensit\`a media} dalla relazione
+
+       \begin{equation}
+	 \label{eq:meanint}
+         \overline{I} =\frac{p_\textrm{rms}}{\rho_0 c} \quad \left[ \frac{\textrm{W}}{\um^2} \right].
+       \end{equation}
+
+
+       La quasi totalit\`a delle sorgenti reali, per\`o, non irradia energia uniformemente in tutte le direzioni,
+       tale caratteristica viene misurata da una grandezza denominata \emph{direttivit\`a} ed indicata con
+       $Q$; si ha
+
+       \begin{equation}
+	 \label{eq:directivity}
+          Q = \frac{I_{\theta, \phi}}{\overline{I}},
+       \end{equation}
+
+       dove $I_{\theta, \phi}$ \`e l'intensit\`a irradiata nella direzione specificata, in coordinate sferiche,
+       dagli angoli $\theta$ e $\phi$.
+
+  \item[Densit\`a di energia sonora.] \`E l'energia contenute in un'unit\`a di volume del mezzo ed \`e data
+       da
+
+       \begin{equation}
+	 \label{eq:density}
+         D = \frac{\overline{I}}{c^2} =\frac{p_\textrm{rms}}{\rho_0 c^2} 
+	                               \quad \left[ \frac{\textrm{W} \cdot \textrm{s}}{\um^3} \right].
+       \end{equation}
+
+  \item[Potenza sonora.] Supponendo che tutta l'energia sonora fluente nel mezzo sia prodotta da una sola e
+       ben identificabile sorgente, l'energia irradiata nell'unit\`a di tempo da quest'ultima rappresenta
+       la sua potenza sonora $W$. Se $S$ \`e una superficie immaginaria inviluppante la sorgente ed $I_S$
+       l'intensit\`a sonora rilevata su un area elementare $\ud S$ della superficie, risulta
+
+       \begin{equation}
+	 \label{eq:power}
+          W = \int_S I_s \, \ud S.
+       \end{equation}
+
+
+\end{description}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Livelli sonori}
+\label{sec:levels}
+
+Per via dell'enorme capacit\`a dinamica dell'orecchio umano difficilmente viene adottata la scala
+lineare per rappresentare le grandezze acustiche: dovendo trattare con un campo di valori estremamente
+esteso e disperso\footnote{La minima pressione percepibile da un individuo normo udente \`e di 20 $\mu$Pa,
+   la soglia del dolore \`e, invece, attorno ai 60 Pa.} \`e universalmente preferita la scala dei decibel,
+codificata nella norma ISO 1648. Premettendo che un valore espresso in decibel implica \emph{sempre} un
+rapporto con un altro valore di riferimento, di seguito si riportano le principali grandezze impiegate:
+
+\begin{description}
+  \item[Livello di pressione sonora.]
+
+       \begin{eqnarray}
+	 \label{eq:pressurelevel}
+          L_p & = & 10 \log \frac{p^2}{p_0^2} = \nonumber \\
+              & = & 20 \log \frac{p}{p_0} \quad \textrm{[dB]},
+       \end{eqnarray}
+
+       dove $p_0 = 20 \, \mu$Pa. La~\ref{eq:pressurelevel} si pu\`o anche riscrivere nel seguente modo,
+       dopo aver sostituito il valore di $p_0$:
+
+       \begin{equation}
+	 \label{eq:pressurelevel2}
+	 L_p = 10 \log p^2 + 94 \quad \textrm{[dB]}.
+       \end{equation}
+
+  \item[Livello di potenza sonora.]
+
+       \begin{equation}
+	 \label{eq:powerlevel}
+          L_W = 10 \log \frac{W}{W_0} \quad \textrm{[dB]},
+       \end{equation}
+
+       dove $W_0 = 1$ pW. Sostituendo quest'ultimo valore nella~\ref{eq:powerlevel} si ricava
+
+      \begin{equation}
+	 \label{eq:powerlevel2}
+          L_W = 10 \log W + 120 \quad \textrm{[dB]}.
+       \end{equation}
+
+  \item[Livello di intensit\`a sonora.]
+  
+     \begin{equation}
+	 \label{eq:intensitylevel}
+          L_I = 10 \log \frac{I}{I_0} \quad \textrm{[dB]},
+       \end{equation}
+
+      dove $I_0 = 1$ pW/m$^2$.  \`E largamente in uso esprimere anche la direttivit\`a in decibel: in questo
+      caso il parametro definito dall'equazione~\ref{eq:directivity} prende il nome di 
+      \emph{Directivity Index} ed \`e cos\`i definito
+
+      \begin{eqnarray}
+	\label{eq:dirindex}
+        \textit{DI} & = & 10 \log Q  = \nonumber \\
+	            & = & L_{I_{\theta, \phi}} - L_{\overline{I}}.
+       \end{eqnarray}
+
+\end{description}
+
+Se $\rho_0 c$ vale 400 rayl risulteranno uguali $\rho_0 c I_0$ e $p_0^2$, cio\`e sar\`a verificata la
+relazione 
+
+\begin{equation}
+  \label{eq:lieqlp}
+  L_I = L_p.
+\end{equation}
+
+Tale situazione si avrebbe a pressione atmosferica e temperatura di 39$^\circ$C; alla temperatura di
+20$^\circ$C il valore dell'impedenza acustica sale a 415 rayl, tuttavia l'errore commesso applicando
+ugualmente la~\ref{eq:lieqlp} \`e comunemente ritenuto trascurabile.\\
+Se l'intensit\`a sonora $I$ \`e uniforme su una superficie $S$ che circoscrive una sorgente di potenza
+$W$ si pu\`o scrivere:
+
+\begin{equation}
+  \label{eq:lweqlieqls}
+  10 \log \frac{W}{W_0} = 10 \log \frac{I}{I_0} + 10 \log \frac{S}{S_0} \quad \textrm{[dB]};
+\end{equation}
+
+se, poi, $S_0 = S = 1 \, \um^2$, risulta esattamente 
+
+\begin{equation}
+  \label{eq:lweqli}
+  L_W = L_I.
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Curve di ponderazione}
+\label{sec:pondcurves}
+
+La sensibilit\`a dell'orecchio umano non \`e costante in tutta la banda udibile, ma presenta un massimo
+nella regione attorno a 4 kHz ed ha i valori minimi in corrispondenza degli estremi, come evidenziato
+dalle curve isofoniche elaborate da Fletcher e Munson.\footnote{Si veda~\cite{mdaa} al capitolo 2.}
+Questo ha portato all'ideazione delle unit\`a di misura \emph{percettive} (la scala dei \emph{phon})
+ed ha suggerito l'adozione negli strumenti di misura di un filtraggio dei livelli rilevati in modo
+da renderli coerenti alla reale sensibilit\`a umana. Il suddetto filtraggio \`e codificato nelle
+cosiddette \emph{curve di ponderazione}, le quali non fanno altro che indicare l'alterazione della
+risposta in frequenza dello strumento, ossia il fattore con cui debbono essere pesate le frequenze
+della banda audio. In figura~\ref{fig:abccurves} sono riportate le curve di ponderazione A, B e C
+che sono, sostanzialmente, le curve isofoniche a 40, 70 e 100 phon rispettivamente.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Trasformata di Fourier}
+\label{sec:fourier}
+
+L'argomento \`e enorme, in questa sede se ne vuole solo riportare la definizione operativa.
+Se $x(t)$ \`e una funzione 
+
+\begin{itemize}   
+   \item limitata
+   \item tale da presentare un numero finito di discontinuit\`a 
+   \item assolutamente integrabile  
+\end{itemize}
+
+allora la sua trasformata secondo Fourier \`e data dalla relazione 
+
+\begin{equation}
+ \label{eq:fourier}
+  X(f) = \int_{-\infty}^{\infty} x(t) \, e^{-j2\pi ft} \, \ud t.
+\end{equation}
+
+La trasformata inversa del segnale $X(f)$, invece si pu\`o calcolare mediante l'equazione
+
+\begin{equation}
+  \label{eq:invfourier}
+  x(t) = \int_{-\infty}^{\infty} X(f) \, e^{j2\pi ft} \, \ud f.
+\end{equation}
+
+In generale affinch\`e esista la trasformata di Fourier del segnale $x(t)$, per il teorema di Plancherel \`e sufficiente 
+che quest'ultimo abbia energia finita, caratteristica, questa, di tutti i segnali fisici.\\
+

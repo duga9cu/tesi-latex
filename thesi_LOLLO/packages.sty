@@ -1,0 +1,51 @@
+   \newif\ifpdf
+    \ifx\pdfoutput\undefined
+      \pdffalse
+    \else
+      \pdfoutput=1
+      \pdftrue
+    \fi
+  \ifpdf
+    \pdfpageheight=\paperheight
+    \pdfpagewidth=\paperwidth
+    %\usepackage[pdftex,plainpages=false,colorlinks,hyperindex,bookmarksopen,linkcolor=red,citecolor=blue,urlcolor=blue]{hyperref}               % sto usando pdflatex
+    \usepackage[pdftex,plainpages=false,colorlinks,hyperindex,pdfpagemode=None,bookmarksopen,linkcolor=red,citecolor=blue,urlcolor=blue]{hyperref}
+
+    \usepackage[pdftex]{graphicx}
+    \DeclareGraphicsExtensions{.pdf}
+    \pdfcompresslevel=9
+  \else
+    \usepackage[dvips,plainpages=false]{hyperref} 
+    \usepackage[dvips]{graphicx}        % inclusione figure
+    \DeclareGraphicsExtensions{.ps,.eps}% dico di cercare file grafici con queste estensioni
+                                        % NON usare estensione in \includegraphics
+  \fi
+
+% rendiamo le lettere accentate come attive
+  \catcode`\ì=\active \def ì{\`{\i}}
+  \catcode`\í=\active \def í{\'{\i}}
+  \catcode`\è=\active \def è{\`e}
+  \catcode`\é=\active \def é{\'e}
+  \catcode`\È=\active \def È{\`E}
+  \catcode`\É=\active \def É{\'E}
+  \catcode`\à=\active \def à{\`a}
+  \catcode`\á=\active \def á{\'a}
+  \catcode`\À=\active \def À{\`A}
+  \catcode`\Á=\active \def Á{\'A}
+  \catcode`\ù=\active \def ù{\`u}
+  \catcode`\ú=\active \def ú{\'u}
+  \catcode`\ò=\active \def ò{\`o}
+  \catcode`\ó=\active \def ó{\'o} 
+
+  \usepackage[small,anne]{caption2}    % abbellisce lo stile delle didascalie
+  %\usepackage[boxed]{algorithm}
+  \usepackage[italian]{babel}         % lingua italiana
+  \usepackage{fancyheadings}
+  \usepackage{fancybox}
+  %\usepackage{times}
+  %\usepackage{mathptm}
+  \usepackage{doublespace}
+  \usepackage{makeidx}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}

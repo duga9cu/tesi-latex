@@ -1,0 +1,146 @@
+\chapter{Elementi di acustica}
+\label{sec:acoust}
+
+\section{Introduzione}
+	\label{sec:intracustic}
+	Nel presente capitolo verranno fornite le nozioni di base riguardanti i principi fisici fondamentali della fisica del suono.\\
+	Partendo dalle grandezze fondamentali che caratterizzano l'analisi del fenomeno sonoro, si parlerà della descrizione delle diverse onde sonore 
+	per arrivare a una descrizione di campo acustico di cui si cerca di fornire una mappa visiva.
+	
+	
+\section{Grandezze fondamentali}
+\label{sec:sound}
+	
+	[...]\\
+	
+	\subsection{Frequenza e Periodo}
+		\label{sec:freq}
+		
+		
+		\begin{equation}
+		  \label{eq:freq}
+		  T=\frac{1}{f}
+		\end{equation}
+		
+		[...]\\
+	
+	\subsection{Velocità di propagazione e lunghezza d'onda}
+			[...]\\
+			
+	\subsection{La scala dei Decibell}
+		\label{sec:dB}
+		[...]\\
+		
+
+\section{Onde acustiche}
+	\label{sec:soundwaves}
+	I fenomeni acustici consistono essenzialmente di una perturbazione di pressione che si propaga in un mezzo in equilibrio. Ciò che caratterizza il fenomeno 
+	è l'entità di questa perturbazione rispetto a un valore di equilibrio preso come riferimento. Nel caso applicativo più frequente, la propagazione nell'aria, 
+	si prende come riferimento la pressione atmosferica.\\
+	Essendo $P_0$ la pressione di riferimento del mezzo, la \emph{pressione acustica istantanea} viene definita come segue:
+	
+	\begin{equation}
+	\label{ eq:pressure}
+	p(t)=p'(t)-P_0
+	\end{equation}
+	
+	dove $p'(t)$ è il valore di pressione atmosferica nell'istante $t$ in un punto dato in cui si vuole misurare la pressione acustica.\\
+	
+	\subsection{livello di pressione}
+	
+		Il valore di pressione acustica varia in un campo molto esteso, per questo motivo si usa riferirsi piuttosto al \emph{livello di pressione acustica $L$}
+		(o SPL: Sound Pressure Level) definito:
+		\begin{equation}
+		\label{ eq:SPL}
+		L=20*\log\frac{p}{p_0}(dB)
+		\end{equation}
+		
+		dove $p_0$ sia il valore di pressione di riferimento per l'atmosfera, scelto dal sistema internazionale uguale a 20  $\mu Pa$ che corrisponde
+		alla soglia di udibilità a $1000 Hz$ \footnote{	Per una spiegazione più dettagliata sui livelli sonori si veda l'appendice ~\ref{sec:levels} }
+.\\
+
+	\subsection{Livello equivalente}
+	In applicazioni reali, siamo in presenza di sorgenti con un livello sonoro non costante nel tempo di cui occorre valutare la \emph{rumorosità}. Descrivendo il fenomeno sonoro con la funzione matematica che ne regola l’andamento del livello (per esempio di pressione), otteniamo una valutazione del livello sonoro in un dato istante ma 
+questo non ci fornisce un’informazione sulla rumorosità globale. Se ad esempio avessimo una sorgente che si 
+accende ad intermittenza, conoscere esattamente l’andamento del tempo non aiuterebbe nel valutare il 
+livello sonoro che la sorgente produce in un determinato tempo. Si definisce quindi un \emph{livello equivalente} che 
+si calcola come: 
+\begin{equation}
+\label{ }
+L_{EQ} = 10 \log(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt)
+\end{equation}
+
+		[...]\\
+		
+
+
+
+\section{Sistema uditivo umano}
+	\label{sec:ears}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA ORECCHIO %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width = 8cm]{img/orecchio.jpg}
+  \caption{Apparato acustico umano.}
+  \label{fig:ear}
+\end{figure}
+	
+	l'apparato uditivo umano, come si evince dalla Figura ~\ref{fig:ear}, è molto complesso e composto da moltissimi elementi dalle svariate funzioni, ognuno dei quali influisce sulla percezione acustica in maniera rilevante e addirittura alcuni degli effetti legati alla sensazione uditiva, che vengono chiamati \emph{psicoaustici}, riguardano la sola interpretazione, da parte del cervello, dei segnali elettrochimici provenienti dall'apparato uditivo.\\
+	
+	In questa sede ci interessano solamente alcuni effetti di non linearità dell'apparato uditivo, le quali comportano conseguenze fondamentali nelle modalità di analisi di un qualsiasi fenomeno sonoro, quali la descrizione mediante suddivisione in \emph{bande frequenziali} e l'introduzione dei \emph{filtri di ponderazione}, che verranno descritti successivamente.\\
+	
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA COCLEA %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width = 8cm]{img/coclea.jpg}
+  \caption{Risposta non lineare della coclea}
+  \label{fig:coclea}
+\end{figure}
+	
+		
+		
+		\subsection{Effetti di non linearità dell'orecchio umano}
+		\label{sec:nonlinearear}
+	Uno degli organi sensoriali principali dell'apparato acustico è la \emph{coclea} rappresentata in Figura ~\ref{fig:coclea}; è lei la responsabile di gran parte degli effetti non lineari di cui discuteremo in seguito.\\
+	Sezionando la coclea, si trova una sorta di doppia lamina la quale è caratterizzata da una diversa sensiblità lungo la sua estensione, a seconda delle frequenze di eccitazione del segnale acustico, alla maniera, ad esempio, di una corda o di una frusta. Si osservi nel grafico di  figura ~\ref{fig:coclea} come le basse frequenze interessino la parte terminale mentre le alte frequenze la parte iniziale. Si evince facilmente inoltre che due rumori con bande sovrapposte (in tutto o in parte) si mascherino in modo tale che il segnale di maggiore intensità copra il segnale più debole, a meno che quest'ultimo non abbia una larghezza di banda sufficientemente larga.
+		
+	%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA curve isofoniche %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width = 8cm]{img/isophon.jpg}
+  \caption{Grafico delle curve isofoniche}
+  \label{fig:isophon}
+\end{figure}
+	
+	Per il sopraccitato ed altri motivi che non approfondiremo in questa sede, il sistema uditivo umano presenta una sensibilità meno accentuata alle frequenze molto basse (poche decine di $Hz$) ed a quelle elevate (oltre i $15kHz$). Inoltre per procurare la stessa sensazione sonora ($phon$) occorrono, a frequenze diverse, livelli di pressioni sonore diverse, allo stesso modo suoni di stessa intensità ma frequenza diversa vengono percepiti dall’orecchio in modo diverso.\\
+	Questi effetti sono riassunti nel grafico in Figura~\ref{fig:isophon}.
+	
+
+
+	
+	[...]\\
+	
+	\subsection{Bande frequenziali }
+		\label{sec:band}
+		[...]\\
+		
+	\subsection{Filtri di ponderazione}
+		\label{sec:ponderaz}
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA curve isofoniche %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width = 8cm]{img/ponderaz.jpg}
+  \caption{Grafico delle curve di ponderazione}
+  \label{fig:ponderaz}
+\end{figure}
+	
+		come descritto nel paragrafo~\ref{sec:nonlinearear}, la sensibilità dell’orecchio varia al variare della frequenza. Per tale motivo il livello di pressione $SPL$ che misuriamo in realtà non corrisponde a una reale sensazione acustica, cioè variazioni del valore di SPL non necessariamente corrispondono a uguali variazioni nella percezione acustica (variazioni di \emph{volume}). Per rendere più aderente alla sensazione umana e quindi rendere più intuitiva la misura di un fenomeno sonoro, occorre utilizzare dei  filtri di \emph{pesatura} o \emph{ponderazione}. Quelli attualmente utilizzati sono rappresentati in Figura~\ref{fig:ponderaz}.
+		Analizzando il grafico notiamo le curve più importanti:
+		\begin{description}
+  \item[ filtro di ponderazione “A”]: il più comunemente impiegato e il cui andamento si conforma alla risposta dell’orecchio umano a livelli medio-bassi. Il livello misurato con la ponderazione del filtro A viene chiamato dB(A).
+  \item[ filtro di ponderazione “C”]: impiegato per rumori molto forti o esplosioni misurate quindi in dB(C).
+\end{description} 
+		
