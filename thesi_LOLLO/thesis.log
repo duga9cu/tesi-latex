@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.7)  18 SEP 2013 13:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.7)  18 SEP 2013 19:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -509,11 +509,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-[2]) (./acoust.tex [3]
+) (./acoust.tex [2]
 Capitolo 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
@@ -535,7 +535,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-[4
+[3
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
@@ -547,12 +547,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--61
 
  []
 
-[5]
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-<img/orecchio.jpg, id=52, 486.91913pt x 373.99725pt>
+<img/orecchio.jpg, id=49, 486.91913pt x 373.99725pt>
 File: img/orecchio.jpg Graphic file (type jpg)
  <use img/orecchio.jpg>
 Package pdftex.def Info: img/orecchio.jpg used on input line 84.
@@ -562,18 +562,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-[6 <./img/orecchio.jpg>]
+[5 <./img/orecchio.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-<img/coclea.jpg, id=58, 370.38374pt x 319.94531pt>
+<img/coclea.jpg, id=55, 370.38374pt x 319.94531pt>
 File: img/coclea.jpg Graphic file (type jpg)
  <use img/coclea.jpg>
 Package pdftex.def Info: img/coclea.jpg used on input line 97.
 (pdftex.def)             Requested size: 227.62204pt x 196.62605pt.
 
-[7 <./img/coclea.jpg>] <img/isophon.jpg, id=63, 629.35126pt x 401.5pt>
+[6 <./img/coclea.jpg>] <img/isophon.jpg, id=59, 629.35126pt x 401.5pt>
 File: img/isophon.jpg Graphic file (type jpg)
 
 <use img/isophon.jpg>
@@ -589,15 +589,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
-<img/ponderaz.jpg, id=64, 704.6325pt x 400.49625pt>
+<img/ponderaz.jpg, id=60, 704.6325pt x 400.49625pt>
 File: img/ponderaz.jpg Graphic file (type jpg)
  <use img/ponderaz.jpg>
 Package pdftex.def Info: img/ponderaz.jpg used on input line 135.
 (pdftex.def)             Requested size: 227.62204pt x 129.3714pt.
 
-[8 <./img/isophon.jpg>]) (./array.tex [9 <./img/ponderaz.jpg>]
+[7 <./img/isophon.jpg>]) (./array.tex [8 <./img/ponderaz.jpg>]
 Capitolo 3.
-) (./virtualmikes.tex [10
+) (./virtualmikes.tex [9
 
 ]
 Capitolo 4.
@@ -621,7 +621,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-) (./audacity.tex [11
+) (./audacity.tex [10
 
 ]
 Capitolo 5.
@@ -645,7 +645,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--1
 
  []
 
-[12
+[11
 
 ]
 Capitolo 6.
@@ -664,9 +664,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-) (./plugindesc.tex [13
+) (./plugindesc.tex [12
 
-] [14]
+] [13]
 Capitolo 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -688,7 +688,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-) (./endings.tex [15
+) (./endings.tex [14
 
 ]
 Capitolo 8.
@@ -697,51 +697,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--126
 
  []
 
-(./appendix.tex [16
+(./appendix.tex [15
 
 ]
 Appendice A.
-[17
+[16
 
 ]
 Overfull \hbox (0.58997pt too wide) in paragraph at lines 54--58
 []\T1/lmr/m/n/12 Ipotizzando ra-gio-ne-vol-men-te va-ria-zio-
  []
 
-[18] [19] [20] [21] <img/abccurves.pdf, id=114, 815.045pt x 525.965pt>
-File: img/abccurves.pdf Graphic file (type pdf)
+[17] [18] [19]
 
-<use img/abccurves.pdf>
-Package pdftex.def Info: img/abccurves.pdf used on input line 251.
-(pdftex.def)             Requested size: 284.52756pt x 183.60896pt.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 266.
+LaTeX Warning: Reference `fig:abccurves' on page 20 undefined on input line 245
+.
 
+[20]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 258.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/lm/ts1lmr.fd
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [22 <./img/abccurves.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 285--287
+)
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
-) (./thesis.bbl [23]
+[21]) (./thesis.bbl [22]
 Underfull \hbox (badness 1303) in paragraph at lines 9--12
 []\T1/lmr/m/sc/12 S. Cin-go-la-ni e R. Spa-gno-lo (a cu-ra di)\T1/lmr/m/n/12 , 
 \T1/lmr/m/it/12 Acu-sti-ca mu-si-ca-le e
  []
 
-) (./thanks.tex [24
+) (./thanks.tex [23
 
-]) [25] [26] (./thesis.aux)
+]) [24] [25] (./thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4044 strings out of 493315
- 56331 string characters out of 6137905
- 114804 words of memory out of 5000000
- 7312 multiletter control sequences out of 15000+600000
+ 4039 strings out of 493315
+ 56231 string characters out of 6137905
+ 114791 words of memory out of 5000000
+ 7308 multiletter control sequences out of 15000+600000
  113175 words of font info for 74 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,12n,45p,718b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -765,10 +767,10 @@ fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
 public/lm/lmri12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/
 lmro12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on thesis.pdf (32 pages, 910033 bytes).
+Output written on thesis.pdf (31 pages, 903373 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 195 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
