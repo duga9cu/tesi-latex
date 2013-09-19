@@ -1,5 +1,16 @@
 \begin{thebibliography}{1}
 
+\bibitem{spheric-soundfield}
+{\sc M.~Binelli, A.~Venturi, A.~Amendola, e A.~Farina}, {\em { Experimental
+  analysis of spatial properties of the sound field inside a car employing a
+  spherical microphone array}}, in {130$^\textrm{th}$ AES Convention}, London
+  (UK), mag. 2011.
+
+\bibitem{aurora}
+{\sc S.~Campanini e A.~Farina}, {\em { A new Audacity feature: room objective
+  acoustical parameters calculation module}}, in {Linux Audio Conference},
+  Parma, Italy, 2009.
+
 \bibitem{mdaa}
 {\sc {R. Spagnolo (a cura di)}}, {\em {Manuale di acustica applicata}}, UTET,
   Torino, Italy, 3~ed., gen. 2005.
@@ -9,5 +20,13 @@
 {\sc {S. Cingolani e R. Spagnolo (a cura di)}}, {\em {Acustica musicale e
   architettonica}}, UTET, Torino, Italy, 1~ed., dic. 2005.
 \newblock ISBN 88-7750-941-4.
+
+\bibitem{triangle}
+{\sc J.~R. Shewchuk}, {\em Triangle: {E}ngineering a {2D} {Q}uality {M}esh
+  {G}enerator and {D}elaunay {T}riangulator}, in Applied Computational
+  Geometry: Towards Geometric Engineering, M.~C. Lin e D.~Manocha, cur., vol.
+  1148 di {\em Lecture Notes in Computer Science}, Springer-Verlag, mag. 1996,
+  pp.~203--222.
+\newblock From the First ACM Workshop on Applied Computational Geometry.
 
 \end{thebibliography}

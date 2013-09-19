@@ -26,22 +26,22 @@
 \contentsline {section}{\numberline {5.2}Altre librerie}{16}
 \contentsline {section}{\numberline {5.3}Libreria per elaborazione audio-video: \emph {ffmpeg}}{16}
 \contentsline {chapter}{\numberline {6}Dettagli di Implementazione}{17}
-\contentsline {section}{\numberline {6.1}Elaborazione numerica del suono}{17}
-\contentsline {section}{\numberline {6.2}Acquisizione del video}{17}
-\contentsline {section}{\numberline {6.3}Livello di fondo scala}{17}
-\contentsline {section}{\numberline {6.4}\emph {Mirroring} dei microfoni virtuali}{18}
-\contentsline {section}{\numberline {6.5}\emph {Meshing} della superficie}{18}
-\contentsline {section}{\numberline {6.6}Interpolazione dei valori acquisiti e filtraggio in bande d'ottava}{18}
-\contentsline {section}{\numberline {6.7}Mappatura con scale cromatiche dei livelli acquisiti e \emph {auto-scaling}}{18}
-\contentsline {section}{\numberline {6.8}Esportazione dei risultati}{18}
-\contentsline {chapter}{\numberline {7}Descrizione plug-in: un manuale d'uso}{19}
-\contentsline {section}{\numberline {7.1}Configuration Dialog}{19}
-\contentsline {section}{\numberline {7.2}Interfaccia}{19}
-\contentsline {section}{\numberline {7.3}Selezione dell'intervallo temporale da analizzare}{19}
-\contentsline {chapter}{\numberline {8}Conclusioni}{20}
-\contentsline {chapter}{\numberline {A}Appendice}{21}
-\contentsline {section}{\numberline {A.1}Propagazione di onde sonore}{21}
-\contentsline {section}{\numberline {A.2}Intensit\`a, densit\`a di energia e potenza}{23}
-\contentsline {section}{\numberline {A.3}Livelli sonori}{24}
-\contentsline {section}{\numberline {A.4}Curve di ponderazione}{26}
-\contentsline {section}{\numberline {A.5}Trasformata di Fourier}{26}
+\contentsline {section}{\numberline {6.1}Elaborazione numerica del suono}{18}
+\contentsline {section}{\numberline {6.2}Acquisizione del video}{18}
+\contentsline {section}{\numberline {6.3}Livello di fondo scala}{18}
+\contentsline {section}{\numberline {6.4}\emph {Mirroring} dei microfoni virtuali}{19}
+\contentsline {section}{\numberline {6.5}\emph {Meshing} della superficie mediante l'operaizone di triangolazione di \emph {Delaunay}}{19}
+\contentsline {section}{\numberline {6.6}Interpolazione dei valori acquisiti e filtraggio in bande d'ottava}{22}
+\contentsline {section}{\numberline {6.7}Mappatura con scale cromatiche e \emph {auto-scaling}}{24}
+\contentsline {section}{\numberline {6.8}Esportazione dei risultati}{25}
+\contentsline {chapter}{\numberline {7}Descrizione plug-in: un manuale d'uso}{26}
+\contentsline {section}{\numberline {7.1}Configuration Dialog}{26}
+\contentsline {section}{\numberline {7.2}Interfaccia}{26}
+\contentsline {section}{\numberline {7.3}Selezione dell'intervallo temporale da analizzare}{26}
+\contentsline {chapter}{\numberline {8}Conclusioni}{27}
+\contentsline {chapter}{\numberline {A}Appendice}{28}
+\contentsline {section}{\numberline {A.1}Propagazione di onde sonore}{28}
+\contentsline {section}{\numberline {A.2}Intensit\`a, densit\`a di energia e potenza}{30}
+\contentsline {section}{\numberline {A.3}Livelli sonori}{31}
+\contentsline {section}{\numberline {A.4}Curve di ponderazione}{33}
+\contentsline {section}{\numberline {A.5}Trasformata di Fourier}{33}

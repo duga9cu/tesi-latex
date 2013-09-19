@@ -30,30 +30,164 @@ Nei capitoli precedenti si è già analizzato lo step della sintesi dei microfoni 
 	
 	
 	\section{Livello di fondo scala}
-	[novak]\\
-	
-	[...]\\
-	
+	Il livello di fondo scala ($FS$) specificato dall'utente tramite la finestra di configurazione del plug-in, è inteso come livello massimo considerato dei segnali ottenuti dalla sintesi per convoluzione dei microfoni virtuali. 
+	Per imporre il FS desiderato non è sufficiente una semplice amplificazione o attenuazione dei segnali di uscita, in quanto l'utente potrebbe aver selezionato uno spezzone casuale del segnale registrato, che quindi potrebbe non comprendere la regione di audio che causa il raggiungimento del livello di FS da parte dei segnali risultanti dalla convoluzione. 
+	Per tenere conto di tale possibilità, si utilizza un algoritmo che svolge le seguenti funzioni: 
+	\begin{enumerate}
+\item determina su quale canale $n$ del progetto Audacity\textregistered si ha il picco massimo 
+di ampiezza tra tutti i canali registrati e ne memorizza il valore $ABS_{MAX-dB}$; 
+\item determina il picco massimo di ampiezza dello stesso canale $n$, considerando solo il segnale entro la selezione, e ne memorizza il valore $REL_{MAX-dB}$;
+\item determina il nuovo livello di FS corretto sfruttando la relazione:
+		\begin{equation}
+			FS_{FIX_dB}=FS_{USER_dB}-ABS_{MAX-dB}-REL_{MAX-dB}
+		\end{equation}
+\end{enumerate}
+	In tal modo, il livello di $FS$ specificato dall'utente sarà riscalato in relazione al 
+rapporto tra l'ampiezza massima assoluta del segnale, cioè quella determinata 
+lungo la sua intera durata, e l'ampiezza massima relativa allo spezzone selezionato. 
+	Grazie all'introduzione di questo algoritmo il \emph{plug-in} non deve calcolare l'intera convoluzione per poi, dopo aver applicato la correzione del FS, doverne scartare la maggior parte, ma viene svolta l’analisi solo sullo spezzone desiderato (??).
 	
 	\section{\emph{Mirroring} dei microfoni virtuali}
+	\label{sec:mirroring}
+	La registrazione effettuata con un array sferico non produce una mappa dei livelli sonori come proiezione cilindrica di una mappa sferica, come ad esempio una mappa ottenibile con un procedimento simile a quello usato per la rappresentazione della superficie terrestre sul planisfero. 
+Muovendo dall'esempio del planisfero, è noto che, essendo la terra sferica, muovendosi lungo i bordi del planisfero si avrà una certa continuità della mappa, ovvero uscendo da nord si rientrerà da sud, uscendo da est si rientrerà da ovest etc. 
+Nel caso particolare di tracciamento della mappa sonora,si è proceduto prolungando la mappa stessa oltre i propri bordi. Per fare ciò si è effettuata una estensione della mappa \emph{specchiando} i punti relativi ai microfoni virtuali sintetizzati seguendo lo schema proposto da Binelli, Venturi, Amendola e Farina nel documento~\cite{spheric-soundfield} e riportato in Figura~\ref{fig:spheric}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA MIRRORING %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width = 11cm]{img/spheric.pdf}
+  \caption{Rappresentazione schematica del processo di \emph{mirroring}, necessario a garantire la 
+continuità ai bordi della mappa.}
+  \label{fig:spheric}
+\end{figure}
+
+	Dalla figura si osserva che i quattro quadranti in cui può essere scomposta la fotografia sferica, A, B, C e D, debbano essere \emph{copiati e specchiati}  verticalmente e/o orizzontalmente attorno alla fotografia, per imporre la condizione di continuità; più precisamente si è proceduto copiando le posizioni e i livelli registrati dai microfoni virtuali in modo da riuscire a coprire con delle \emph{mesh} triangolari anche i bordi della mappa, così come meglio spiegato nel prossimo paragrafo.
 	
-	[...]\\
 	
+	\section{\emph{Meshing} della superficie mediante l'operaizone di triangolazione di \emph{Delaunay}}
+	\label{sec:delaunay}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA CAPSULE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width = 13cm]{img/capsules.pdf}
+  \caption{Direzioni di puntamento delle capsule dell'Eigenmike sovrapposte ad una foto panoramica del Teatro alla Scala di Milano, svolta secondo lo schema di proiezione visto nella sezione~\ref{sec:mirroring}.}
+  \label{fig:capsules}
+\end{figure}
+	Per eseguire l'interpolazione di una serie di livelli noti di una funzione in due variabili, l'ascissa e l'ordinata, occorre suddividere l'intero piano in aree più piccole di forma poligonale, aventi come vertici tre o più coppie di coordinate in cui i livelli siano noti; 
+	occorre poi ipotizzare, per ciascuna di queste aree, che i livelli ai vertici facciano tutti parte di un'unica funzione notevole, ed infine calcolare i valori che tale funzione assume in tutti i punti compresi quelli di ognuna delle sottoaree in cui si è suddivisa la superficie. 
+	Questo primo passaggio è detto \emph{meshing} della superficie, mentre le sottoaree che vanno a ricoprire l'intera superficie prendono il nome di \emph{mesh}. 
 	
-	\section{\emph{Meshing} della superficie}
+	Il primo passo da fare è stabilire il metodo da seguire per determinare la griglia, ovvero la forma geometrica delle \emph{mesh} in cui l'intero piano xy andrà suddiviso. 
+La prima ipotesi potrebbe essere la suddivisione in aree di forma quadrata (come i meridiani e i paralleli del planisfero): questa ipotesi è valida se i microfoni virtuali, che costituiscono la griglia dei punti in cui i livelli sonori sono noti, sono disposti su una griglia uniforme. 
+
+	Come si può notare dalla Figura~\ref{fig:capsules}, le posizioni delle capsule dell'Eigenmike\textregistered purtroppo non lo sono, e se anche così fosse, lo sviluppo del plug-in sotto l'ipotesi di griglia uniforme avrebbe portato alla realizzazione di un software utilizzabile per un numero limitato di disposizioni dei microfoni virtuali. 
 	
-	[...]\\
+	La seconda ipotesi è quella di suddividere l'intero piano xy in superfici di forma triangolare; 
+	in questo modo, anche nel caso in cui le posizioni dei microfoni fossero disposte nella maniera più casuale possibile, si potrà sempre determinare un insieme continuo di triangoli che copra l'intera superficie. 
+	Infatti Nel 1925 è stato dimostrato che ogni superﬁcie può essere triangolata ma questo può richiedere un numero inﬁnito di triangoli.
+	Per effettuare questa operazione si è scelto quindi di utilizzare una triangolazione particolare detta di \emph{Delaunay} che è definita come segue:
+	
+	\emph{Una triangolazione di un insieme ﬁnito di punti $P \subset R^2$ viene detta di Delaunay se il cerchio circoscritto ad ogni triangolo è vuoto, ovvero nessun punto di $P$ vi giace all’interno}. 
+	
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA CAPSULE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width = 8cm]{img/delaunay.png}
+  \caption{Descrizione della proprietà dei triangoli formati con l'algoritmo di \emph{Delaunay}.}
+  \label{fig:delaunay}
+\end{figure}
+	
+	Sono diversi gli algoritmi che consentono di determinare, dato un insieme di punti sparsi su un piano, la triangolazione di Delaunay. 
+	I principali, con complessità differente in funzione del numero di punti da triangolare, sono: 
+\begin{itemize}
+\item  l'algoritmo incrementale; 
+
+\item  l'algoritmo dividi et impera; 
+
+\item  l'algoritmo Convex Hull. 
+
+\end{itemize}
+	
+	Per il presente lavoro di tesi si è deciso di utilizzare una libreria esterna, denominata Triangle++, per implementare l'algoritmo di \emph{Delaunay}, essendo l’implementazione particolarmente impegnativa. 
+Triangle++ è il nome del wrapper $C++$ della libreria $C$ \emph{Triangle}\footnote{Si veda \cite{triangle}}; esso fornisce la definizione di una classe molto semplice da utilizzare, la quale, dato un insieme di punti di cui si vuole conoscere la triangolazione, svolge autonomamente il calcolo delle mesh facendo uso di tutti e tre gli algoritmi sopraccitati. 	
+	
 	
 	
 	\section{Interpolazione dei valori acquisiti e filtraggio in bande d'ottava}
 	
-	[...]\\
+	Quando si sia calcolata una ipotetica partizione del piano xy in \emph{mesh} di forma triangolare, all'interno di ciascuna delle quali ci interessi conoscere i valori assunti dalla funzione incognita dei livelli sonori, occorre scegliere, tra le tante possibili, una e una sola funzione da utilizzare come stima approssimativa di quella incognita, imponendo che soddisfi i livelli noti presenti ai tre vertici della mesh. 
+La soluzione più semplice è quella di scegliere come funzione approssimante l'equazione di un piano passante per tre punti generici.  
+Il metodo di interpolazione che ne deriva va sotto il nome di \emph{interpolazione bilineare}. 
+
+Sapendo che l'equazione generica di un piano può essere scritta nella forma: 
 	
+	\begin{equation}
+	\label{eq:plane}
+		z=A\cdot x + B\cdot y + C
+	\end{equation}
+
+	e chiamando ($x_{1i}$, $y_{1i}$, $z_{1i}$), ($x_{2i}$, $y_{2i}$, $z_{2i}$) e ($x_{3i}$, $y_{3i}$, $z_{3i}$) le coordinate degli unici tre punti noti della funzione incognita dei livelli sonori, dove i valori $z_{1i}$, $z_{2i}$ e $z_{3i}$ corrispondono proprio ai livelli misurati in corrispondenza dei tre vertici della i-esima mesh, l'imposizione del passaggio del piano per i tre punti corrisponde all'equazione matriciale: 
+		\begin{equation}
+		\label{eq:planefor3points}
+		\left(\begin{array}{c c c }
+		x_{1i} & y_{1i} & 1 \\
+		x_{2i} & y_{2i} & 1 \\
+		 x_{3i} & y_{3i} & 1 \\
+		 \end{array}\right)
+		 \cdot
+		 \left(\begin{array}{c}A \\B \\C\end{array}\right)	
+		 =
+		 \left(\begin{array}{c}z_{1i} \\z_{2i} \\C\end{array}\right)
+ 	\end{equation}
 	
-	\section{Mappatura con scale cromatiche dei livelli acquisiti e \emph{auto-scaling}}
+%	che, attraverso semplici manipolazioni, può essere riscritta come:
+%
+%	\begin{equation}
+%	\left(\begin{array}{c}A \\B \\C\end{array}\right)
+%	=
+%	\frac{1}{\det (M)}
+%	\cdot
+%	\left(\begin{array}{c}
+%		z_{1i}\cdot (y_{2i} - y_{3i}) + z_{2i}\cdot (y_{3i} - y_{1i}) + z_{3i}\cdot (y_{1i} - y_{2i})  \\
+%		z_{1i}\cdot (x_{3i} - x_{2i}) + z_{2i}\cdot (x_{1i} - x_{3i}) + z_{3i}\cdot (x_{2i} - x_{1i})  \\
+%		z_{1i}\cdot (x_{2i}\cdot y_{3i} - x_{3i}\cdot y_{2i} ) + z_{2i}\cdot (x_{2i}\cdot y_{1i} - x_{1i}\cdot y_{3i} ) + z_{3i}\cdot (x_{1i}\cdot y_{2i} - x_{2i}\cdot y_{1i} ) 
+%	\end{array}\right)	
+%	\end{equation}
+
+	L'equazione \ref{eq:planefor3points} rappresenta esattamente l'approccio utilizzato dalla classe \emph{TriangularMesh}, definita all'interno del codice del \emph{plug-in} progettato, per il calcolo dei coefficienti $A$, $B$, $C$ e $\det (M)$ che servono per l'interpolazione. 
+	Quando si desidererà conoscere il livello sonoro in una certa posizione di coordinate (in pixel) che cadono entro una certa \emph{mesh}, si dovrà chiamare la funzione membro dell'oggetto che rappresenta la \emph{mesh} di interesse e che, implementando la \ref{eq:planefor3points}, ci restituirà il valore interpolato.
+	 
+	Questa ipotesi sarebbe corretta nel caso in cui ad ogni vertice di ciascuna mesh fosse possibile associare un unico livello sonoro, ma ciò non può avvenire. 
+	Come si è visto nel precedente capitolo 
+
+(verificare)
+
+	, infatti, il \emph{plug-in} consente di effettuare una analisi in bande d'ottava\footnote{si veda la sezione \ref{sec:band}} dei livelli sonori ovvero si avranno non una sola mappa dei livelli, bensì tante mappe quante sono le possibili bande d'ottava selezionabili. 
+	Per risolvere occorre usare come terza "coordinata" di ciascun vertice il numero del microfono virtuale posizionato nelle stesse coordinate del vertice (anzichè il livello sonoro) e memorizzare una matrice dei livelli sonori tale che, incrociando il numero del microfono virtuale con il numero identificativo della banda selezionata, fornisca il livello sonoro corretto per la determinazione dei coefficienti $A$, $B$, $C$ e $\det (M)$ necessari per la costruzione della mappa della particolare banda selezionata. 
+	Il processo di filtraggio è stato affrontato in modo trasparente grazie all'utilizzo di una classe già progettata per la suite di plug-in \emph{Aurora} per Audacity\textregistered \footnote{si veda \cite{aurora}} la quale già disponeva di tutte le funzioni membro necessarie ad implementare i filtraggi in bande d'ottava, come definiti secondo norma IEC-1260.
+	Infine, dopo l’operazione di filtraggio, è necessario creare un \emph{frame audio} cioè una mappa statica che rappresenti il contenuto del campo acustico nell'intervallo non infinitesimo di un frame\footnote{selezionato dall'utente come al paragrafo \ref{sec:framelength}} del video che si sta andando a costruire; occorre qui un calcolo del valore \emph{RMS}\footnote{si veda l'appendice (da scrivere e da controllare se è la prima citazione-noncredo-) \ref{sec:rms}} dei segnali filtrati. 
+
+
+
+
+
+	\section{Mappatura con scale cromatiche e \emph{auto-scaling}}
 	
-	[...]\\
+	La scala di colore che si utilizza è una funzione in una incognita a tre variabili dipendenti: l'incognita è il livello sonoro in un dato punto ed i tre valori di uscita della funzione coincidono con i tre canali $R$ ($red$), $G$ ($green$) e $B$ ($blue$) di una interfaccia video. 
+	A seconda della scala di colore disederata, sarà utilizzata una \emph{routine} diversa per determinare il valore $RGB$ del pixel interessato, il quale sarà successivamente inserito in una \emph{mappa RGB} (una bitmap, appunto). 
+	Per assegnare ai valori di $SPL$ un valore $RGB$ è necessario stabilire gli estremi SPL da rappresentare per poi successivamente effettuare tutta la scalatura tra i livelli in modo proporzionale. Infatti le relazioni tra i valori $R$, $G$ e $B$ e il livello che si vuole mappare sono parametrizzate in funzione dei valori di minimo e massimo rappresentabili. 
+	Non si tratta di un operazione banalissima in quanto per definire univocamente questi valori è necessario analizzare tutto il video alla ricerca degli estremi.
+	Questo comporta la perdita della possibilità di lavorare in tempo reale con una registrazione (a meno di accontentarsi di approssimazioni\footnote{si potrebbe per esempio... }), sarà invece necessario analizzare un audio pre-registrato.
+	Dopo aver calcolato tutti i livelli corrispondenti ai microfoni virtuali, filtrati per ogni banda, ed effettuata questa operazione per ogni singolo frame\footnote{ cioè in seguito al precalcolo descritto in questo capitolo}, il programma è in grado di ottenere e salvare in una struttura dati i valori di $SPL$ massimi e minimi per ogni banda e per ogni frame.
+	In questo modo sarà possibile individuare gli estremi cercati.
 	
+	Con la funzione di \emph{auto-scaling} si modificano i valori minimi e massimi entro i quali verrà adattata la scala colorata in base alla banda frequenziale selezionata dall'utente.
+	
+	Nel caso in cui sia stata abilitata la funzione \emph{auto-scale}\footnote{con il \emph{checkbox} descritto nella sezione \ref{sec:options}}, saranno modificati i valori $RMS$ di minimo e massimo dei segnali prodotti dai microfoni virtuali limitando la ricerca in ogni frame ai soli valori riguardanti la banda selezionata; 
+	se il livello minimo così calcolato dovesse essere inferiore a quello di soglia stabilito dall'utente\footnote{si veda il paragrafo \ref{sec:confdlg}}, si considererà come valore minimo il valore di soglia. 
+	
+	Nel caso in cui invece la funzione \emph{auto-scale} sia disabilitata, il livello minimo verrà assunto pari a quello di soglia inserito dall'utente, mentre quello massimo verrà assunto pari al massimo assoluto tra i livelli $RMS$ prodotti dai vari microfoni virtuali in tutte le bande e fra tutti i singoli frame del video di output. 
 	
 	\section{Esportazione dei risultati}
 	
