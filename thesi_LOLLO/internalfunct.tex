@@ -1,26 +1,64 @@
 \chapter{Dettagli di Implementazione}
 \label{sec:internalfunct}
-	\label{sec:impl}
-	
-	[...]\\
-	
+	In questo capitolo si analizzeranno i dettagli del lavoro computazionale sotto il tracciamento della mappa. 
+	La spiegazione del lavoro svolto seguirà i seguenti step:
+ \begin{enumerate}
+\item sintesi dei microfoni virtuali mediante convoluzione; 
+\item scalatura delle ampiezze dei segnali risultanti in funzione del fondo 
+scala specificato nella finestra di configurazione; 
+\item mirroring dei microfoni virtuali, per garantire la continuità ai bordi 
+della mappa; 
+\item copertura dell'intera area della mappa con superfici di forma 
+triangolare (meshing); 
+\item interpolazione dei dati ed il filtraggio in bande d'ottava; 
+\item applicazione della scala colorata in relazione alla presenza o meno della 
+funzione di auto-scaling. 
+\end{enumerate}
+
+Nei capitoli precedenti si è già analizzato lo step della sintesi dei microfoni virtuali mediante convoluzione (punto 1). Si procederà di seguito con la spiegazione in dettaglio degli altri cinque passaggi.
+
+
 	\section{Elaborazione numerica del suono}
 	[lezione 12 ppt]\\
 	
+	[...]\\
+	
+	
 	\section{Acquisizione del video}
+	
+	[...]\\
+	
 	
 	\section{Livello di fondo scala}
 	[novak]\\
 	
+	[...]\\
+	
+	
 	\section{\emph{Mirroring} dei microfoni virtuali}
+	
+	[...]\\
+	
 	
 	\section{\emph{Meshing} della superficie}
 	
+	[...]\\
+	
+	
 	\section{Interpolazione dei valori acquisiti e filtraggio in bande d'ottava}
+	
+	[...]\\
+	
 	
 	\section{Mappatura con scale cromatiche dei livelli acquisiti e \emph{auto-scaling}}
 	
+	[...]\\
+	
+	
 	\section{Esportazione dei risultati}
+	
+	[...]\\
+	
 	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

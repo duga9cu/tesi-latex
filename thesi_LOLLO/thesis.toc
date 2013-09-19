@@ -3,45 +3,45 @@
 \contentsline {chapter}{\numberline {2}Elementi di acustica}{3}
 \contentsline {section}{\numberline {2.1}Introduzione}{3}
 \contentsline {section}{\numberline {2.2}Grandezze fondamentali}{3}
-\contentsline {subsection}{\numberline {2.2.1}Frequenza e Periodo}{3}
-\contentsline {subsection}{\numberline {2.2.2}Velocit\`a di propagazione e lunghezza d'onda}{3}
-\contentsline {subsection}{\numberline {2.2.3}La scala dei Decibell}{4}
-\contentsline {section}{\numberline {2.3}Onde acustiche}{4}
-\contentsline {subsection}{\numberline {2.3.1}livello di pressione}{4}
-\contentsline {subsection}{\numberline {2.3.2}Livello equivalente}{5}
-\contentsline {section}{\numberline {2.4}Sistema uditivo umano}{5}
-\contentsline {subsection}{\numberline {2.4.1}Effetti di non linearit\`a dell'orecchio umano}{6}
-\contentsline {subsection}{\numberline {2.4.2}Bande frequenziali }{7}
-\contentsline {subsection}{\numberline {2.4.3}Filtri di ponderazione}{7}
-\contentsline {chapter}{\numberline {3}Array microfonici }{9}
-\contentsline {section}{\numberline {3.1}Array sferico: Eigenmike}{9}
-\contentsline {section}{\numberline {3.2}Array cilindrico}{9}
-\contentsline {section}{\numberline {3.3}Array planare}{9}
-\contentsline {chapter}{\numberline {4}Sintesi di microfoni virtuali}{10}
-\contentsline {section}{\numberline {4.1}Elaborazione dei segnali microfonici}{10}
-\contentsline {section}{\numberline {4.2}Sistema di Elaborazione}{10}
-\contentsline {section}{\numberline {4.3}Implementazione del calcolo convolutivo}{10}
-\contentsline {chapter}{\numberline {5}Ambiente di Sviluppo: l'host Audacity}{11}
-\contentsline {section}{\numberline {5.1}Libreria per la costruzione di interfacce grafiche \emph {WxWidgets}}{11}
-\contentsline {section}{\numberline {5.2}Altre librerie}{11}
-\contentsline {section}{\numberline {5.3}Libreria per elaborazione audio-video: \emph {ffmpeg}}{11}
-\contentsline {chapter}{\numberline {6}Dettagli di Implementazione}{12}
-\contentsline {section}{\numberline {6.1}Elaborazione numerica del suono}{12}
-\contentsline {section}{\numberline {6.2}Acquisizione del video}{12}
-\contentsline {section}{\numberline {6.3}Livello di fondo scala}{12}
-\contentsline {section}{\numberline {6.4}\emph {Mirroring} dei microfoni virtuali}{13}
-\contentsline {section}{\numberline {6.5}\emph {Meshing} della superficie}{13}
-\contentsline {section}{\numberline {6.6}Interpolazione dei valori acquisiti e filtraggio in bande d'ottava}{13}
-\contentsline {section}{\numberline {6.7}Mappatura con scale cromatiche dei livelli acquisiti e \emph {auto-scaling}}{13}
-\contentsline {section}{\numberline {6.8}Esportazione dei risultati}{13}
-\contentsline {chapter}{\numberline {7}Descrizione plug-in: un manuale d'uso}{14}
-\contentsline {section}{\numberline {7.1}Configuration Dialog}{14}
-\contentsline {section}{\numberline {7.2}Interfaccia}{14}
-\contentsline {section}{\numberline {7.3}Selezione dell'intervallo temporale da analizzare}{14}
-\contentsline {chapter}{\numberline {8}Conclusioni}{15}
-\contentsline {chapter}{\numberline {A}Appendice}{16}
-\contentsline {section}{\numberline {A.1}Propagazione di onde sonore}{16}
-\contentsline {section}{\numberline {A.2}Intensit\`a, densit\`a di energia e potenza}{18}
-\contentsline {section}{\numberline {A.3}Livelli sonori}{19}
-\contentsline {section}{\numberline {A.4}Curve di ponderazione}{21}
-\contentsline {section}{\numberline {A.5}Trasformata di Fourier}{21}
+\contentsline {subsection}{\numberline {2.2.1}Frequenza e Periodo}{4}
+\contentsline {subsection}{\numberline {2.2.2}Velocit\`a di propagazione e lunghezza d'onda}{5}
+\contentsline {section}{\numberline {2.3}Onde acustiche}{6}
+\contentsline {subsection}{\numberline {2.3.1}La scala dei Decibell}{6}
+\contentsline {subsection}{\numberline {2.3.2}livello di pressione}{8}
+\contentsline {subsection}{\numberline {2.3.3}Livello equivalente}{8}
+\contentsline {section}{\numberline {2.4}Sistema uditivo umano}{9}
+\contentsline {subsection}{\numberline {2.4.1}Effetti di non linearit\`a dell'orecchio umano}{11}
+\contentsline {subsection}{\numberline {2.4.2}Bande frequenziali }{12}
+\contentsline {subsection}{\numberline {2.4.3}Filtri di ponderazione}{12}
+\contentsline {chapter}{\numberline {3}Array microfonici }{14}
+\contentsline {section}{\numberline {3.1}Array sferico: Eigenmike}{14}
+\contentsline {section}{\numberline {3.2}Array cilindrico}{14}
+\contentsline {section}{\numberline {3.3}Array planare}{14}
+\contentsline {chapter}{\numberline {4}Sintesi di microfoni virtuali}{15}
+\contentsline {section}{\numberline {4.1}Elaborazione dei segnali microfonici}{15}
+\contentsline {section}{\numberline {4.2}Sistema di Elaborazione}{15}
+\contentsline {section}{\numberline {4.3}Implementazione del calcolo convolutivo}{15}
+\contentsline {chapter}{\numberline {5}Ambiente di Sviluppo: l'host Audacity}{16}
+\contentsline {section}{\numberline {5.1}Libreria per la costruzione di interfacce grafiche \emph {WxWidgets}}{16}
+\contentsline {section}{\numberline {5.2}Altre librerie}{16}
+\contentsline {section}{\numberline {5.3}Libreria per elaborazione audio-video: \emph {ffmpeg}}{16}
+\contentsline {chapter}{\numberline {6}Dettagli di Implementazione}{17}
+\contentsline {section}{\numberline {6.1}Elaborazione numerica del suono}{17}
+\contentsline {section}{\numberline {6.2}Acquisizione del video}{17}
+\contentsline {section}{\numberline {6.3}Livello di fondo scala}{17}
+\contentsline {section}{\numberline {6.4}\emph {Mirroring} dei microfoni virtuali}{18}
+\contentsline {section}{\numberline {6.5}\emph {Meshing} della superficie}{18}
+\contentsline {section}{\numberline {6.6}Interpolazione dei valori acquisiti e filtraggio in bande d'ottava}{18}
+\contentsline {section}{\numberline {6.7}Mappatura con scale cromatiche dei livelli acquisiti e \emph {auto-scaling}}{18}
+\contentsline {section}{\numberline {6.8}Esportazione dei risultati}{18}
+\contentsline {chapter}{\numberline {7}Descrizione plug-in: un manuale d'uso}{19}
+\contentsline {section}{\numberline {7.1}Configuration Dialog}{19}
+\contentsline {section}{\numberline {7.2}Interfaccia}{19}
+\contentsline {section}{\numberline {7.3}Selezione dell'intervallo temporale da analizzare}{19}
+\contentsline {chapter}{\numberline {8}Conclusioni}{20}
+\contentsline {chapter}{\numberline {A}Appendice}{21}
+\contentsline {section}{\numberline {A.1}Propagazione di onde sonore}{21}
+\contentsline {section}{\numberline {A.2}Intensit\`a, densit\`a di energia e potenza}{23}
+\contentsline {section}{\numberline {A.3}Livelli sonori}{24}
+\contentsline {section}{\numberline {A.4}Curve di ponderazione}{26}
+\contentsline {section}{\numberline {A.5}Trasformata di Fourier}{26}

@@ -10,33 +10,92 @@
 	
 \section{Grandezze fondamentali}
 \label{sec:sound}
+	Il fenomeno sonoro si genera dalla variazione di pressione in un mezzo materiale elastico (fluido o solido) la quale si propaga senza trasporto di materia. 
+	Le molecole del mezzo in cui si propagano i suoni, si muovono parallelamente alla direzione di propagazione. 
+	Un'onda sonora che viaggi attraverso l'aria non è altro che una successione di rarefazioni e compressioni di piccole porzioni d'aria; 
+	ogni singola molecola trasferisce energia alle molecole adiacenti e, dopo il passaggio dell'onda, ritorna pressappoco nella sua posizione iniziale.
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA livello equivalente %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width = 8cm]{img/motoarmonico.pdf}
+  \caption{Moto delle particelle di un fluido elastico compresse e decompresse alternativamente da un pistone, creando l'\emph{onda sonora}.}
+  \label{fig:motoarmonico}
+\end{figure}
+
+	Consideriamo l'esempio di un fluido che viene compresso dal movimento armonico di un pistone come rappresentato in Figura~\ref{fig:motoarmonico}. 
+	Le particelle del fluido adiacenti alla superficie del pistone saranno spostate dal suo movimento verso le particelle subito adiacenti a esse e si verificherà quindi una compressione locale. 
+	Subito dopo il pistone retrocederà lasciando un spazio libero dietro di sé che tenderà a richiamare le particelle che erano state spinte inizialmente, mente le particelle adiacenti ad esse continueranno il loro movimento nella direzione opposta creando una regione di decompressione locale adiacente al pistone.
+	Questo andamento alternativo creerà il fenomeno ondulatorio il quale viene denominato onda sonora nel momento in cui viene percepito dalle nostre orecchie. 	
 	
-	[...]\\
+	
 	
 	\subsection{Frequenza e Periodo}
-		\label{sec:freq}
+	\label{sec:freq}
 		
+	Riferendoci per comodità all'esempio precedente, Il moto armonico del pistone è caratterizzato dalla frequenza $f$ con cui la superficie piana si muove. 
+	La frequenza indica il numero di cicli compiuti dalla superficie piana in un secondo e viene espressa in $hertz (Hz)$; il tempo necessario a compiere uno di questi cicli è detto $periodo$ e viene indicato con il simbolo $T$. Risulta intuitivo quindi capire che $frequenza$ e $periodo$ siano legati dalla relazione seguente:
 		
 		\begin{equation}
 		  \label{eq:freq}
 		  T=\frac{1}{f}
 		\end{equation}
-		
-		[...]\\
+	
+	Se la frequenza del fenomeno è compresa  tra $20$ e $20000 Hz$, la perturbazione è percepibile dall’orecchio dell’uomo e si parlerà di fenomeno acustico o sonoro.	
+	Un suono caratterizzato da una funzione di variazione di pressione sinusoidale a $frequenza$ costante, come quello dell'esempio, è detto \emph{tono puro}.
+	I rumori presenti in natura invece sono formati da varie componenti tonali pure sovrapposte.
+	Queste onde sovrapposte concorreranno quindi nel formare una \emph{forma d'onda} complessa che avrà frequenza proporzionale alle frequenze componenti.
+	
+	Il nostro orecchio è particolarmente abile nel percepire le variazioni di frequenza e le relazioni tra le varie componenti frequenziali presenti in un suono. 
+	Queste componenti vengono dette \emph{armoniche}.
+	Se le armoniche sono multiple intere le une delle altre allora di avrà un effetto musicale piacevole detto \emph{consonanza}, in caso contrario si otterrà un suono poco armonioso (addirittura in certi casi dall'altezza indeterminata) detto \emph{dissonanza}.
+	
 	
 	\subsection{Velocità di propagazione e lunghezza d'onda}
-			[...]\\
+	Le proprietà elastiche e la massa del mezzo fluido stabiliscono la \emph{velocità} con cui la perturbazione si trasmette.	
+	Chiamando $c$ la questa velocità di propagazione dell'onda acustica sono riportate nella  tabella~\ref{tab:soundspeed} alcune velocità in differenti mezzi elastici.
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABELLA VELOCITà DEL SUONO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[tp]
+  \centering
+  \begin{tabular}{l c c}
+    \emph{Materiale} & \emph{Densità $\rho$ $[kg/m^3]$} & \emph{Velocità del suono $c$ $[m/s]$} \\
+    \hline
+    Acciao           			& $ 7800$				&$5000$ \\
+    Alluminio			& $ 2700$				&$5820$ \\
+    Calcestruzzo		 	& $ 2000 \div 2600$ 		&$3500 \div 5000$\\
+    Gomma			 	& $ 1010 \div 1250$ 		&$35 \div 230$\\
+    Legno				& $ 400 \div 700$ 		&$3300$\\
+     Marmo           		& $ 2600$				&$3800$ \\
+    Mattoni pieni  		& $ 2100 $ 			&$3600$\\
+    Piombo		   		& $ 11300$ 			&$1260$\\	
+    Rame		   		& $ 8900$ 			&$4500$\\	
+      Sabbia		   	& $ 1600$ 			&$1400 \div 2600$\\	
+      Stagno		   	& $ 7280$ 			&$4900$\\	
+      Sughero		   	& $ 240$  				&$480$\\	
+      Vetro		  	 	& $ 2300 \div 5000$ 		&$4000 \div 5000$\\	
+      Zinco			   	& $ 7100$ 			&$3750$\\	
+    
+  \end{tabular}
+  \caption{Velocità del suono in alcuni mezzi (fonte: ).}
+  \label{tab:soundspeed}
+\end{table}
+	
+	Tenendo come riferimento sempre l'esempio di Figura~\ref{fig:motoarmonico}, definiamo come \emph{lunghezza d'onda} $\lambda$ la distanza tra due picchi di compressione del mezzo elastico.
+	
+	Perciò fissata la frequenza $f$ del moto armonico del pistone, $\lambda$ dipende dal valore della velocità $c_0$ secondo la relazione:
+	
+	\begin{equation}
+\label{eq:lambdac }
+	\lambda=\frac{c_0}{f} 
+\end{equation}
+	
 			
-	\subsection{La scala dei Decibell}
-		\label{sec:dB}
-		[...]\\
-		
+	
 
 \section{Onde acustiche}
 	\label{sec:soundwaves}
 	I fenomeni acustici consistono essenzialmente di una perturbazione di pressione che si propaga in un mezzo in equilibrio. Ciò che caratterizza il fenomeno 
-	è l'entità di questa perturbazione rispetto a un valore di equilibrio preso come riferimento. Nel caso applicativo più frequente, la propagazione nell'aria, 
-	si prende come riferimento la pressione atmosferica.\\
+	è l'entità di questa perturbazione rispetto a un valore di equilibrio preso come riferimento. Nel caso applicativo più frequente, la propagazione nell'aria, si prende come riferimento la pressione atmosferica.\\
 	Essendo $P_0$ la pressione di riferimento del mezzo, la \emph{pressione acustica istantanea} viene definita come segue:
 	
 	\begin{equation}
@@ -44,35 +103,125 @@
 	p(t)=p'(t)-P_0
 	\end{equation}
 	
-	dove $p'(t)$ è il valore di pressione atmosferica nell'istante $t$ in un punto dato in cui si vuole misurare la pressione acustica.\\
+	dove $p'(t)$ è il valore di pressione atmosferica nell'istante $t$ in un punto dato in cui si vuole misurare la pressione acustica.
+	
+	
+	\subsection{La scala dei Decibell}
+		\label{sec:dB}
+		
+		Il valore minimo di perturbazione di pressione $p_0$ udibile, secondo la definizione~\ref{eq:pressure}, è variabile da persona a persona, ma nella normativa viene considerato 
+		
+		\begin{equation}
+		\label{ eq:udibile}
+			p_0=20 \;  \mu Pa,
+		\end{equation}
+		
+		Invece i valori massimi a cui il sistema uditivo viene sottoposto sono dell'ordine delle centinaia di $Pa$! Normalmente viene considerata come soglia del dolore
+		
+		\begin{equation}
+			\label{ eq:pain}
+			P_{max} = 20 \; Pa,
+		\end{equation}
+		
+		ma si pensi che alcuni rumori della vita quotidiana superano di gran lunga questa soglia.
+		Sono stati riportati nella tabella~\ref{tab:commonsounds} alcuni valori di pressione in Pascal relativi a suoni comuni.
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABELLA RUMORI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[tp]
+  \centering
+  \begin{tabular}{l p{4,5cm} p{3,5cm}}
+    \emph{Evento sonoro} & \emph{Variazione di pressione $[Pa]$} & \emph{Livello di pressione (SPL) $[dB]$} \\
+    \hline
+    Jet militare al decollo, 50m           			& $200$		  		& $150$	\\
+    Arma da fuoco, 3m					& $ 63$		  		& $ 130$	  \\ 
+    Concerto rock, 2m						& $ 20$	  			& $ 120$	  \\ 
+    Motosega, 1m						& $ 14$	  			& $ 117$	  \\ 
+    Passaggio di un Aeroplano				& $ 6,3$		  		& $ 110$	  \\ 
+    Clacson, 7m							& $ 2$		  		& $ 100$	  \\ 
+    Metropolitana, interno					& $ 1$	  			& $ 94$	  \\ 
+    Strada trafficata, 1m					& $ 2\cdot10^{-1}$	  	& $ 80$	  \\ 
+    Automobile, interno					& $ 6\cdot10^{-2}$		& $ 70$	  \\ 
+    Conversazione						& $ 2\cdot10^{-2}$ 		& $ 60$	  \\ 
+    Ambiente casalingo					& $ 2\cdot10^{-3}$	  	& $ 40$	  \\ 
+    Stormire delle foglie					& $ 2\cdot10^{-4}$	  	& $ 20$	  \\ 
+    \emph{Soglia di udibilità}				& $ 2\cdot10^{-5}$	 	& $ 0$	  \\ 
+    
+  \end{tabular}
+  \caption{Valori di pressione e di SPL relativi a alcuni suoni comuni.}
+  \label{tab:commonsounds}
+\end{table}
+
+		
+		Dunque è evidente che la dinamica a cui è sottoposto l'apparato acustico umano, e che quindi  è necessario misurare, è molto ampia. Infatti:
+		
+		\begin{equation}
+		\label{ eq:dinamica}
+			\frac{P_{max}}{P_{min}}=\frac{200  \; Pa}{2\cdot10^{-5} \; Pa}=10^7	
+		\end{equation}
+		
+		Per evitare quindi di utilizzare sette ordini di grandezza, nonché per rispettare le proprietà di non linearità della risposta dell'apparato acustico umano\footnote{Vedi sezione~\ref{sec:nonlinearear}}, viene introdotta la scala logaritmica dei \emph{decibell}. Data una grandezza da misurare $G$ e un suo valore di riferimento $g_0$ rispetto al quale effettuare al misura si definisce il \emph{decibell} ($dB$) come:
+		
+		 \begin{equation}
+		\label{ eq:dB}
+			grandezza \; in \; dB=10\cdot \log \Biggr(\frac{G}{g_0}\Biggr)
+			\end{equation}
+		
+		Perciò il $dB$ non rappresenta un unità di misura ma semplicemente una scala logaritmica con cui rappresentare il valore. La scala dei decibel può quindi essere applicata a qualunque grandezza. Nel momento in cui essa viene applicata alla variazione di pressione di un suono si parla di \emph{Livello di Pressione} (o \emph{Sound Pressure Level} $SPL$).		
 	
 	\subsection{livello di pressione}
 	
-		Il valore di pressione acustica varia in un campo molto esteso, per questo motivo si usa riferirsi piuttosto al \emph{livello di pressione acustica $L$}
-		(o SPL: Sound Pressure Level) definito:
+		Quasi mai in acustica si fa riferimento alla pressione direttamente in Pascal, si usa piuttosto misurare in dB e, per dare un significato energetico alla misura, si usa considerare il quadrato del valore di variazione di pressione. Si definisce quindi il \emph{livello di pressione acustica $L$} (o SPL: Sound Pressure Level):
+		
 		\begin{equation}
 		\label{ eq:SPL}
-		L=20*\log\frac{p}{p_0}(dB)
+		L=\log\biggr(\frac{p^2}{p_0^2}\biggr) \; dB,
 		\end{equation}
 		
-		dove $p_0$ sia il valore di pressione di riferimento per l'atmosfera, scelto dal sistema internazionale uguale a 20  $\mu Pa$ che corrisponde
-		alla soglia di udibilità a $1000 Hz$ \footnote{	Per una spiegazione più dettagliata sui livelli sonori si veda l'appendice ~\ref{sec:levels} }
-.\\
+		o più comunemente
+		
+		\begin{equation}
+		\label{ eq:SPL}
+		L=20\cdot\log\biggr(\frac{p}{p_0}\biggr) \; dB,
+		\end{equation}
+		
+		dove $p_0$ sia il valore di pressione di riferimento per l'atmosfera, scelto dal sistema internazionale uguale a 20 $\mu Pa$ che corrisponde alla soglia di udibilità a $1000 \; Hz$ \footnote{	Per una spiegazione più dettagliata sui livelli sonori si veda l'appendice ~\ref{sec:levels} }
+
 
 	\subsection{Livello equivalente}
-	In applicazioni reali, siamo in presenza di sorgenti con un livello sonoro non costante nel tempo di cui occorre valutare la \emph{rumorosità}. Descrivendo il fenomeno sonoro con la funzione matematica che ne regola l’andamento del livello (per esempio di pressione), otteniamo una valutazione del livello sonoro in un dato istante ma 
-questo non ci fornisce un’informazione sulla rumorosità globale. Se ad esempio avessimo una sorgente che si 
-accende ad intermittenza, conoscere esattamente l’andamento del tempo non aiuterebbe nel valutare il 
-livello sonoro che la sorgente produce in un determinato tempo. Si definisce quindi un \emph{livello equivalente} che 
-si calcola come: 
+	In applicazioni reali, usualmente ci si trova in presenza di sorgenti con un valore $SPL$ non costante nel tempo di cui occorre valutare la \emph{rumorosità}. 
+	Descrivendo il fenomeno sonoro con la funzione matematica che ne regola l’andamento del livello, otteniamo una valutazione precisa in un dato istante.
+	Questo però non ci fornisce un’informazione sulla rumorosità globale. 
+	Se ad esempio avessimo una sorgente che si accende ad intermittenza, conoscere esattamente l’andamento del tempo non aiuterebbe nel valutare il livello sonoro che la sorgente produce in un determinato tempo. 
+	Si definisce quindi un \emph{livello equivalente} che si calcola come: 
+
 \begin{equation}
 \label{ }
-L_{EQ} = 10 \log(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt)
+L_{EQ} = 10 \log\biggr(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt\biggr)
 \end{equation}
 
-		[...]\\
-		
+	
+	Il livello equivalente rappresenta una sorta di media del livello sonoro sul periodo di tempo T considerato. 
+	In Figura~\ref{fig:leq} è rappresentato l’andamento (quantitativo) del livello emesso da una sorgente intermittente ed il corrispondente livello equivalente: 
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA livello equivalente %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width = 8cm]{img/leq.pdf}
+  \caption{Livello sonoro di una sorgente intermittente e relativo livello equivalente $Leq$.}
+  \label{fig:leq}
+\end{figure}
+	
+	Come si vede dal grafico, il livello equivalente raggiunge valori sempre più stabili all’aumentare della lunghezza della finestra di integrazione considerata. 
+	L’importanza di questo valore misurbile è quella di consentirci di quantificare il livello sonoro complessivo emesso da una sorgente in un determinato intervallo di tempo, attraverso un unico numero. 
+	Infatti il livello equivalente è usato nella legislazione come riferimento principale sul quale normare il rumore.	
+	In particolare la legge italiana  stabilisce tre intervalli di tempo diversi per effettuare le rilevazioni: 
+	
+	\begin{description}
+  \item[dalle 6:00 alle 22:00] corrispondente al periodo diurno.
+  \item[dalle 22:00 alle 6:00] corrispondente al periodo notturno.
+ \item[8 ore] che corrispondono a una giornata lavorativa. Da utilizzare per normare la rumorosità sul luovo di lavoro.
+ \end{description}
 
+	
 
 
 \section{Sistema uditivo umano}
@@ -114,17 +263,57 @@ L_{EQ} = 10 \log(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt)
   \label{fig:isophon}
 \end{figure}
 	
-	Per il sopraccitato ed altri motivi che non approfondiremo in questa sede, il sistema uditivo umano presenta una sensibilità meno accentuata alle frequenze molto basse (poche decine di $Hz$) ed a quelle elevate (oltre i $15kHz$). Inoltre per procurare la stessa sensazione sonora ($phon$) occorrono, a frequenze diverse, livelli di pressioni sonore diverse, allo stesso modo suoni di stessa intensità ma frequenza diversa vengono percepiti dall’orecchio in modo diverso.\\
-	Questi effetti sono riassunti nel grafico in Figura~\ref{fig:isophon}.
+	Per il sopraccitato ed altri motivi che non approfondiremo in questa sede, il sistema uditivo umano presenta una sensibilità meno accentuata alle frequenze molto basse (poche decine di $Hz$) ed a quelle elevate (oltre i $15kHz$). 
+	Inoltre per procurare la stessa \emph{sensazione sonora} (che si misura in $phon$) occorrono, a frequenze diverse, livelli di pressioni sonore diverse, allo stesso modo suoni di stessa intensità ma frequenza diversa vengono percepiti dall’orecchio in modo diverso\footnote{Si veda~\cite{mdaa} al capitolo 2.}. 
+	Tutti questi effetti sono osservabili nel grafico in Figura~\ref{fig:isophon}. 
 	
+	Essendo dunque tutto il sistema uditivo umano molto soggetto, nella sua risposta all'eccitamento acustico, alla frequenza dell'onda incidente, è spesso comodo analizzare i fenomeni acustici solo per alcune \emph{bande} di frequenza.	
 
-
-	
-	[...]\\
-	
 	\subsection{Bande frequenziali }
 		\label{sec:band}
-		[...]\\
+		
+		La descrizione della composizione in frequenza dei segnali sonori può essere condotta valutando il contenuto di energia sonora all’interno di prefissati intervalli di frequenze, le \emph{bande di frequenza}.
+ Ciascuna banda è caratterizzata da una frequenza di taglio superiore $fs$ e da una frequenza di taglio inferiore $fi$.
+L’analisi in frequenza può essere di due tipi:
+
+\begin{description}
+\item[analisi a banda costante:]
+		se \emph{ $\Delta f=fs - fi=costante$ } cioè suddivisione a bande frequenziali di uguale larghezza.
+		Tipicamente impiegata per analisi approfondite della composizione in frequenza. 
+		Solitamente viene usata per misure nel campo delle vibrazioni delle strutture o delle macchine.
+		Viene ottenuta con una tecnica di elaborazione matematica detta FFT (Fast Fourier Transform)\footnote{si veda il capitolo~\ref{sec:fft}}
+		
+\item[analisi a banda percentuale costante da 1/1 o 1/3 di ottava:]
+		se la larghezza di banda $\Delta f$ è una percentuale costante del valore della frequenza nominale di centro-banda che caratterizza la banda stessa.
+		
+		Si parla di \emph{ottave} (bande da $1/1$ di ottava) nel caso di $fs=2 \cdot fi$. 
+		
+		Si parla invece di \emph{terzi d'ottava} (bande da $1/3$ d'ottava) se $fs=2^{1/3}fi$.
+		
+		Tipicamente impiegata per misure acustiche. 
+		Possono essere usati “banchi” di 10 filtri (ottave) o 30 filtri (terzi), ottenuti con circuiti analogici o digitali (filtri IIR)
+\end{description}
+		
+		Nella Tabella~\ref{tab:band} sono definite le diverse bande e relative frequenze di centro-banda per le due diverse analisi descritte.
+		
+				
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABELLA BANDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[tp]
+  \centering
+  \begin{tabular}{p{2cm}p{2cm}p{2cm}|p{2cm}p{2cm}p{2cm}}
+  
+    \multicolumn{3}{c}{\emph{Bande di $1/1$ ottava}} &     \multicolumn{3}{c}{\emph{Bande di $1/3$ ottava}} \\
+    \hline
+   \emph{Frequenza limite inferiore} & \emph{Frequenza di centro banda} & \emph{Frequenza limite superiore} &     \emph{Frequenza limite inferiore} & \emph{Frequenza di centro banda} & \emph{Frequenza limite superiore}\\
+    \hline
+  
+  	$11$		&	$16$		&	$12$		&	$14,1$	&	$16$		&	$17,8$	\\
+  
+    \end{tabular}
+  \caption{Definizione delle diverse bande e relative frequenze di centro-banda per le due diverse analisi descritte.}
+  \label{tab:band}
+\end{table}
+		
 		
 	\subsection{Filtri di ponderazione}
 		\label{sec:ponderaz}
@@ -137,10 +326,11 @@ L_{EQ} = 10 \log(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt)
   \label{fig:ponderaz}
 \end{figure}
 	
-		come descritto nel paragrafo~\ref{sec:nonlinearear}, la sensibilità dell’orecchio varia al variare della frequenza. Per tale motivo il livello di pressione $SPL$ che misuriamo in realtà non corrisponde a una reale sensazione acustica, cioè variazioni del valore di SPL non necessariamente corrispondono a uguali variazioni nella percezione acustica (variazioni di \emph{volume}). Per rendere più aderente alla sensazione umana e quindi rendere più intuitiva la misura di un fenomeno sonoro, occorre utilizzare dei  filtri di \emph{pesatura} o \emph{ponderazione}. Quelli attualmente utilizzati sono rappresentati in Figura~\ref{fig:ponderaz}.
-		Analizzando il grafico notiamo le curve più importanti:
+		come descritto nel paragrafo~\ref{sec:nonlinearear}, la sensibilità dell’orecchio varia al variare della frequenza. Per tale motivo il livello di pressione $SPL$ che misuriamo in realtà non corrisponde a una reale sensazione acustica, cioè variazioni del valore di SPL non necessariamente corrispondono a uguali variazioni nella percezione acustica (variazioni di \emph{volume}). Per rendere più aderente alla sensazione umana e quindi rendere più intuitiva la misura di un fenomeno sonoro, occorre utilizzare dei  filtri di pesatura o \emph{ponderazione}. Quelli attualmente utilizzati sono rappresentati in Figura~\ref{fig:ponderaz}.
+		Analizzando il grafico notiamo le curve più importanti\footnote{Per un approfondimento sulle curve di ponderazione si veda l'appendice~\ref{sec:pondcurves}}:
 		\begin{description}
-  \item[ filtro di ponderazione “A”]: il più comunemente impiegato e il cui andamento si conforma alla risposta dell’orecchio umano a livelli medio-bassi. Il livello misurato con la ponderazione del filtro A viene chiamato dB(A).
-  \item[ filtro di ponderazione “C”]: impiegato per rumori molto forti o esplosioni misurate quindi in dB(C).
+  \item[filtro di ponderazione “A”]: il più comunemente impiegato e il cui andamento si conforma alla risposta dell’orecchio umano a livelli medio-bassi. Il livello misurato con la ponderazione del filtro $A$ viene chiamato $dB(A)$.
+  \item[filtro di ponderazione “C”]: impiegato per rumori molto forti o esplosioni misurate quindi in $dB(C)$.
 \end{description} 
+
 		
