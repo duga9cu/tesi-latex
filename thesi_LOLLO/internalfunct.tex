@@ -1,32 +1,70 @@
+
 \chapter{Dettagli di Implementazione}
 \label{sec:internalfunct}
-	In questo capitolo si analizzeranno i dettagli del lavoro computazionale sotto il tracciamento della mappa. 
-	La spiegazione del lavoro svolto seguirà i seguenti step:
- \begin{enumerate}
-\item sintesi dei microfoni virtuali mediante convoluzione; 
-\item scalatura delle ampiezze dei segnali risultanti in funzione del fondo 
-scala specificato nella finestra di configurazione; 
-\item mirroring dei microfoni virtuali, per garantire la continuità ai bordi 
-della mappa; 
-\item copertura dell'intera area della mappa con superfici di forma 
-triangolare (meshing); 
-\item interpolazione dei dati ed il filtraggio in bande d'ottava; 
-\item applicazione della scala colorata in relazione alla presenza o meno della 
-funzione di auto-scaling. 
-\end{enumerate}
+	In questo capitolo si analizzeranno i dettagli del lavoro computazionale che il tracciamento della mappa comporta. 
+	La spiegazione, analogamente al flusso di implementazione, segue i seguenti step:
+	 \begin{enumerate}
+	 \item Acquisizione dei dati;
+	 \item Organizzazione del carico computazionale;
+	\item Sintesi dei microfoni virtuali mediante convoluzione; 
+	\item Scalatura delle ampiezze dei segnali risultanti in funzione del fondo 
+	scala specificato nella finestra di configurazione; 
+	\item Mirroring dei microfoni virtuali, per garantire la continuità ai bordi 
+	della mappa; 
+	\item Copertura dell'intera area della mappa con superfici di forma 
+	triangolare (\emph{meshing}); 
+	\item Interpolazione dei dati e filtraggio in bande d'ottava; 
+	\item Applicazione della \emph{color-map} in relazione all'opzione di \emph{auto-scaling};
+	\item Sincronizzazione audio-video.
+	\end{enumerate}
 
-Nei capitoli precedenti si è già analizzato lo step della sintesi dei microfoni virtuali mediante convoluzione (punto 1). Si procederà di seguito con la spiegazione in dettaglio degli altri cinque passaggi.
+	Nei capitoli precedenti si è già analizzato lo step della sintesi dei microfoni virtuali mediante convoluzione (punto 2). Si procederà di seguito con la spiegazione in dettaglio degli altri passaggi.
 
 
-	\section{Elaborazione numerica del suono}
-	[lezione 12 ppt]\\
 	
-	[...]\\
+	\section{Acquisizione dei dati in ingresso}
+	Per il corretto funzionamento del \emph{plug-in}, abbiamo visto, nel capitolo precedente alla sezione \ref{sec:confdlg}, che sono necessari i seguenti dati in ingresso:
+	\begin{itemize}
+  \item Una \textbf{registrazione multicanale} effettuata con l'array microfonico in uso,
+  \item Un \textbf{videoclip dell'ambiente di background}, aquisito con una videocamera adatta durante la registrazione dell'evento sonoro, su cui mappare i livelli \emph{SPL} con le bande di colore,
+  \item Una \textbf{matrice di filtri} in grado di sintetizzare i microfoni virtuali a partire dalle capsule dell'array
+  \item Un\textbf{ file \emph{xml} }contenente la mappatura in \emph{pixel} delle posizioni delle singole capsule microfoniche sulla immagine di background.
+\end{itemize}
+	Di tutti questi dati, viene controllata la coerenza in fase di configurazione\footnote{ ancora come già detto al capitolo  \ref{sec:confdlg}}.
+
+	Per quanto riguarda la \textbf{registrazione multicanale} direttamente proveniente dall'array, è lo stesso host \emph{Audacity\textregistered} a farsi carico di rendere disponibile la registrazione al \emph{plug-in} tramite l'utilizzo di apposite \emph{routines}.
+
+	La seconda componente fondamentale per la costruzione della mappa acustica è il \textbf{videoclip di background}. 
+	Essendo a conoscenza del \emph{path} nel \emph{filesystem}, fornitoci in fase di configurazione dall'utente, utilizziamo alcune \emph{routines} basate sulle \emph{API} fornite dalla suite \emph{ffmpeg} per acquisire il video, salvarlo in memoria diviso in singoli frames (quindi immagini di tipo bitmap o per meglio dire \emph{wxBitmap}). 
+	A tale scopo è stata creata una struttura dati complessa composta da due classi fondamentali:
+	
+	\begin{itemize}
+	  \item la classe \emph{Video} che si occupa di modellizzare il video finale di output,
+	  \item la classe \emph{VideoFrame} la quale implementa la struttura logica dei singoli frame del video e contiene tutte le informazioni di pressione, livelli \emph{SPL}, le varie bitmap di sfondo e di mappe di colore per ogni banda frequenziale, nonché le informazioni temporali di \emph{timestamp} riguardanti la sincronizzazione tra audio e relativa mappa acustica e video.
+\end{itemize}
+
+	Per quanto riguarda la \textbf{matrice di filtri}, abbiamo visto\footnote{al capitolo \ref{sec:}} che viene fornita al plugin sotto forma di file .wav, che viene caricato in memoria \emph{heap} durante la fase di \emph{precalcolo}\footnote{dove ne parli?} per poi venire \emph{deallocato} al momento della presentazione dei risultati. 
+
+	Infine il\textbf{ file \emph{xml}} viene letto attraverso le \emph{routines} della libreria \emph{tinyXml} e salvato in una struttura appositamente creata chiamata \emph{MikesCoordinates}.
+
 	
 	
-	\section{Acquisizione del video}
 	
-	[...]\\
+	\section{Organizzazione del carico computazionale}
+	A questo punto, avendo caricato in memoria tutti i dati necessari, è possibile iniziare l'elaborazione vera e propria. 
+	Tutta la parte che segue riguarda una descrizione puramente implementativa, che chiameremo fase di \emph{precalcolo}, la quale dal punto di vista dell'utente corrisponde a una semplice \emph{progress bar} che comunicherà lo stato di avanzamento del programma durante l'elaborazione.
+	
+	Trattandosi dell'elaborazione di un video, si è pensato di parallelizzare il \emph{precalcolo} in modo da approfittare della ripetitività del flusso di lavoro che deve analizzare i dati dividendoli in piccoli \emph{chunk} temporali corrispondenti ai frame video che si vorranno ottenere.
+	Si procede dunque all'allocazione dinamica di svariati \emph{thread} paralleli che concorreranno alla formazione del video finale, calcolando un singolo frame ciascuno.
+	Per l'implementazione di questa parallelizzazione si è utilizzata la classe fornita da \emph{wxWidgets} chiamata \emph{wxThread} in modo da mantenere lo stile di programmazione multipiattaforma prefissato. 
+	Si tratta di una implementazione che aderisce fedelmente allo standard \emph{POSIX}, in modo da non stravolgere le abitudini implementative del programmatore, ma che contiene alcune classi avanzate in grado di semplificare abbastanza la gestione delle corse critiche e della mutua esclusione tra gli accessi concorrenti.
+	
+	Ogni \emph{thread} dunque si incaricherà di memorizzare in una sua struttura apposita i dati riguardanti il suo \emph{chunk} di audio e procederà con l'esecuzione di tutti i passi che verranno descritti nelle prossime sezioni.
+	Alla fine del proprio iter procedurale andrà a salvare i suoi risultati in una struttura \emph{VideoFrame} che verrà aggiunta (nella posizione coerente con il numero di frame assegnato al thread stesso) alla struttura condivisa \emph{video}, naturalmente rispettando i principi che regolano l'accesso concorrente.	
+	
+	il main thread, dopo aver \emph{aspettato} tutti gli altri thread\footnote{ operazione che nello standard \emph{posix} prende il nome di \emph{join}} libererà la memoria inutilizzata e aggiungerà informazioni globali derivanti dall'analisi dell'intero video (come il massimo assoluto di fondoscala).
+	
+	
 	
 	
 	\section{Livello di fondo scala}
@@ -47,6 +85,8 @@ rapporto tra l'ampiezza massima assoluta del segnale, cioè quella determinata
 lungo la sua intera durata, e l'ampiezza massima relativa allo spezzone selezionato. 
 	Grazie all'introduzione di questo algoritmo il \emph{plug-in} non deve calcolare l'intera convoluzione per poi, dopo aver applicato la correzione del FS, doverne scartare la maggior parte, ma viene svolta l’analisi solo sullo spezzone desiderato (??).
 	
+	
+	
 	\section{\emph{Mirroring} dei microfoni virtuali}
 	\label{sec:mirroring}
 	La registrazione effettuata con un array sferico non produce una mappa dei livelli sonori come proiezione cilindrica di una mappa sferica, come ad esempio una mappa ottenibile con un procedimento simile a quello usato per la rappresentazione della superficie terrestre sul planisfero. 
@@ -65,7 +105,9 @@ continuità ai bordi della mappa.}
 	Dalla figura si osserva che i quattro quadranti in cui può essere scomposta la fotografia sferica, A, B, C e D, debbano essere \emph{copiati e specchiati}  verticalmente e/o orizzontalmente attorno alla fotografia, per imporre la condizione di continuità; più precisamente si è proceduto copiando le posizioni e i livelli registrati dai microfoni virtuali in modo da riuscire a coprire con delle \emph{mesh} triangolari anche i bordi della mappa, così come meglio spiegato nel prossimo paragrafo.
 	
 	
-	\section{\emph{Meshing} della superficie mediante l'operaizone di triangolazione di \emph{Delaunay}}
+	
+	
+	\section{\emph{Meshing} della superficie mediante l'operazione di triangolazione di \emph{Delaunay}}
 	\label{sec:delaunay}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA CAPSULE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -102,13 +144,9 @@ La prima ipotesi potrebbe essere la suddivisione in aree di forma quadrata (come
 	I principali, con complessità differente in funzione del numero di punti da triangolare, sono: 
 \begin{itemize}
 \item  l'algoritmo incrementale; 
-
 \item  l'algoritmo dividi et impera; 
-
 \item  l'algoritmo Convex Hull. 
-
-\end{itemize}
-	
+\end{itemize}	
 	Per il presente lavoro di tesi si è deciso di utilizzare una libreria esterna, denominata Triangle++, per implementare l'algoritmo di \emph{Delaunay}, essendo l’implementazione particolarmente impegnativa. 
 Triangle++ è il nome del wrapper $C++$ della libreria $C$ \emph{Triangle}\footnote{Si veda \cite{triangle}}; esso fornisce la definizione di una classe molto semplice da utilizzare, la quale, dato un insieme di punti di cui si vuole conoscere la triangolazione, svolge autonomamente il calcolo delle mesh facendo uso di tutti e tre gli algoritmi sopraccitati. 	
 	
@@ -165,7 +203,7 @@ Sapendo che l'equazione generica di un piano può essere scritta nella forma:
 
 	, infatti, il \emph{plug-in} consente di effettuare una analisi in bande d'ottava\footnote{si veda la sezione \ref{sec:band}} dei livelli sonori ovvero si avranno non una sola mappa dei livelli, bensì tante mappe quante sono le possibili bande d'ottava selezionabili. 
 	Per risolvere occorre usare come terza "coordinata" di ciascun vertice il numero del microfono virtuale posizionato nelle stesse coordinate del vertice (anzichè il livello sonoro) e memorizzare una matrice dei livelli sonori tale che, incrociando il numero del microfono virtuale con il numero identificativo della banda selezionata, fornisca il livello sonoro corretto per la determinazione dei coefficienti $A$, $B$, $C$ e $\det (M)$ necessari per la costruzione della mappa della particolare banda selezionata. 
-	Il processo di filtraggio è stato affrontato in modo trasparente grazie all'utilizzo di una classe già progettata per la suite di plug-in \emph{Aurora} per Audacity\textregistered \footnote{si veda \cite{aurora}} la quale già disponeva di tutte le funzioni membro necessarie ad implementare i filtraggi in bande d'ottava, come definiti secondo norma IEC-1260.
+	Il processo di filtraggio è stato affrontato in modo trasparente grazie all'utilizzo di una classe già progettata per la suite di plug-in \emph{Aurora} per \emph{Audacity\textregistered} \footnote{si veda \cite{aurora}} la quale già disponeva di tutte le funzioni membro necessarie ad implementare i filtraggi in bande d'ottava, come definiti secondo norma IEC-1260.
 	Infine, dopo l’operazione di filtraggio, è necessario creare un \emph{frame audio} cioè una mappa statica che rappresenti il contenuto del campo acustico nell'intervallo non infinitesimo di un frame\footnote{selezionato dall'utente come al paragrafo \ref{sec:framelength}} del video che si sta andando a costruire; occorre qui un calcolo del valore \emph{RMS}\footnote{si veda l'appendice (da scrivere e da controllare se è la prima citazione-noncredo-) \ref{sec:rms}} dei segnali filtrati. 
 
 
@@ -189,8 +227,28 @@ Sapendo che l'equazione generica di un piano può essere scritta nella forma:
 	
 	Nel caso in cui invece la funzione \emph{auto-scale} sia disabilitata, il livello minimo verrà assunto pari a quello di soglia inserito dall'utente, mentre quello massimo verrà assunto pari al massimo assoluto tra i livelli $RMS$ prodotti dai vari microfoni virtuali in tutte le bande e fra tutti i singoli frame del video di output. 
 	
-	\section{Esportazione dei risultati}
 	
+	
+	
+	\section{Esportazione dei risultati}
+	La struttura dati \emph{Video} conterrà le seguenti informazioni generali:
+	\begin{itemize}
+	  \item il livello di trasparenza delle bande colorate rispetto allo sfondo,
+	  \item \emph{l'aspect ratio} proprio del video (in \emph{pixel}),
+	  \item il numero totale dei frame del video
+	  \item i valori di $SPL$ massimo e minimo assoluti per ogni banda
+	\end{itemize}
+	Inoltre conterrà una struttura di tipo \emph{hash-map} contenenti i singoli \emph{VideoFrame} contrassegnati dal numero di frame come chiave unica.
+	Ogni \emph{VideoFrame} dal canto suo, conterrà le informazioni seguenti:
+	\begin{itemize}
+	\item \emph{timestamp} del frame ottenuta dal progetto \emph{Audacity} al momento del salvataggio del \emph{chunck} audio,
+	  \item Immagine \emph{bitmap} di background corrispondente al frame più vicino alla timestamp di cui sopra,
+	  \item una matrice contenente per ogni canale \emph{virtuale} registrato (cioè per ogni microfono virtuale ricavato dai filtri di inversione) i valori SPL filtrati secondo le 10 bande frequenziali con l'aggiunta del valore filtrato A ($dB(A)$) e del filtraggio lineare in banda stretta\footnote{???}
+	  \item una matrice contenente il valore SPL per ogni pixel dell'immagine, ottenuto a seguito dell'interpolazione dei valori dei singoli microfoni virtuali.
+	  \item i valori di massimo e minimo SPL per ognuna delle 10 bande e per gli altri 2 filtraggi descritti (dB(A) e lineare).
+	\end{itemize}
+	
+	A questo punto, ogni \emph{videoFrame} può essere salvato su disco rigido con una funzione della libreria \emph{wxWidgets} che garantirà quindi un'operazione ad hoc funzionante su ogni piattaforma\footnote{per ottenere il video --- ???}.
 	[...]\\
 	
 	

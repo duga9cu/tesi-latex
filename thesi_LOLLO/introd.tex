@@ -1,7 +1,7 @@
 \chapter{Premessa}
 \label{sec:introd}
 
-Il presente progetto di tesi si pone l'obiettivo mappare il campo acustico dinamico di un ambiente (interno o esterno) tramite una sonda, nella fattispecie un \emph{array microfonico}. Il risultato richiesto quindi è quello di ottenere un videoclip composto dalla sovrapposizione di:
+	Il presente progetto di tesi si pone l'obiettivo mappare il campo acustico dinamico di un ambiente (interno o esterno) tramite una sonda, nella fattispecie un \emph{array microfonico}. Il risultato richiesto quindi è quello di ottenere un videoclip composto dalla sovrapposizione di:
 
 \begin{description}
   \item[un videoclip di sfondo] ottenuto da una particolare videocamera, che rappresenti l'ambiente circostante e contenente quindi un informazione visiva. 
@@ -9,14 +9,15 @@ Il presente progetto di tesi si pone l'obiettivo mappare il campo acustico dinam
   \item[eventuali \emph{metadata}] quali le posizioni delle singole capsule microfoniche dell'array, o i valori dei livelli sonori in determinate posizioni di interesse.
 \end{description}  
 
-Si tratta di un \emph{plug-in} scritto per l'ambiente di editing audio \emph{Audacity}\footnote{http://audacity.sourceforge.net/?lang=it}, celebre software \emph{open-source} in grado di registrare e elaborare segnali audio, e genera da essi una \emph{mappa acustica}, composta da bande di colore che corrispondono ai diversi livelli sonori attorno all'array sonda, posto nell'ambiente di misura. \\
-Questo tipo di \emph{tool} può avere svariate applicazioni tecnologiche in quanto è in grado di rendere visibile i campi sonori i quali contengono invece una informazione di tipo uditivo. 
-La potenza di questa operazione sinestetica di traduzione di un'informazione visiva in una uditiva, risiede principalmente nella maggior apprezzabilità delle grandi qualità di definizione spaziale degli array microfonici. \\
-Dal punto di vista applicativo, il sistema sviluppato può essere di estrema utilità nella precisa individuazione di sorgenti sonore, nonchè nella misura delle loro emissioni. 
-Basti pensare per esempio ad ambienti di tipo industriale, nei quali spesso il campo acustico è complesso e generato da molteplici e varie sorgenti che spesso risultano difficili da individuare con precisione. 
-Un altro esempio calzante riguarda gli ambienti molto ristretti come gli abitacoli di automobili o aereoplani il cui confort è una specifica di progetto che attualmente ricopre un notevole interesse.
+	Si tratta di un \emph{plug-in} scritto per l'ambiente di editing audio \emph{Audacity}\textregistered \footnote{ http://audacity.sourceforge.net/?lang=it}, celebre software \emph{open-source} molto versatile, dalle possibilità molto ampie per permettere gli utilizzi anche meno convenzionali.
+	Il software sviluppato in questa tesi, dialogando con l'\emph{host} \emph{Audacity}\textregistered, acquisisce i dati in ingresso e genera da essi una \emph{mappa acustica}, composta da bande di colore che corrispondono ai diversi livelli sonori attorno all'array sonda, posto nell'ambiente di misura. \\
+	Questo tipo di \emph{tool} può avere svariate applicazioni tecnologiche in quanto è in grado di rendere visibile i campi sonori i quali contengono invece una informazione di tipo uditivo. 
+	La potenza di questa operazione sinestetica di traduzione di un'informazione visiva in una uditiva, risiede principalmente nella maggior apprezzabilità delle grandi qualità di definizione spaziale degli array microfonici. \\
+	Dal punto di vista applicativo, il sistema sviluppato può essere di estrema utilità nella precisa individuazione di sorgenti sonore, nonchè nella misura delle loro emissioni. 
+	Basti pensare per esempio ad ambienti di tipo industriale, nei quali spesso il campo acustico è complesso e generato da molteplici e varie sorgenti che spesso risultano difficili da individuare con precisione. 
+	Un altro esempio calzante riguarda gli ambienti molto ristretti come gli abitacoli di automobili o aereoplani il cui confort è una specifica di progetto che attualmente ricopre un notevole interesse.
 
-In particolare, la principale espansione da me svolta durante questa tesi, rende il software in grado di generare una mappa \emph{dinamica} riflettendo i cambiamenti del campo acustico attorno alla sonda istante per istante e sovrapponendo questo risultato a un video di sfondo, posto in trasparenza e acquisito mediante telecamere installate appositamente sulle sonde utilizzate e raffigurante l'ambiente stesso di misura.\\
+	In particolare, la principale espansione da me svolta durante questa tesi, è stata quella di rendere il software in grado di generare una mappa \emph{dinamica} riflettendo i cambiamenti del campo acustico attorno alla sonda istante per istante e sovrapponendo questo risultato a un video di sfondo, posto in trasparenza e acquisito mediante telecamere installate appositamente sulle sonde utilizzate e raffigurante l'ambiente stesso di misura.\\
 
 Di seguito, in sintesi, il contenuto:
 
@@ -25,12 +26,13 @@ Di seguito, in sintesi, il contenuto:
   		ausilio fondamentale a tutta la trattazione successiva.
   \item[Capitolo~\ref{sec:array}] introduzione agli array microfonici come tecnica di misura dei campi acustici 
   		e delle loro proprietà spaziali di direttività e direzionalità.
-  \item[Capitolo~\ref{sec:virtualmikes}] concetto di microfono virtuale e relativa sintesi a partire da registrazioni multicanale, 
-  		ovvero possibilità offerte da questo artificio nella fattispecie riguardo al campionamento spaziale di un campo acustico.
- \item[Capitolo~\ref{sec:audacity}] descrizione dell'ambiente software definito dal programma \emph{host} scelto (\emph{Audacity}) 
-  		e librerie esterne utilizzate, per elaborazioni grafiche, audio nonchè per garantire una portabilità multipiattaforma.  
- \item[Capitolo~\ref{sec:internalfunct}] dettagli sul funzionamento interno del \emph{plug-in}, algoritmi utilizzati e flusso di lavoro.
- \item[Capitolo~\ref{sec:plugindesc} ] breve manuale d'uso per un utilizzatore del \emph{plug-in}, possibili analisi e parametri significativi.
+  \item[Capitolo~\ref{sec:virtualmikes}] introduzione al concetto di microfono virtuale e relativa sintesi, 
+  		ovvero possibilità offerte da questo artificio, nella fattispecie riguardo alla descrizione spaziale di un campo acustico.
+ \item[Capitolo~\ref{sec:audacity}] descrizione dell'ambiente software definito dal programma \emph{host} scelto (\emph{Audacity\textregistered}) 
+  		e delle librerie esterne utilizzate.  
+ \item[Capitolo~\ref{sec:plugindesc} ] breve manuale d'uso per un utilizzatore del \emph{plug-in}. 
+ 		Possibili analisi e parametri significativi.
+ \item[Capitolo~\ref{sec:internalfunct}] dettagli sul funzionamento interno, algoritmi utilizzati e flusso di lavoro.
 \end{description}
                      
 		    

@@ -4,17 +4,17 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Moto delle particelle di un fluido elastico compresse e decompresse alternativamente da un pistone, creando l'\emph {onda sonora}.}}{4}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Livello sonoro di una sorgente intermittente e relativo livello equivalente $Leq$.}}{9}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Apparato acustico umano.}}{10}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Risposta non lineare della coclea}}{10}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Risposta non lineare della coclea}}{11}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Grafico delle curve isofoniche}}{11}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Grafico delle curve di ponderazione}}{13}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Rappresentazione schematica del processo di \emph {mirroring}, necessario a garantire la continuit\`a ai bordi della mappa.}}{20}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Direzioni di puntamento delle capsule dell'Eigenmike sovrapposte ad una foto panoramica del Teatro alla Scala di Milano, svolta secondo lo schema di proiezione visto nella sezione~\ref {sec:mirroring}.}}{20}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Descrizione della propriet\`a dei triangoli formati con l'algoritmo di \emph {Delaunay}.}}{22}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Rappresentazione schematica del processo di \emph {mirroring}, necessario a garantire la continuit\`a ai bordi della mappa.}}{24}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Direzioni di puntamento delle capsule dell'Eigenmike sovrapposte ad una foto panoramica del Teatro alla Scala di Milano, svolta secondo lo schema di proiezione visto nella sezione~\ref {sec:mirroring}.}}{25}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Descrizione della propriet\`a dei triangoli formati con l'algoritmo di \emph {Delaunay}.}}{27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Graphic User Interface sotto le tre diverse piattaforme principali: \emph {Windows}, \emph {Mac OS X} e \emph {Linux}.}}{27}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Graphic User Interface sotto le tre diverse piattaforme principali: \emph {Windows}, \emph {Mac OS X} e \emph {Linux}.}}{32}
 \addvspace {10\p@ }
