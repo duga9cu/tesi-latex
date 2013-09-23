@@ -14,7 +14,7 @@
 	Le molecole del mezzo in cui si propagano i suoni, si muovono parallelamente alla direzione di propagazione. 
 	Un'onda sonora che viaggi attraverso l'aria non è altro che una successione di rarefazioni e compressioni di piccole porzioni d'aria; 
 	ogni singola molecola trasferisce energia alle molecole adiacenti e, dopo il passaggio dell'onda, ritorna pressappoco nella sua posizione iniziale.
-			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA livello equivalente %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURApistone %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
   \centering
   \includegraphics[width = 8cm]{img/motoarmonico.pdf}
@@ -33,14 +33,9 @@
 	\label{sec:freq}
 		
 	Riferendoci per comodità all'esempio appena visto, definiamo che Il moto armonico del pistone è caratterizzato dalla frequenza $f$ con cui la superficie piana si muove. 
-	La frequenza indica il numero di cicli compiuti dalla superficie piana in un secondo e viene espressa in $hertz (Hz)$; il tempo necessario a compiere uno di questi cicli è detto $periodo$ e viene indicato con il simbolo $T$. Risulta intuitivo quindi capire che $frequenza$ e $periodo$ siano in un rapporto di proporzionalità inversa:
-		
-		\begin{equation}
-		  \label{eq:freqperiod}
-		  T=\frac{1}{f}
-		\end{equation}
+	La frequenza indica il numero di cicli compiuti dalla superficie piana in un secondo e viene espressa in $hertz (Hz)$; il tempo necessario a compiere uno di questi cicli è detto $periodo$ e viene indicato con il simbolo $T$. Risulta intuitivo quindi capire che $frequenza$ e $periodo$ siano in un rapporto di proporzionalità inversa.
 	
-	Se la frequenza del fenomeno è compresa  tra $20$ e $20\,000 \;Hz$, la perturbazione è percepibile dall’orecchio umano e si parla quindi di \emph{fenomeno acustico} o \emph{sonoro}.	
+	Se la frequenza del fenomeno è compresa  tra $20$ e $20\,000 \,Hz$, la perturbazione è percepibile dall’orecchio umano e si parla quindi di \emph{fenomeno acustico} o \emph{sonoro}.	
 	Un suono caratterizzato da una funzione di variazione di pressione sinusoidale a $frequenza$ costante, come quello dell'esempio, è detto \emph{tono puro}.
 	I rumori presenti in natura invece sono formati da varie componenti tonali pure sovrapposte.
 	Queste onde sovrapposte concorreranno quindi nel formare una \emph{forma d'onda} complessa che avrà frequenza proporzionale alle frequenze componenti.
@@ -95,7 +90,7 @@
 			
 	\begin{equation}
 	\label{eq:lambdac }
-	\lambda=c_0\; T.
+	\lambda=c_0\, T.
 	\end{equation}	
 	
 
@@ -113,21 +108,21 @@
 	dove $p'(t)$ è il valore di pressione atmosferica nell'istante $t$ in un punto dato in cui si vuole misurare la pressione acustica.
 	
 	
-	\subsection{La scala dei Decibell}
+	\subsection{La scala dei deciBell}
 		\label{sec:dB}
 		
 		Il valore minimo di perturbazione di pressione $p_0$ udibile varia da persona a persona, ma il valore standard considerato come riferimento di misura è:
 		
 		\begin{equation}
 		\label{eq:udibile}
-			p_0=20 \;  \mu Pa
+			p_0=20 \,  \mu Pa
 		\end{equation}
 		
-		Invece i valori massimi a cui il sistema uditivo può venire sottoposto sono dell'ordine delle centinaia di $Pascal$. 
-		Normalmente viene considerata come soglia del dolore $P_{max} = 20 \; Pa$.
+		Invece i valori massimi a cui il sistema uditivo può venire sottoposto sono dell'ordine delle centinaia di pascal. 
+		Normalmente viene considerata come soglia del dolore $P_{max} = 20 \, Pa$.
 		Si pensi però che alcuni rumori comuni superano di gran lunga questa soglia.
 		
-		Sono stati riportati nella tabella~\ref{tab:commonsounds} alcuni valori di pressione in Pascal relativi a suoni comuni.
+		Sono stati riportati nella tabella~\ref{tab:commonsounds} alcuni valori di pressione in pascal relativi a suoni comuni.
 		
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABELLA RUMORI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[tp]
@@ -159,7 +154,7 @@
 		
 		\begin{equation}
 		\label{ eq:dinamica}
-			\frac{P_{max}}{P_{min}}=\frac{200  \; Pa}{2\cdot10^{-5} \; Pa}=10^7	
+			\frac{P_{max}}{P_{min}}=\frac{200  \, Pa}{2\cdot10^{-5} \, Pa}=10^7	
 		\end{equation}
 		
 		Per evitare quindi di utilizzare sette ordini di grandezza, nonché per rispettare le proprietà di non linearità della risposta dell'apparato acustico umano\footnote{Vedi sezione~\ref{sec:nonlinearear}}, viene introdotta la scala logaritmica dei \emph{decibell}. 
@@ -176,24 +171,25 @@
 	
 	\subsection{Livello di pressione}
 	
-		Quasi mai in acustica si fa riferimento alla pressione direttamente in Pascal, si usa piuttosto misurare in dB e, per dare un significato energetico alla misura, si usa considerare il quadrato del valore di variazione di pressione. Si definisce quindi il \emph{livello di pressione acustica $L$} (o SPL: Sound Pressure Level):
+		Quasi mai in acustica si fa riferimento alla pressione direttamente in pascal, si usa piuttosto misurare in dB e, per dare un significato energetico alla misura, si usa considerare il quadrato del valore di variazione di pressione. Si definisce quindi il \emph{livello di pressione acustica $L$} (o SPL: Sound Pressure Level):
 		
 		\begin{equation}
 		\label{ eq:SPL}
-		L=\log\left(\frac{p^2}{p_0^2}\right) \; dB,
+		L=\log\left(\frac{p^2}{p_0^2}\right) \, dB,
 		\end{equation}
 		
 		o più comunemente
 		
 		\begin{equation}
 		\label{ eq:SPL}
-		L=20\cdot\log\biggr(\frac{p}{p_0}\biggr) \; dB,
+		L=20\cdot\log\biggr(\frac{p}{p_0}\biggr) \, dB,
 		\end{equation}
 		
-		dove $p_0$ sia il valore di scostamento di pressione usato come riferimento riferimento, scelto dal sistema internazionale uguale a 20 $\mu Pa$ che come abbiamo visto poco sopra nell'equazione \ref{eq:udibile} corrisponde alla soglia di udibilità a $1000 \; Hz$ nell'atmosfera in condizioni standard\footnote{	Per una spiegazione più dettagliata sui livelli sonori si veda l'appendice ~\ref{sec:levels} }.
+		dove $p_0$ sia il valore di scostamento di pressione usato come riferimento riferimento, scelto dal sistema internazionale uguale a 20 $\mu Pa$ che come abbiamo visto poco sopra nell'equazione \ref{eq:udibile} corrisponde alla soglia di udibilità a $1000 \, Hz$ nell'atmosfera in condizioni standard\footnote{	Per una spiegazione più dettagliata sui livelli sonori si veda l'appendice ~\ref{sec:levels} }.
 
 
 	\subsection{Livello equivalente}
+	\label{sec:leq}
 	In applicazioni reali, usualmente ci si trova in presenza di sorgenti caratterizzate da un valore $SPL$ non costante nel tempo, delle quali occorre valutare la \emph{rumorosità}. 
 	Descrivendo il fenomeno sonoro con la funzione matematica che ne regola l’andamento del \emph{livello di pressione} nel tempo, otteniamo una valutazione precisa in un dato istante.
 	Questo però non ci fornisce un’informazione sulla rumorosità globale. 
@@ -213,12 +209,12 @@ L_{EQ} = 10 \log\biggr(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt\biggr)
 \begin{figure}
   \centering
   \includegraphics[width = 8cm]{img/leq.pdf}
-  \caption{Livello sonoro di una sorgente intermittente e relativo livello equivalente $Leq$.}
+  \caption{Livello sonoro di una sorgente intermittente e relativo livello equivalente $L_{EQ}$.}
   \label{fig:leq}
 \end{figure}
 	
 	Come si vede dal grafico, il livello equivalente raggiunge valori sempre più stabili all’aumentare della lunghezza della finestra di integrazione considerata. 
-	L’importanza di questo valore misurbile è quella di consentirci di quantificare il livello sonoro complessivo emesso da una sorgente in un determinato intervallo di tempo, attraverso un unico numero. 
+	L’importanza di questo valore misurabile è quella di consentirci di quantificare il livello sonoro complessivo emesso da una sorgente in un determinato intervallo di tempo, attraverso un unico numero. 
 	Infatti il livello equivalente è usato nella legislazione come riferimento principale sul quale normare il rumore.	
 	In particolare la legge italiana  stabilisce tre intervalli di tempo diversi per effettuare le rilevazioni: 
 	
@@ -280,7 +276,7 @@ L_{EQ} = 10 \log\biggr(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt\biggr)
 		\label{sec:band}
 		
 		La descrizione della composizione in frequenza dei segnali sonori può essere condotta valutando il contenuto di energia sonora all’interno di prefissati intervalli di frequenze, le \emph{bande di frequenza}.
- Ciascuna banda è caratterizzata da una frequenza di taglio superiore $fs$ e da una frequenza di taglio inferiore $fi$.
+ Ciascuna banda è caratterizzata da una frequenza di taglio superiore $f_s$ e da una frequenza di taglio inferiore $f_i$.
 L’analisi in frequenza può essere di due tipi:
 
 \begin{description}
