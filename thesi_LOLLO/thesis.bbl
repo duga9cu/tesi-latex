@@ -11,6 +11,11 @@
   acoustical parameters calculation module}}, in {Linux Audio Conference},
   Parma, Italy, 2009.
 
+\bibitem{delaunay}
+{\sc D.~T. Lee e B.~J. Schachter}, {\em {Two Algorithms for Constructing a
+  Delaunay Triangulation }}, International Journal of Computer and Information
+  Sciences.
+
 \bibitem{mdaa}
 {\sc {R. Spagnolo (a cura di)}}, {\em {Manuale di acustica applicata}}, UTET,
   Torino, Italy, 3~ed., gen. 2005.

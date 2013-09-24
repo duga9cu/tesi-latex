@@ -3,25 +3,28 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Esempio di mappa acustica generata dal plug-in \emph {Microphone Array Analyzer}}}{2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Moto delle particelle di un fluido elastico compresse e decompresse alternativamente da un pistone, creando l'\emph {onda sonora}.}}{5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Livello sonoro di una sorgente intermittente e relativo livello equivalente $L_{EQ}$.}}{10}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Apparato acustico umano.}}{11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Livello sonoro di una sorgente intermittente e relativo livello equivalente $L_{EQ}$.}}{11}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Apparato acustico umano.}}{12}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Risposta non lineare della coclea}}{12}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Grafico delle curve isofoniche}}{12}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Grafico delle curve isofoniche}}{13}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Grafico delle curve di ponderazione}}{15}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Struttura del sistema \emph {Eigenmike\textsuperscript {\texttrademark } EM32}}}{19}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Disposizione delle capsule dell' array microfonico \emph {Eigenmike\textsuperscript {\texttrademark } EM32}}}{20}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Angoli di riferimento e loro direzioni relative per la descrizione sferica rispetto al sistema di riferimento antropometrico secondo la norma ISO2631. }}{22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Interfaccia utente dell'host utilizzato, \emph {Audacity\textregistered } sotto diverse piattaforme.}}{19}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Intorno per la costruzione di interfacce grafiche \textsf {wxFormBuilder}}}{21}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Interfaccia utente dell'host utilizzato, \emph {Audacity\textregistered } sotto diverse piattaforme.}}{28}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Intorno per la costruzione di interfacce grafiche \textsf {wxFormBuilder}}}{31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Selezione dello spezzone di materiale audio da analizzare con il \emph {plug-in}.}}{25}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Messaggio di errore in caso di memoria insufficiente per le operazioni di \emph {precalcolo}}}{26}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Finestra di configurazione del modulo \emph {Microphone Array Analyzer}}}{27}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Finestra principale del modulo \emph {Microphone Array Analyzer}}}{28}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Selezione dello spezzone di materiale audio da analizzare con il \emph {plug-in}.}}{34}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Messaggio di errore in caso di memoria insufficiente per le operazioni di \emph {precalcolo}}}{35}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Finestra di configurazione del modulo \emph {Microphone Array Analyzer}}}{36}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Finestra principale del modulo \emph {Microphone Array Analyzer}}}{38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Rappresentazione schematica del processo di \emph {mirroring}, necessario a garantire la continuit\`a ai bordi della mappa.}}{36}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Direzioni di puntamento delle capsule dell'Eigenmike sovrapposte ad una foto panoramica del Teatro alla Scala di Milano, svolta secondo lo schema di proiezione visto nella sezione~\ref {sec:mirroring}.}}{36}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Descrizione della propriet\`a dei triangoli formati con l'algoritmo di \emph {Delaunay}.}}{38}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Rappresentazione schematica del processo di \emph {mirroring}, necessario a garantire la continuit\`a ai bordi della mappa.}}{46}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Direzioni di puntamento delle capsule dell'Eigenmike sovrapposte ad una foto panoramica del Teatro alla Scala di Milano, svolta secondo lo schema di proiezione visto nella sezione~\ref {sec:mirroring}.}}{47}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Descrizione della propriet\`a dei triangoli formati con l'algoritmo di \emph {Delaunay}.}}{49}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Graphic User Interface sotto le tre diverse piattaforme principali: \emph {Windows}, \emph {Mac OS X} e \emph {Linux}.}}{43}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Graphic User Interface sotto le tre diverse piattaforme principali: \emph {Windows}, \emph {Mac OS X} e \emph {Linux}.}}{55}
 \addvspace {10\p@ }

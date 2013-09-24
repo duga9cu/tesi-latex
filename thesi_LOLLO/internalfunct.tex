@@ -62,29 +62,25 @@
 	Ogni \emph{thread} dunque si incaricherà di memorizzare in una sua struttura apposita i dati riguardanti il suo \emph{chunk} di audio e procederà con l'esecuzione di tutti i passi che verranno descritti nelle prossime sezioni.
 	Alla fine del proprio iter procedurale andrà a salvare i suoi risultati in una struttura \textsf{VideoFrame} che verrà aggiunta (nella posizione coerente con il numero di frame assegnato al thread stesso) alla struttura condivisa \textsf{video}, naturalmente rispettando i principi che regolano l'accesso concorrente.	
 	
-	il main thread, dopo aver \emph{aspettato} tutti gli altri thread\footnote{ operazione che nello standard \textsf{POSIX} prende il nome di \textsf{join}} libererà la memoria inutilizzata e aggiungerà informazioni globali derivanti dall'analisi dell'intero video (come il massimo assoluto di fondoscala).
+	Il main thread, dopo aver \emph{aspettato} tutti gli altri thread\footnote{ operazione che nello standard \textsf{POSIX} prende il nome di \textsf{join}} libererà la memoria inutilizzata e aggiungerà informazioni globali derivanti dall'analisi dell'intero video (come il massimo assoluto di fondoscala).
 	
 	
 	
 	
 	\section{Livello di fondo scala}
-	Il livello di fondo scala ($FS$) specificato dall'utente tramite la finestra di configurazione del \emph{ plug-in}, è inteso come livello massimo considerato dei segnali ottenuti dalla sintesi per convoluzione dei microfoni virtuali. 
-	Per imporre il FS desiderato non è sufficiente una semplice amplificazione o attenuazione dei segnali di uscita, in quanto l'utente potrebbe aver selezionato uno spezzone casuale del segnale registrato, che quindi potrebbe non comprendere la regione di audio che causa il raggiungimento del livello di FS da parte dei segnali risultanti dalla convoluzione. 
-	Per tenere conto di tale possibilità, si utilizza un algoritmo che svolge le seguenti funzioni: 
-	\begin{enumerate}
-\item determina su quale canale $n$ del progetto \emph{Audacity\textregistered} si ha il picco massimo 
-di ampiezza tra tutti i canali registrati e ne memorizza il valore $ABS_{MAX-dB}$; 
-\item determina il picco massimo di ampiezza dello stesso canale $n$, considerando solo il segnale entro la selezione, e ne memorizza il valore $REL_{MAX-dB}$;
-\item determina il nuovo livello di FS corretto sfruttando la relazione:
-		\begin{equation}
-			FS_{FIX_dB}=FS_{USER_dB}-ABS_{MAX-dB}-REL_{MAX-dB}
-		\end{equation}
-\end{enumerate}
-	In tal modo, il livello di $FS$ specificato dall'utente sarà riscalato in relazione al 
-rapporto tra l'ampiezza massima assoluta del segnale, cioè quella determinata 
-lungo la sua intera durata, e l'ampiezza massima relativa allo spezzone selezionato. 
-	Grazie all'introduzione di questo algoritmo il \emph{plug-in} non deve calcolare l'intera convoluzione per poi, dopo aver applicato la correzione del FS, doverne scartare la maggior parte, ma viene svolta l’analisi solo sullo spezzone desiderato (??).
+	Il livello di fondo scala ($FS$) specificato dall'utente tramite la finestra di configurazione del \emph{ plug-in}, è inteso come livello massimo con il quale fornire un riferimento di pressione acustica al sensore.	
+	Posto che non sono ancora stati scoperti metodi efficaci per la taratura degli array microfonici, si dimostra comunque necessario effettuare una sorta di \emph{adeguamento} dei risultati per ottenere una mappa di significato fisico dal punto di vista quantitativo dei livelli sonori e non solo una corretta interpretazione proporzionale di questi.
+	Il problema è di natura elettroacustica e di elaborazione digitale dei segnali audio: il file \emph{wav} come altri standard di questo tipo, rappresentano il suono analogico attraverso il campionamento e la quantizzazione\footnote{appendice \ref{sec:}}, per poi assegnare a ogni \emph{sample } un valore compreso tra -1 e 1.
+	Ora, risulta chiaro che questi non possono essere direttamente la misura dei valori di pressione acustica incidente sulla capsula microfonica, ma sono invece rappresentativi del segnale elettrico in cui essa viene tradotta dal sensore.
 	
+	Per ritradurre l'informazione in pascal e ottenere quindi un informazione dal significato acustico preciso, è necessaria una operazione di \emph{taratura} dello strumento che permetta di misurare un segnale a frequenza e SPL note a priori, in modo da poter mappare la risposta del sensore ed effettuare una opportuna calibrazione applicando un guadagno in ingresso.
+	Non si è ancora riusciti a riprodurre questo procedimento su un sensore cosi complesso come un array microfonico, perciò si è escogitato uno stratagemma intuitivo che permetta di effettuare questo adeguamento facilmente, anche se senza pretesa di precisione assoluta.
+	Non si tratta infatti di un'operazione di taratura dello strumento, se non di un semplice\emph{adeguamento} dei risultati a una condizione di \emph{verosimiglianza fisica}.
+	
+	Si rende necessario quindi misurare, durante la registrazione con l'array microfonico, un segnale di riferimento, per esempio attraverso un fonometro calibrato, dal quale risalire al livello SPL di fondoscala della registrazione.
+	Una volta individuato il picco massimo in dB sarà sufficiente fornire questo valore al \emph{plug-in} in fase di configurazione e il software si occuperà di computare questo semplice adeguamento dei risultati senza variare i rapporti energetici tra i contenuti frequenziali alle varie bande o nelle diverse zone del campo acustico.
+	
+		
 	
 	
 	\section{\emph{Mirroring} dei microfoni virtuali}
@@ -123,7 +119,7 @@ continuità ai bordi della mappa.}
 	Il primo passo da fare è stabilire il metodo da seguire per determinare la griglia, ovvero la forma geometrica delle \emph{mesh} in cui l'intero piano xy andrà suddiviso. 
 La prima ipotesi potrebbe essere la suddivisione in aree di forma quadrata (come i meridiani e i paralleli del planisfero): questa ipotesi è valida se i microfoni virtuali, che costituiscono la griglia dei punti in cui i livelli sonori sono noti, sono disposti su una griglia uniforme. 
 
-	Come si può notare dalla Figura~\ref{fig:capsules}, le posizioni delle capsule dell'Eigenmike\textregistered purtroppo non lo sono, e se anche così fosse, lo sviluppo del plug-in sotto l'ipotesi di griglia uniforme avrebbe portato alla realizzazione di un software utilizzabile per un numero limitato di disposizioni dei microfoni virtuali. 
+	Come si può notare dalla Figura~\ref{fig:capsules}, le posizioni delle capsule dell'Eigenmike\textsuperscript{\textregistered} purtroppo non lo sono, e se anche così fosse, lo sviluppo del plug-in sotto l'ipotesi di griglia uniforme avrebbe portato alla realizzazione di un software utilizzabile per un numero limitato di disposizioni dei microfoni virtuali. 
 	
 	La seconda ipotesi è quella di suddividere l'intero piano xy in superfici di forma triangolare; 
 	in questo modo, anche nel caso in cui le posizioni dei microfoni fossero disposte nella maniera più casuale possibile, si potrà sempre determinare un insieme continuo di triangoli che copra l'intera superficie. 
@@ -132,7 +128,7 @@ La prima ipotesi potrebbe essere la suddivisione in aree di forma quadrata (come
 	
 	\emph{Una triangolazione di un insieme ﬁnito di punti $P \subset R^2$ viene detta di Delaunay se il cerchio circoscritto ad ogni triangolo è vuoto, ovvero nessun punto di $P$ vi giace all’interno}. 
 	
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA CAPSULE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA delaunay %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
   \centering
   \includegraphics[width = 8cm]{img/delaunay.png}
@@ -199,7 +195,7 @@ Sapendo che l'equazione generica di un piano può essere scritta nella forma:
 	Questa ipotesi sarebbe corretta nel caso in cui ad ogni vertice di ciascuna mesh fosse possibile associare un unico livello sonoro, ma ciò non può avvenire. 
 	Come si è visto nei precedenti capitoli, infatti, il \emph{plug-in} consente di effettuare una analisi in bande d'ottava\footnote{si veda la sezione \ref{sec:band} per la definizione delle bande utilizzate} dei livelli sonori, ovvero si avranno non una sola mappa dei livelli, bensì tante mappe quante sono le possibili bande d'ottava selezionabili. 
 	Per risolvere occorre usare come terza "coordinata" di ciascun vertice il numero del microfono virtuale posizionato nelle stesse coordinate del vertice (anzichè il livello sonoro) e memorizzare una matrice dei livelli sonori tale che, confrontando il numero del microfono virtuale con il numero identificativo della banda selezionata, fornisca il livello sonoro corretto per la determinazione dei coefficienti $A$, $B$, $C$ e $\det (M)$ necessari per la costruzione della mappa della particolare banda selezionata. 
-	Il processo di filtraggio è stato affrontato in modo trasparente grazie all'utilizzo di una classe già progettata per la suite di plug-in \textsf{Aurora} per \emph{Audacity\textregistered} \footnote{si veda \cite{aurora}} la quale già disponeva di tutte le funzioni membro necessarie ad implementare i filtraggi in bande d'ottava, come definiti secondo norma IEC-1260.
+	Il processo di filtraggio è stato affrontato in modo trasparente grazie all'utilizzo di una classe già progettata per la suite di plug-in \textsf{Aurora} per \emph{Audacity\textsuperscript{\textregistered} }\footnote{si veda \cite{aurora}} la quale già disponeva di tutte le funzioni membro necessarie ad implementare i filtraggi in bande d'ottava, come definiti secondo norma IEC-1260.
 	Infine, dopo l’operazione di filtraggio, è necessario creare un \emph{frame audio} cioè una mappa statica che rappresenti il contenuto del campo acustico nell'intervallo non infinitesimo di un frame\footnote{selezionato dall'utente come al paragrafo \ref{sec:framelength}} del video che si sta andando a costruire; occorre qui un calcolo del valore \emph{$L_{EQ}$}\footnote{definito alla sezione \ref{sec:leq}} dei segnali filtrati. 
 
 
@@ -237,7 +233,7 @@ Sapendo che l'equazione generica di un piano può essere scritta nella forma:
 	Inoltre conterrà una struttura di tipo \textsf{hash-map} contenenti i singoli \textsf{VideoFrame} contrassegnati dal numero di frame come chiave unica.
 	Ogni \textsf{VideoFrame} dal canto suo, conterrà le informazioni seguenti:
 	\begin{itemize}
-	\item \emph{timestamp} del frame ottenuta dal progetto \emph{Audacity\textregistered} al momento del salvataggio del \emph{chunck} audio,
+	\item \emph{timestamp} del frame ottenuta dal progetto \emph{Audacity\textsuperscript{\textregistered}} al momento del salvataggio del \emph{chunck} audio,
 	  \item Immagine \textsf{bitmap} di background corrispondente al frame più vicino alla timestamp di cui sopra,
 	  \item una matrice contenente per ogni canale \emph{virtuale} registrato (cioè per ogni microfono virtuale ricavato dai filtri di inversione) i valori $SPL$ filtrati secondo le 10 bande frequenziali con l'aggiunta del valore filtrato A ($dB(A)$) e del filtraggio lineare in banda stretta\footnote{???}
 	  \item una matrice contenente il valore $SPL$ per ogni pixel dell'immagine, ottenuto a seguito dell'interpolazione dei valori dei singoli microfoni virtuali.

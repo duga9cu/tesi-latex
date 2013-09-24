@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.7)  24 SEP 2013 05:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.7)  24 SEP 2013 21:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -102,12 +102,30 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count100
+\LTcapwidth=\dimen112
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count101
+\LT@rows=\count102
+\c@LT@tables=\count103
+\c@LT@chunks=\count104
+\LT@p@ftn=\toks25
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks25
+\KV@toks@=\toks26
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -129,10 +147,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count100
+\Gread@gobject=\count105
 ))
-\Gin@req@height=\dimen112
-\Gin@req@width=\dimen113
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -144,16 +162,16 @@ Package color Info: Driver file: pdftex.def on input line 130.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen114
-\extrarowheight=\dimen115
-\NC@list=\toks26
-\extratabsurround=\skip49
-\backup@length=\skip50
+\col@sep=\dimen115
+\extrarowheight=\dimen116
+\NC@list=\toks27
+\extratabsurround=\skip53
+\backup@length=\skip54
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-\everycr=\toks27
-\minrowclearance=\skip51
+\everycr=\toks28
+\minrowclearance=\skip55
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2013/05/16 v3.9f The Babel package
@@ -163,15 +181,15 @@ Language: italian 2008/03/14 v1.2t Italian support from the babel system
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2013/05/16 v3.9f Babel common definitions
-\babel@savecnt=\count101
-\U@D=\dimen116
+\babel@savecnt=\count106
+\U@D=\dimen117
 )
 Package babel Info: Making " an active character on input line 94.
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks28
-\inpenc@posthook=\toks29
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/applemac.def
 File: applemac.def 2008/03/30 v1.1d Input encoding file
@@ -300,15 +318,15 @@ Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip52
-\f@ncyO@elh=\skip53
-\f@ncyO@erh=\skip54
-\f@ncyO@olh=\skip55
-\f@ncyO@orh=\skip56
-\f@ncyO@elf=\skip57
-\f@ncyO@erf=\skip58
-\f@ncyO@olf=\skip59
-\f@ncyO@orf=\skip60
+\fancy@headwidth=\skip56
+\f@ncyO@elh=\skip57
+\f@ncyO@erh=\skip58
+\f@ncyO@olh=\skip59
+\f@ncyO@orh=\skip60
+\f@ncyO@elf=\skip61
+\f@ncyO@erf=\skip62
+\f@ncyO@olf=\skip63
+\f@ncyO@orf=\skip64
 )
 (./frontpage.sty)
 \@input{macros.aux}
@@ -323,10 +341,7 @@ LaTeX Warning: Label `eq:lambdac ' multiply defined.
 LaTeX Warning: Label ` eq:SPL' multiply defined.
 
 
-LaTeX Warning: Label `sec:eigenmike' multiply defined.
-
-
-LaTeX Warning: Label `sec:eigenmike' multiply defined.
+LaTeX Warning: Label `sec:' multiply defined.
 
 
 LaTeX Warning: Label `sec:' multiply defined.
@@ -337,49 +352,49 @@ LaTeX Warning: Label `sec:' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 61.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 62.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 62.
  (/usr/local/texlive/2013/texmf-dist/tex/generic/babel-greek/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 61.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 62.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 61.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 62.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count102
-\scratchdimen=\dimen117
-\scratchbox=\box28
-\nofMPsegments=\count103
-\nofMParguments=\count104
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count105
-\MPscratchDim=\dimen118
-\MPnumerator=\count106
-\makeMPintoPDFobject=\count107
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count107
+\scratchdimen=\dimen118
+\scratchbox=\box32
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen119
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks32
 ) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -428,40 +443,40 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 76.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 77.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 76.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 77.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 76.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 77.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 76.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 77.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 76.
+(Font)              <12> on input line 77.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 76.
+(Font)              <8> on input line 77.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 76.
-LaTeX Font Info:    Try loading font information for U+msa on input line 76.
+(Font)              <6> on input line 77.
+LaTeX Font Info:    Try loading font information for U+msa on input line 77.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 76.
+LaTeX Font Info:    Try loading font information for U+msb on input line 77.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -472,50 +487,50 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 84.
+less on input line 85.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 85.
+less on input line 86.
 
-(./dedication.tex) [2] (./thesis.toc [3
+(./dedication.tex) [2] (./thesis.toc
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 17.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [3
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 25.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 27.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
-\tf@toc=\write3
-\openout3 = `thesis.toc'.
-
-
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] (./thesis.lof
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 14.
- (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-[5
+[4])
+\tf@toc=\write3
+\openout3 = `thesis.toc'.
+
+ [5] (./thesis.lof [6
 
 ])
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
- [6] (./thesis.lot)
+ [7] (./thesis.lot)
 \tf@lot=\write5
 \openout5 = `thesis.lot'.
 
- [7
+ [8
 
 ] (./introd.tex
 Capitolo 1.
-<img/acousticmap.png, id=35, 1280.785pt x 635.37375pt>
+<img/acousticmap.png, id=39, 1280.785pt x 635.37375pt>
 File: img/acousticmap.png Graphic file (type png)
 
 <use img/acousticmap.png>
@@ -537,7 +552,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
 [2 <./img/acousticmap.png>]) (./acoust.tex [3]
 Capitolo 2.
-<img/motoarmonico.pdf, id=50, 1411.2725pt x 638.64966pt>
+<img/motoarmonico.pdf, id=54, 1411.2725pt x 638.64966pt>
 File: img/motoarmonico.pdf Graphic file (type pdf)
 
 <use img/motoarmonico.pdf>
@@ -545,77 +560,91 @@ Package pdftex.def Info: img/motoarmonico.pdf used on input line 20.
 (pdftex.def)             Requested size: 227.62204pt x 103.00461pt.
  [4
 
-] [5 <./img/motoarmonico.pdf>] [6]
-
-LaTeX Warning: Reference `eq:freqperiod' on page 7 undefined on input line 89.
-
-
+] [5 <./img/motoarmonico.pdf>] [6] [7]
 Underfull \hbox (badness 1231) in paragraph at lines 131--131
 []|\T1/lmr/m/it/12 Variazione di pres-sio-ne
  []
 
-[7] [8] <img/leq.pdf, id=78, 367.6655pt x 163.19188pt>
+[8] [9] <img/leq.pdf, id=85, 367.6655pt x 163.19188pt>
 File: img/leq.pdf Graphic file (type pdf)
  <use img/leq.pdf>
-Package pdftex.def Info: img/leq.pdf used on input line 211.
+Package pdftex.def Info: img/leq.pdf used on input line 215.
 (pdftex.def)             Requested size: 227.62204pt x 101.03348pt.
 
-[9] <img/orecchio.jpg, id=82, 486.91913pt x 373.99725pt>
+[10] <img/orecchio.jpg, id=89, 486.91913pt x 373.99725pt>
 File: img/orecchio.jpg Graphic file (type jpg)
 
 <use img/orecchio.jpg>
-Package pdftex.def Info: img/orecchio.jpg used on input line 236.
+Package pdftex.def Info: img/orecchio.jpg used on input line 240.
 (pdftex.def)             Requested size: 227.62204pt x 174.83711pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
-[10 <./img/leq.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
-<img/coclea.jpg, id=129, 370.38374pt x 319.94531pt>
+[11 <./img/leq.pdf>] <img/coclea.jpg, id=137, 370.38374pt x 319.94531pt>
 File: img/coclea.jpg Graphic file (type jpg)
- <use img/coclea.jpg>
-Package pdftex.def Info: img/coclea.jpg used on input line 249.
+
+<use img/coclea.jpg>
+Package pdftex.def Info: img/coclea.jpg used on input line 253.
 (pdftex.def)             Requested size: 227.62204pt x 196.62605pt.
-
-[11 <./img/orecchio.jpg>] <img/isophon.jpg, id=133, 629.35126pt x 401.5pt>
+ [12 <./img/orecchio.jpg> <./img/coclea.jpg>]
+<img/isophon.jpg, id=141, 629.35126pt x 401.5pt>
 File: img/isophon.jpg Graphic file (type jpg)
-
-<use img/isophon.jpg>
-Package pdftex.def Info: img/isophon.jpg used on input line 264.
+ <use img/isophon.jpg>
+Package pdftex.def Info: img/isophon.jpg used on input line 268.
 (pdftex.def)             Requested size: 227.62204pt x 145.21378pt.
- [12 <./img/coclea.jpg> <./img/isophon.jpg>]
-
-LaTeX Warning: Reference `sec:fft' on page 13 undefined on input line 287.
-
-
-Overfull \hbox (11.55359pt too wide) in paragraph at lines 290--291
+ [13 <./img/isophon.jpg>]
+Overfull \hbox (11.55359pt too wide) in paragraph at lines 295--296
 []\T1/lmr/m/n/12 se la lar-ghez-
  []
 
 
-Overfull \hbox (1.26805pt too wide) in paragraph at lines 306--348
- [][] 
- []
+LaTeX Warning: Reference `sec:fft' on page 14 undefined on input line 305.
 
-
-LaTeX Warning: Float too large for page by 75.03995pt on input line 350.
-
-<img/ponderaz.jpg, id=138, 704.6325pt x 400.49625pt>
+[14] <img/ponderaz.jpg, id=148, 704.6325pt x 400.49625pt>
 File: img/ponderaz.jpg Graphic file (type jpg)
- <use img/ponderaz.jpg>
-Package pdftex.def Info: img/ponderaz.jpg used on input line 359.
-(pdftex.def)             Requested size: 227.62204pt x 129.3714pt.
 
-[13] [14]) (./array.tex [15 <./img/ponderaz.jpg>]
+<use img/ponderaz.jpg>
+Package pdftex.def Info: img/ponderaz.jpg used on input line 368.
+(pdftex.def)             Requested size: 227.62204pt x 129.3714pt.
+ [15 <./img/ponderaz.jpg>]) (./array.tex [16] [17]
 Capitolo 3.
-) (./virtualmikes.tex [16
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 11.
+<img/eigensystem.png, id=160, 740.7675pt x 351.3125pt>
+File: img/eigensystem.png Graphic file (type png)
+
+<use img/eigensystem.png>
+Package pdftex.def Info: img/eigensystem.png used on input line 21.
+(pdftex.def)             Requested size: 412.56496pt x 195.66153pt.
+ [18
 
 ]
+<img/eigencapsules.png, id=165, 702.625pt x 313.17pt>
+File: img/eigencapsules.png Graphic file (type png)
+
+<use img/eigencapsules.png>
+Package pdftex.def Info: img/eigencapsules.png used on input line 33.
+(pdftex.def)             Requested size: 412.56496pt x 183.88942pt.
+ [19 <./img/eigensystem.png>]
+<img/normaISO2631.png, id=169, 293.095pt x 336.25626pt>
+File: img/normaISO2631.png Graphic file (type png)
+
+<use img/normaISO2631.png>
+Package pdftex.def Info: img/normaISO2631.png used on input line 51.
+(pdftex.def)             Requested size: 170.71652pt x 195.85483pt.
+
+
+LaTeX Warning: Float too large for page by 11.32764pt on input line 103.
+
+[20 <./img/eigencapsules.png>] [21] [22 <./img/normaISO2631.png>])
+(./virtualmikes.tex [23] [24]
 Capitolo 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -633,154 +662,164 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-) (./audacity.tex [17
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+) (./audacity.tex [25
+
+] [26]
 Capitolo 5.
-<img/audacity.jpg, id=155, 602.25pt x 515.9275pt>
+<img/audacity.jpg, id=193, 602.25pt x 515.9275pt>
 File: img/audacity.jpg Graphic file (type jpg)
  <use img/audacity.jpg>
 Package pdftex.def Info: img/audacity.jpg used on input line 7.
 (pdftex.def)             Requested size: 412.56496pt x 353.44757pt.
 
-[18
+[27
 
-] [19 <./img/audacity.jpg>] [20]
-<img/wxformbuilder.png, id=167, 1156.32pt x 873.2625pt>
+] [28 <./img/audacity.jpg>] [29]
+<img/wxformbuilder.png, id=206, 1156.32pt x 873.2625pt>
 File: img/wxformbuilder.png Graphic file (type png)
 
 <use img/wxformbuilder.png>
 Package pdftex.def Info: img/wxformbuilder.png used on input line 47.
 (pdftex.def)             Requested size: 412.56496pt x 311.5627pt.
- [21 <./img/wxformbuilder.png>] [22]
+ [30] [31 <./img/wxformbuilder.png>]
 
-LaTeX Warning: Reference `sec:ffmpeg' on page 23 undefined on input line 80.
+LaTeX Warning: Reference `sec:ffmpeg' on page 32 undefined on input line 80.
 
-) (./plugindesc.tex [23]
+) (./plugindesc.tex [32]
 Capitolo 6.
-[24
-
-] <img/audioselect.png, id=182, 1284.8pt x 739.76375pt>
+<img/audioselect.png, id=217, 1284.8pt x 739.76375pt>
 File: img/audioselect.png Graphic file (type png)
 
 <use img/audioselect.png>
-Package pdftex.def Info: img/audioselect.png used on input line 22.
+Package pdftex.def Info: img/audioselect.png used on input line 20.
 (pdftex.def)             Requested size: 341.43306pt x 196.58955pt.
+ [33
 
-<img/outofmemory.png, id=183, 1284.8pt x 715.67375pt>
+]
+<img/outofmemory.png, id=221, 1284.8pt x 715.67375pt>
 File: img/outofmemory.png Graphic file (type png)
 
 <use img/outofmemory.png>
-Package pdftex.def Info: img/outofmemory.png used on input line 34.
+Package pdftex.def Info: img/outofmemory.png used on input line 31.
 (pdftex.def)             Requested size: 341.43306pt x 190.18773pt.
- [25 <./img/audioselect.png>]
-<img/confdlgBIG.png, id=187, 717.68124pt x 549.05125pt>
+ [34 <./img/audioselect.png>]
+<img/confdlgBIG.png, id=225, 717.68124pt x 549.05125pt>
 File: img/confdlgBIG.png Graphic file (type png)
 
 <use img/confdlgBIG.png>
-Package pdftex.def Info: img/confdlgBIG.png used on input line 55.
+Package pdftex.def Info: img/confdlgBIG.png used on input line 52.
 (pdftex.def)             Requested size: 341.43306pt x 261.21257pt.
+ [35 <./img/outofmemory.png>]
 
+LaTeX Warning: Reference `sec:fir' on page 36 undefined on input line 63.
 
-LaTeX Warning: Reference `sec:fir' on page 26 undefined on input line 66.
+[36 <./img/confdlgBIG.png>] <img/maadlg.png, id=233, 1334.9875pt x 803.0pt>
+File: img/maadlg.png Graphic file (type png)
 
-[26 <./img/outofmemory.png>] [27 <./img/confdlgBIG.png>] [28]
-Overfull \hbox (3.669pt too wide) in paragraph at lines 98--99
+<use img/maadlg.png>
+Package pdftex.def Info: img/maadlg.png used on input line 80.
+(pdftex.def)             Requested size: 341.43306pt x 205.3688pt.
+ [37] [38 <./img/maadlg.png>]
+Overfull \hbox (3.669pt too wide) in paragraph at lines 96--97
 []\T1/lmr/m/n/12 consente, se-le-zio-nan-do l'ap-po-si-ta \T1/lmr/m/it/12 chec-
 
  []
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
-) (./internalfunct.tex [30]
+) (./internalfunct.tex [40]
 Capitolo 7.
-[31
+[41
 
-] [32] [33] [34] <img/spheric.pdf, id=221, 233.98286pt x 234.62758pt>
+] [42] [43] [44] [45] <img/spheric.pdf, id=267, 233.98286pt x 234.62758pt>
 File: img/spheric.pdf Graphic file (type pdf)
 
 <use img/spheric.pdf>
-Package pdftex.def Info: img/spheric.pdf used on input line 99.
+Package pdftex.def Info: img/spheric.pdf used on input line 95.
 (pdftex.def)             Requested size: 312.9803pt x 313.85872pt.
- <img/capsules.pdf, id=222, 430.5799pt x 209.48875pt>
+ [46 <./img/spheric.pdf>]
+<img/capsules.pdf, id=293, 430.5799pt x 209.48875pt>
 File: img/capsules.pdf Graphic file (type pdf)
-
-<use img/capsules.pdf>
-Package pdftex.def Info: img/capsules.pdf used on input line 115.
+ <use img/capsules.pdf>
+Package pdftex.def Info: img/capsules.pdf used on input line 111.
 (pdftex.def)             Requested size: 369.88582pt x 179.96501pt.
- [35]
+
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
  Make it at least 27.25061pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36 <./img/spheric.pdf> <./img/capsules.pdf>]
-<img/delaunay.png, id=272, 301.125pt x 307.90031pt>
+[47 <./img/capsules.pdf>] <img/delaunay.png, id=318, 301.125pt x 307.90031pt>
 File: img/delaunay.png Graphic file (type png)
- <use img/delaunay.png>
-Package pdftex.def Info: img/delaunay.png used on input line 138.
+
+<use img/delaunay.png>
+Package pdftex.def Info: img/delaunay.png used on input line 134.
 (pdftex.def)             Requested size: 227.62204pt x 232.75224pt.
+ [48] [49 <./img/delaunay.png (PNG copy)>] [50]
 
-[37] [38 <./img/delaunay.png (PNG copy)>]
+LaTeX Warning: Reference `sec:framelength' on page 51 undefined on input line 1
+99.
 
-LaTeX Warning: Reference `sec:framelength' on page 39 undefined on input line 2
-03.
 
-[39]
-Overfull \hbox (23.22906pt too wide) in paragraph at lines 209--209
+Overfull \hbox (23.22906pt too wide) in paragraph at lines 205--205
 []\T1/lmr/bx/n/17.28 Mappatura con sca-le cro-ma-ti-che e \T1/lmr/bx/it/17.28 a
 uto-scaling 
  []
 
-[40]
+[51]
 
-LaTeX Warning: Reference `sec:options' on page 41 undefined on input line 221.
+LaTeX Warning: Reference `sec:options' on page 52 undefined on input line 217.
 
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 247--249
+[52] [53]
+Underfull \hbox (badness 10000) in paragraph at lines 243--245
 
  []
 
-) (./endings.tex [42]
+) (./endings.tex [54]
 Capitolo 8.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 18--126
+Underfull \hbox (badness 10000) in paragraph at lines 18--127
 
  []
 
-(./appendix.tex [43
+(./appendix.tex [55
 
 ]
 Appendice A.
-[44
+[56
 
 ]
 Overfull \hbox (0.58997pt too wide) in paragraph at lines 54--58
 []\T1/lmr/m/n/12 Ipotizzando ra-gio-ne-vol-men-te va-ria-zio-
  []
 
-[45] [46] [47] [48]
+[57] [58] [59] [60] [61]
 Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
-[49]) (./thesis.bbl [50]
-Underfull \hbox (badness 1303) in paragraph at lines 20--23
+) (./thesis.bbl [62]
+Underfull \hbox (badness 1303) in paragraph at lines 25--28
 []\T1/lmr/m/sc/12 S. Cin-go-la-ni e R. Spa-gno-lo (a cu-ra di)\T1/lmr/m/n/12 , 
 \T1/lmr/m/it/12 Acu-sti-ca mu-si-ca-le e
  []
 
-) (./thanks.tex [51
+) (./thanks.tex [63
 
-]) [52] [53] (./thesis.aux)
+]) [64] [65] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -789,19 +828,19 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4171 strings out of 493315
- 58607 string characters out of 6137905
- 139070 words of memory out of 5000000
- 7421 multiletter control sequences out of 15000+600000
- 131938 words of font info for 81 fonts, out of 8000000 for 9000
+ 4299 strings out of 493315
+ 60371 string characters out of 6137905
+ 157869 words of memory out of 5000000
+ 7538 multiletter control sequences out of 15000+600000
+ 141881 words of font info for 91 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,13n,44p,866b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2013/t
-exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2013/texmf-dist/
-fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2013/texmf-dist/fonts/enc/
-dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/l
-m-ts1.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
+ 38i,16n,44p,866b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
+13/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2013/texmf-dist/
+fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvi
+ps/lm/lm-mathex.enc}{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-m
+athsy.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
 l/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2013/tex
@@ -816,16 +855,16 @@ t/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
 1/public/lm/lmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/
 lmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmri10.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local
-/texlive/2013/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2013/texmf-
-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2013/texmf-dist/fonts
-/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
-ublic/lm/lmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/l
-msy8.pfb>
-Output written on thesis.pdf (60 pages, 5838435 bytes).
+/texlive/2013/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2013/texmf-d
+ist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/public/lm/lmss12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
+ic/lm/lmssbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lm
+sy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on thesis.pdf (73 pages, 7416924 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
+ 475 PDF objects out of 1000 (max. 8388607)
+ 325 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

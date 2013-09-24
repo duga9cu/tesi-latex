@@ -86,7 +86,7 @@
 		\lambda=\frac{c_0}{f} ,
 	\end{equation}
 	
-			o alternativamente sfruttando la definizione \ref{eq:freqperiod}:
+			o alternativamente sfruttando la proporzionalità inversa tra \emph{frequenza} e \emph{periodo}:
 			
 	\begin{equation}
 	\label{eq:lambdac }
@@ -169,6 +169,8 @@
 		La scala dei decibel può quindi essere applicata a qualunque grandezza. 
 		Nel momento in cui essa viene applicata alla variazione di pressione di un suono si parla di \emph{Livello di Pressione} (o \emph{Sound Pressure Level} $SPL$).		
 	
+	
+	
 	\subsection{Livello di pressione}
 	
 		Quasi mai in acustica si fa riferimento alla pressione direttamente in pascal, si usa piuttosto misurare in dB e, per dare un significato energetico alla misura, si usa considerare il quadrato del valore di variazione di pressione. Si definisce quindi il \emph{livello di pressione acustica $L$} (o SPL: Sound Pressure Level):
@@ -188,6 +190,8 @@
 		dove $p_0$ sia il valore di scostamento di pressione usato come riferimento riferimento, scelto dal sistema internazionale uguale a 20 $\mu Pa$ che come abbiamo visto poco sopra nell'equazione \ref{eq:udibile} corrisponde alla soglia di udibilità a $1000 \, Hz$ nell'atmosfera in condizioni standard\footnote{	Per una spiegazione più dettagliata sui livelli sonori si veda l'appendice ~\ref{sec:levels} }.
 
 
+	
+	
 	\subsection{Livello equivalente}
 	\label{sec:leq}
 	In applicazioni reali, usualmente ci si trova in presenza di sorgenti caratterizzate da un valore $SPL$ non costante nel tempo, delle quali occorre valutare la \emph{rumorosità}. 
@@ -272,6 +276,8 @@ L_{EQ} = 10 \log\biggr(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt\biggr)
 	
 	Essendo dunque tutto il sistema uditivo umano molto soggetto, nella sua risposta all'eccitamento acustico, alla frequenza dell'onda incidente, è spesso comodo analizzare i fenomeni acustici solo per alcune \emph{bande} di frequenza.	
 
+	
+	
 	\subsection{Bande frequenziali }
 		\label{sec:band}
 		
@@ -284,8 +290,7 @@ L’analisi in frequenza può essere di due tipi:
 		se \emph{ $\Delta f=fs - fi=costante$ } cioè suddivisione a bande frequenziali di uguale larghezza.
 		Tipicamente impiegata per analisi approfondite della composizione in frequenza. 
 		Solitamente viene usata per misure nel campo delle vibrazioni delle strutture o delle macchine.
-		Viene ottenuta con una tecnica di elaborazione matematica detta FFT (Fast Fourier Transform)\footnote{si veda il capitolo~\ref{sec:fft}}
-		
+				
 \item[analisi a banda percentuale costante da 1/1 o 1/3 di ottava:]
 		se la larghezza di banda $\Delta f$ è una percentuale costante del valore della frequenza nominale di centro-banda che caratterizza la banda stessa.
 		
@@ -297,12 +302,15 @@ L’analisi in frequenza può essere di due tipi:
 		Possono essere usati “banchi” di 10 filtri (ottave) o 30 filtri (terzi), ottenuti con circuiti analogici o digitali (filtri IIR)
 \end{description}
 		
+		Entrambe le analisi vengono ottenute tramite un'operazione detta di  \emph{filtraggio}, il quale può essere ottenuto con una tecnica di elaborazione matematica detta FFT (Fast Fourier Transform)\footnote{si veda il capitolo~\ref{sec:fft}}, passando al dominio della frequenza, oppure è possibile effettuare un filtraggio nel dominio del tempo, anche se più oneroso.
+
 		Nella Tabella~\ref{tab:band} sono definite le diverse bande e relative frequenze di centro-banda per le due diverse analisi descritte.
 		
-				
+	
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABELLA BANDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[tp]
   \centering
+  \scalebox{0.7}{
   \begin{tabular}{p{2cm}p{2cm}p{2cm}|p{2cm}p{2cm}p{2cm}}
   
     \multicolumn{3}{c}{\emph{Bande di $1/1$ ottava}} &     \multicolumn{3}{c}{\emph{Bande di $1/3$ ottava}} \\
@@ -345,10 +353,11 @@ L’analisi in frequenza può essere di due tipi:
   	$\;$		&	$\;$		&	$\;$		&	$14,1$	&	$16$		&	$17,8$	\\
   
     \end{tabular}
+}
+%endfontsize		
   \caption{Definizione delle diverse bande e relative frequenze di centro-banda per le due diverse analisi descritte.}
   \label{tab:band}
 \end{table}
-		
 		
 	\subsection{Filtri di ponderazione}
 		\label{sec:ponderaz}

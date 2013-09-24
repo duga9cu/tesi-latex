@@ -8,15 +8,166 @@ Nel presente capitolo verranno presentati i tre diversi tipi di array microfonic
   \item[ Planare:] array microfonico
 \end{description}
 
-\section{Array sferico: Eigenmike}
+\section{Array sferico: \emph{Eigenmike\textsuperscript{\texttrademark} EM32}}
 \label{sec:eigenmike}
+	Si tratta del primo array microfonico utilizzato per lo sviluppo del software, fornito all’Università di Parma dal Centro Ricerche RAI di Torino nell’ambito di un progetto di collaborazione, viene prodotto dalla società americana \emph{mhAcoustic}\footnote{www.mhacoustics.com} ed è probabilmente il primo sistema così portatile della sua categoria ad essere stato commercializzato.
+	
+	 
+	\subsection{Composizione del sistema}
+	\label{sec:eigensystem}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA sistema eigen %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width =14.5cm]{img/eigensystem.png}
+  \caption{Struttura del sistema \emph{Eigenmike\textsuperscript{\texttrademark} EM32}}
+  \label{fig:eigensystem}
+\end{figure}
+	Come possiamo notare dalla figura \ref{fig:eigensystem}, il sistema \emph{Eigenmike\textsuperscript{\texttrademark} EM32} viene fornito dalla casa produttrice \emph{mhAcoustic} nella composizione di un array microfonico sferico a 32 capsule, relativa interfaccia di controllo \emph{EMIB}, i quali devono venire interfacciati attraverso il software corredato, con un computer che si occuperà di salvare su hard disk le sessioni di registrazione dell'array.
+	
+	L'array microfonico è costituito da una sfera di alluminio anodizzato con raggio di 42 mm sulla cui superficie sono disposte in modo relativamente uniforme 32 capsule di tipo \emph{electret} di elevata qualità.
+	La conoscenza della disposizione precisa delle capsule è di grande importanza al fine di mappare queste ultime su una proiezione dello sfondo, come verrà spiegato al capitolo \ref{sec:}.
+	
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA capsules eigen %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width =14.5cm]{img/eigencapsules.png}
+  \caption{Disposizione delle capsule dell' array microfonico \emph{Eigenmike\textsuperscript{\texttrademark} EM32}}
+  \label{fig:eigencapsules}
+\end{figure}
+	
+	Possiamo intenderne il preciso assetto dall'osservazione della figura \ref{fig:eigencapsules}.
+	All’interno della sfera sono alloggiati l’intera circuiteria analogica di preamplificazione con guadagno controllabile via software, nonché i convertitori A/D in grado di campionare i segnali delle capsule con risoluzione fino a $24\, bit$ e frequenza di campionamento di $44100\, Hz$.
+	I segnali vengono quindi trasferiti all’interfaccia \emph{EMIB} mediante un collegamento digitale garantendo l'immunità ai disturbi e con grande guadagno in comodità, ingombro e risparmio di cablaggi audio XLR.
+	Lo stesso sistema di preamplificazione analogica consente anche di compensare le differenze di sensibilità esistenti tra una capsula e l'altra per ottenere scostamenti compresi tra $\pm0.5 \,dB$. 
+	La mhAcoustics caratterizza infatti la sensibilità delle capsule una a una, e fornisce all'acquirente un file di testo contenente i 32 valori che corrispondono ai guadagni in dB necessari alla compensazione
+	Questi valori, una volta caricati sulla EEPROM contenuta all'interno del microfono stesso, vengono automaticamente sommati ad ogni variazione del guadagno in modo da effettuare la compensazione di sensibilità in modo totalmente trasparente. 
+
+	
+	
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA normaISO2631  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[width =6cm]{img/normaISO2631.png}
+  \caption{Angoli di riferimento e loro direzioni relative per la descrizione sferica rispetto al sistema di riferimento antropometrico secondo la norma ISO2631. }
+  \label{fig:normaISO2631}
+\end{figure}
+	
+	Al fine di effettuare la mappature delle capsule ricercata, sono necessarie le coordinate sferiche descritte dagli angoli di \emph{azimut} e \emph{elevation}.
+	Per questa descrizione si è fatto riferimento alla norma ISO2631 che viene descritta nella figura \ref{fig:normaISO2631}.
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABELLA coordinate sferiche %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[tp]
+  \centering
+    \scalebox{0.8}{
+  \begin{tabular}{r | r r | r r}
+    \emph{mic \#} & \emph{ $\theta$ $[rad]$} & \emph{$\varphi$ $[rad]$} & \emph{ $\theta$ $[^{o}]$} & \emph{$\varphi$ $[^{o}]$} \\
+    \hline
+    1           			& $ 0,000$	&$0,367$		&$0$		&$21$ \\
+    2           			& $ 0,559$	&$0,000$		&$32$		&$0$ \\
+    3           			& $ 0,000$	&$-0,367$	&$0$		&$-21$ \\
+    4           			& $ 5,725$	&$0,000$		&$328$		&$0$ \\
+    5           			& $ 0,000$	&$1.012$		&$0$		&$58$ \\
+    6           			& $ 0,785$	&$0,611$		&$45$		&$35$ \\
+    7           			& $ 1,204$	&$0,000$		&$69$		&$0$ \\
+    8           			& $ 0,785$	&$-0,611$	&$45$		&$-35$ \\
+    9           			& $ 0,000$	&$-1,012$	&$0$		&$-58$ \\
+    10           		& $ 5,498$	&$-0,611$		&$315$		&$-35$ \\
+    11         			& $ 5,079$	&$0,000$		&$291$		&$0$ \\
+    12         			& $ 5,498$	&$0,611$		&$315$		&$35$ \\
+    13         			& $ 1,588$	&$1,204$		&$91$		&$69$ \\
+    14         			& $ 1,571$	&$0,559$		&$90$		&$32$ \\
+    15         			& $ 1,571$	&$-0,541$		&$90$		&$-31$ \\
+    16         			& $ 1,553$	&$-1,204$		&$89$		&$-69$ \\
+    17         			& $ 3,142$	&$0,367$		&$180$		&$21$ \\
+    18         			& $ 3,700$	&$0,000$		&$212$		&$0$ \\
+    19         			& $ 3,142$	&$-0,367$		&$180$		&$-21$ \\
+    20         			& $ 2,583$	&$0,000$		&$148$		&$0$ \\
+    21		         		& $ 3,142$	&$1,012$		&$180$		&$58$ \\
+    22     			& $ 3,927$	&$0,611$		&$225$		&$35$ \\
+    23       			& $ 4,346$	&$0,000$		&$249$		&$0$ \\
+    24       			& $ 3,927$	&$-0,611$		&$225$		&$-35$ \\
+    25       			& $ 3,142$	&$-1,012$		&$180$		&$-58$ \\
+    26       			& $ 2,356$	&$-0,611$		&$135$		&$-35$ \\
+    27       			& $ 1,937$	&$0,000$		&$111$		&$0$ \\
+    28       			& $ 2,356$	&$0,611$		&$135$		&$35$ \\
+    29       			& $ 4,695$	&$1,204$		&$269$		&$69$ \\
+    30       			& $ 4,712$	&$0,559$		&$270$		&$32$ \\
+    31       			& $ 4,712$	&$-0,559$		&$270$		&$-32$ \\
+    32       			& $ 4,730$	&$-1,204$		&$271$		&$-69$ \\
+ 
+  \end{tabular}
+  }
+  \caption{Coordinate sferiche antropometriche delle direzioni delle capsule fornite sia in gradi che in radianti secondo la norma ISO2631 descritta in figura \ref{fig:normaISO2631} }
+  \label{tab:capsulescoord}
+\end{table}
+	
+	
+	
+	%\subsection{interfaccia EMIB}
+	
+	
+	
+	
+	%\subsection{software corredato all'eigenmike}	
+	
+	
+	
+	\subsection{Limiti intrinseci teorici del sistema}
+	\label{eigenlimits}
+	Per la morfologia dell'oggetto \emph{array di microfoni} in questione è possibile calcolare alcuni limiti operativi intrinseci e confrontarli con quelli dichiarati dalla casa produttrice.
+	
+	In primo luogo, secondo il \emph{teorema di Shannon}, dovrebbe verificarsi un fenomeno di \emph{aliasing spaziale} se si tentassero di decodificare segnali di una frequenza maggiore di quella limite. 
+	Per poter essere decodificata correttamente, infatti, un onda sonora di lunghezza d'onda $\lambda$, dovrebbe essere campionata \emph{nello spazio} un numero doppio di volte rispetto alla frequenza dell'onda che si vuole campionare.
+	Si può quindi scrivere una relazione che lega la massima frequenza decodificabile prima dell'introduzione di effetti di \emph{aliasing}, che chiameremo $f_{alias}$, con la distanza di campionamento, cioè la distanza minima tra le capsule $d$, che è funzione dell'angolo tra le capsule $\gamma$ e il raggio $R$ della sfera, e quindi anche del numero di capsule del microfono:
+	\begin{equation}
+	\label{eq:eigenalias}
+	f_{alias}=\frac{v}{2\cdot \lambda} = \frac{v}{2\cdot d} \approx \frac{v}{2\cdot R \cdot \gamma}\; , \; 
+\end{equation}
+	essendo $v$ la velocità del suono.
+	
+	Osservando la disposizione delle capsule descritta in tabella \ref{tab:capsulescoord} si può notare che ci sono due possibili spaziature angolari fra le capsule, abbastanza simili tra loro:
+\begin{equation} 
+\left\{
+\begin{aligned}
+& \gamma_{1-5}=1,012-0,367 = 0,645  \\
+& \gamma_{1-3}=0,367-(-0,367) = 0,734
+\end{aligned}
+\right.
+\end{equation}
+	dove $\gamma_{1-5}$ rappresenta la spaziatura tra le capsule 1 e 5 mentre $\gamma_{1-3}$ tra quelle contrassegnate dai numeri 1 e 3.
+	
+	Sostituendo queste spaziature minime nella equazione \ref{eq:eigenalias},
+	\begin{equation} 
+\left\{
+\begin{aligned}
+& f_{alias\;1-5} \approx \frac{v}{2\cdot R \cdot \gamma_{1-5}} = \frac{343}{2 \cdot 42 \cdot 10^{-3} \cdot 0,645} = 6,3\;[kHz] \\
+& f_{alias\;1-3} \approx \frac{v}{2\cdot R \cdot \gamma_{1-3}} = \frac{343}{2 \cdot 42 \cdot 10^{-3} \cdot 0,734} = 5,6\;[kHz]
+\end{aligned}
+\right.
+\end{equation}
+	Quindi la massima frequenza operativa sembra essere intorno ai 5,5 kHz. 
+	Tuttavia è bene precisare che tale relazione è valida sotto precise semplificazioni geometriche e quindi solamente per array lineari uniformi.
+	La banda passante dichiarata dal costruttore, invece, è dell'ordine dei 10 kHz, quindi ampiamente superiore al valore appena calcolato.
+	
+	Un’altra importante relazione emerge dalla scomposizione del campo sonoro in serie di 
+\emph{Fourier-Bessel} e consente di stimare il massimo ordine ($L$) delle armoniche \emph{Ambisonic} ottenibili da un microfono sferico con $N$ capsule. 
+\begin{equation}
+	\label{eq:eigenbressel}
+		(L+1)^2 \le N
+	\end{equation}
+	
+	dalla quale deriva, essendo il numero di ordine delle armoniche strettamente non negativo,
+	\begin{equation}
+		L \le \sqrt{ N} - 1 = \sqrt{32}-1=4,7	
+	\end{equation}
+	
+	Risulta quindi che il sensore è in grado di generare microfoni virtuali supercardioidi con direttività fino al $4^{\circ}$ ordine, mentre la casa costruttrice ha impostato il sistema per la generazione di microfoni virtuali fino alla massima direttività del $3^{\circ}$ ordine.
+	
+	[...]
 
 
-
-\section{Array cilindrico}
-\label{sec:eigenmike}
-
-
-
-\section{Array planare}
-\label{sec:eigenmike}
+\section{Altri Array}
+	
+	
+	[...]
