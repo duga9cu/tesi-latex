@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.7)  23 SEP 2013 10:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.7)  24 SEP 2013 05:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -480,7 +480,12 @@ less on input line 85.
 
 (./dedication.tex) [2] (./thesis.toc [3
 
-])
+]
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 25.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
@@ -491,13 +496,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] (./thesis.lof)
+[4] (./thesis.lof
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 14.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+[5
+
+])
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
- [5
-
-] [6] (./thesis.lot)
+ [6] (./thesis.lot)
 \tf@lot=\write5
 \openout5 = `thesis.lot'.
 
@@ -505,17 +515,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ] (./introd.tex
 Capitolo 1.
-<img/acousticmap.png, id=33, 1280.785pt x 635.37375pt>
+<img/acousticmap.png, id=35, 1280.785pt x 635.37375pt>
 File: img/acousticmap.png Graphic file (type png)
 
 <use img/acousticmap.png>
 Package pdftex.def Info: img/acousticmap.png used on input line 15.
 (pdftex.def)             Requested size: 412.56496pt x 204.66165pt.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 20.
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 20.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -532,7 +537,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
 [2 <./img/acousticmap.png>]) (./acoust.tex [3]
 Capitolo 2.
-<img/motoarmonico.pdf, id=49, 1411.2725pt x 638.64966pt>
+<img/motoarmonico.pdf, id=50, 1411.2725pt x 638.64966pt>
 File: img/motoarmonico.pdf Graphic file (type pdf)
 
 <use img/motoarmonico.pdf>
@@ -549,13 +554,13 @@ Underfull \hbox (badness 1231) in paragraph at lines 131--131
 []|\T1/lmr/m/it/12 Variazione di pres-sio-ne
  []
 
-[7] [8] <img/leq.pdf, id=77, 367.6655pt x 163.19188pt>
+[7] [8] <img/leq.pdf, id=78, 367.6655pt x 163.19188pt>
 File: img/leq.pdf Graphic file (type pdf)
  <use img/leq.pdf>
 Package pdftex.def Info: img/leq.pdf used on input line 211.
 (pdftex.def)             Requested size: 227.62204pt x 101.03348pt.
 
-[9] <img/orecchio.jpg, id=81, 486.91913pt x 373.99725pt>
+[9] <img/orecchio.jpg, id=82, 486.91913pt x 373.99725pt>
 File: img/orecchio.jpg Graphic file (type jpg)
 
 <use img/orecchio.jpg>
@@ -571,13 +576,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
-<img/coclea.jpg, id=128, 370.38374pt x 319.94531pt>
+<img/coclea.jpg, id=129, 370.38374pt x 319.94531pt>
 File: img/coclea.jpg Graphic file (type jpg)
  <use img/coclea.jpg>
 Package pdftex.def Info: img/coclea.jpg used on input line 249.
 (pdftex.def)             Requested size: 227.62204pt x 196.62605pt.
 
-[11 <./img/orecchio.jpg>] <img/isophon.jpg, id=132, 629.35126pt x 401.5pt>
+[11 <./img/orecchio.jpg>] <img/isophon.jpg, id=133, 629.35126pt x 401.5pt>
 File: img/isophon.jpg Graphic file (type jpg)
 
 <use img/isophon.jpg>
@@ -600,7 +605,7 @@ Overfull \hbox (1.26805pt too wide) in paragraph at lines 306--348
 
 LaTeX Warning: Float too large for page by 75.03995pt on input line 350.
 
-<img/ponderaz.jpg, id=137, 704.6325pt x 400.49625pt>
+<img/ponderaz.jpg, id=138, 704.6325pt x 400.49625pt>
 File: img/ponderaz.jpg Graphic file (type jpg)
  <use img/ponderaz.jpg>
 Package pdftex.def Info: img/ponderaz.jpg used on input line 359.
@@ -636,47 +641,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
 ]
 Capitolo 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-) (./plugindesc.tex
-Underfull \hbox (badness 10000) in paragraph at lines 22--1
-
- []
+<img/audacity.jpg, id=155, 602.25pt x 515.9275pt>
+File: img/audacity.jpg Graphic file (type jpg)
+ <use img/audacity.jpg>
+Package pdftex.def Info: img/audacity.jpg used on input line 7.
+(pdftex.def)             Requested size: 412.56496pt x 353.44757pt.
 
 [18
 
-]
-Capitolo 6.
-[19
+] [19 <./img/audacity.jpg>] [20]
+<img/wxformbuilder.png, id=167, 1156.32pt x 873.2625pt>
+File: img/wxformbuilder.png Graphic file (type png)
 
-] <img/audioselect.png, id=161, 1284.8pt x 739.76375pt>
+<use img/wxformbuilder.png>
+Package pdftex.def Info: img/wxformbuilder.png used on input line 47.
+(pdftex.def)             Requested size: 412.56496pt x 311.5627pt.
+ [21 <./img/wxformbuilder.png>] [22]
+
+LaTeX Warning: Reference `sec:ffmpeg' on page 23 undefined on input line 80.
+
+) (./plugindesc.tex [23]
+Capitolo 6.
+[24
+
+] <img/audioselect.png, id=182, 1284.8pt x 739.76375pt>
 File: img/audioselect.png Graphic file (type png)
 
 <use img/audioselect.png>
 Package pdftex.def Info: img/audioselect.png used on input line 22.
 (pdftex.def)             Requested size: 341.43306pt x 196.58955pt.
 
-<img/outofmemory.png, id=162, 1284.8pt x 715.67375pt>
+<img/outofmemory.png, id=183, 1284.8pt x 715.67375pt>
 File: img/outofmemory.png Graphic file (type png)
 
 <use img/outofmemory.png>
 Package pdftex.def Info: img/outofmemory.png used on input line 34.
 (pdftex.def)             Requested size: 341.43306pt x 190.18773pt.
- [20 <./img/audioselect.png>]
-<img/confdlgBIG.png, id=166, 717.68124pt x 549.05125pt>
+ [25 <./img/audioselect.png>]
+<img/confdlgBIG.png, id=187, 717.68124pt x 549.05125pt>
 File: img/confdlgBIG.png Graphic file (type png)
 
 <use img/confdlgBIG.png>
@@ -684,106 +686,101 @@ Package pdftex.def Info: img/confdlgBIG.png used on input line 55.
 (pdftex.def)             Requested size: 341.43306pt x 261.21257pt.
 
 
-LaTeX Warning: Reference `sec:fir' on page 21 undefined on input line 66.
+LaTeX Warning: Reference `sec:fir' on page 26 undefined on input line 66.
 
-[21 <./img/outofmemory.png>] [22 <./img/confdlgBIG.png>] [23]
+[26 <./img/outofmemory.png>] [27 <./img/confdlgBIG.png>] [28]
 Overfull \hbox (3.669pt too wide) in paragraph at lines 98--99
 []\T1/lmr/m/n/12 consente, se-le-zio-nan-do l'ap-po-si-ta \T1/lmr/m/it/12 chec-
 
  []
 
-[24]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
-) (./internalfunct.tex [25]
+) (./internalfunct.tex [30]
 Capitolo 7.
-[26
+[31
 
-]
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 38.
- (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [27] [28]
-[29] <img/spheric.pdf, id=201, 233.98286pt x 234.62758pt>
+] [32] [33] [34] <img/spheric.pdf, id=221, 233.98286pt x 234.62758pt>
 File: img/spheric.pdf Graphic file (type pdf)
 
 <use img/spheric.pdf>
 Package pdftex.def Info: img/spheric.pdf used on input line 99.
 (pdftex.def)             Requested size: 312.9803pt x 313.85872pt.
- <img/capsules.pdf, id=202, 430.5799pt x 209.48875pt>
+ <img/capsules.pdf, id=222, 430.5799pt x 209.48875pt>
 File: img/capsules.pdf Graphic file (type pdf)
 
 <use img/capsules.pdf>
 Package pdftex.def Info: img/capsules.pdf used on input line 115.
 (pdftex.def)             Requested size: 369.88582pt x 179.96501pt.
- [30]
+ [35]
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
  Make it at least 27.25061pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31 <./img/spheric.pdf> <./img/capsules.pdf>]
-<img/delaunay.png, id=252, 301.125pt x 307.90031pt>
+[36 <./img/spheric.pdf> <./img/capsules.pdf>]
+<img/delaunay.png, id=272, 301.125pt x 307.90031pt>
 File: img/delaunay.png Graphic file (type png)
  <use img/delaunay.png>
 Package pdftex.def Info: img/delaunay.png used on input line 138.
 (pdftex.def)             Requested size: 227.62204pt x 232.75224pt.
 
-[32] [33 <./img/delaunay.png (PNG copy)>]
+[37] [38 <./img/delaunay.png (PNG copy)>]
 
-LaTeX Warning: Reference `sec:framelength' on page 34 undefined on input line 2
+LaTeX Warning: Reference `sec:framelength' on page 39 undefined on input line 2
 03.
 
-[34]
+[39]
 Overfull \hbox (23.22906pt too wide) in paragraph at lines 209--209
 []\T1/lmr/bx/n/17.28 Mappatura con sca-le cro-ma-ti-che e \T1/lmr/bx/it/17.28 a
 uto-scaling 
  []
 
-[35]
+[40]
 
-LaTeX Warning: Reference `sec:options' on page 36 undefined on input line 221.
+LaTeX Warning: Reference `sec:options' on page 41 undefined on input line 221.
 
-[36]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 247--249
 
  []
 
-) (./endings.tex [37]
+) (./endings.tex [42]
 Capitolo 8.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 18--126
 
  []
 
-(./appendix.tex [38
+(./appendix.tex [43
 
 ]
 Appendice A.
-[39
+[44
 
 ]
 Overfull \hbox (0.58997pt too wide) in paragraph at lines 54--58
 []\T1/lmr/m/n/12 Ipotizzando ra-gio-ne-vol-men-te va-ria-zio-
  []
 
-[40] [41] [42] [43]
+[45] [46] [47] [48]
 Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
-[44]) (./thesis.bbl [45]
+[49]) (./thesis.bbl [50]
 Underfull \hbox (badness 1303) in paragraph at lines 20--23
 []\T1/lmr/m/sc/12 S. Cin-go-la-ni e R. Spa-gno-lo (a cu-ra di)\T1/lmr/m/n/12 , 
 \T1/lmr/m/it/12 Acu-sti-ca mu-si-ca-le e
  []
 
-) (./thanks.tex [46
+) (./thanks.tex [51
 
-]) [47] [48] (./thesis.aux)
+]) [52] [53] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -792,13 +789,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4156 strings out of 493315
- 58311 string characters out of 6137905
- 139048 words of memory out of 5000000
- 7408 multiletter control sequences out of 15000+600000
- 126402 words of font info for 79 fonts, out of 8000000 for 9000
+ 4171 strings out of 493315
+ 58607 string characters out of 6137905
+ 139070 words of memory out of 5000000
+ 7421 multiletter control sequences out of 15000+600000
+ 131938 words of font info for 81 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,13n,43p,866b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,13n,44p,866b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2013/t
 exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2013/texmf-dist/
@@ -822,12 +819,13 @@ lmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmri10.pfb><
 /texlive/2013/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2
 013/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2013/texmf-
 dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2013/texmf-dist/fonts
-/type1/public/lm/lmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
-lic/lm/lmsy8.pfb>
-Output written on thesis.pdf (55 pages, 5353654 bytes).
+/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
+ublic/lm/lmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/l
+msy8.pfb>
+Output written on thesis.pdf (60 pages, 5838435 bytes).
 PDF statistics:
- 396 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
+ 417 PDF objects out of 1000 (max. 8388607)
+ 287 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -22,27 +22,27 @@
 \contentsline {section}{\numberline {4.2}Sistema di Elaborazione}{17}
 \contentsline {section}{\numberline {4.3}Implementazione del calcolo convolutivo}{17}
 \contentsline {chapter}{\numberline {5}Ambiente di Sviluppo: l'host Audacity}{18}
-\contentsline {section}{\numberline {5.1}Libreria per la costruzione di interfacce grafiche \emph {wxWidgets}}{18}
-\contentsline {section}{\numberline {5.2}Altre librerie}{18}
-\contentsline {section}{\numberline {5.3}Libreria per elaborazione audio-video: \emph {ffmpeg}}{18}
-\contentsline {chapter}{\numberline {6}Descrizione plug-in: un manuale d'uso}{19}
-\contentsline {section}{\numberline {6.1}Selezione dell'intervallo temporale da analizzare}{19}
-\contentsline {section}{\numberline {6.2}Finestra di configurazione}{21}
-\contentsline {section}{\numberline {6.3}Interfaccia principale}{23}
-\contentsline {section}{\numberline {6.4}Esportazione dei risultati}{25}
-\contentsline {chapter}{\numberline {7}Dettagli di Implementazione}{26}
-\contentsline {section}{\numberline {7.1}Acquisizione dei dati in ingresso}{27}
-\contentsline {section}{\numberline {7.2}Organizzazione del carico computazionale}{28}
-\contentsline {section}{\numberline {7.3}Livello di fondo scala}{29}
-\contentsline {section}{\numberline {7.4}\emph {Mirroring} dei microfoni virtuali}{30}
-\contentsline {section}{\numberline {7.5}\emph {Meshing} della superficie mediante l'operazione di triangolazione di \emph {Delaunay}}{30}
-\contentsline {section}{\numberline {7.6}Interpolazione dei valori acquisiti e filtraggio in bande d'ottava}{33}
-\contentsline {section}{\numberline {7.7}Mappatura con scale cromatiche e \emph {auto-scaling}}{35}
-\contentsline {section}{\numberline {7.8}Esportazione dei risultati}{36}
-\contentsline {chapter}{\numberline {8}Conclusioni}{38}
-\contentsline {chapter}{\numberline {A}Appendice}{39}
-\contentsline {section}{\numberline {A.1}Propagazione di onde sonore}{39}
-\contentsline {section}{\numberline {A.2}Intensit\`a, densit\`a di energia e potenza}{41}
-\contentsline {section}{\numberline {A.3}Livelli sonori}{42}
-\contentsline {section}{\numberline {A.4}Curve di ponderazione}{44}
-\contentsline {section}{\numberline {A.5}Trasformata di Fourier}{44}
+\contentsline {section}{\numberline {5.1}Libreria per la costruzione di interfacce grafiche \textsf {wxWidgets}}{20}
+\contentsline {section}{\numberline {5.2}Altre librerie}{21}
+\contentsline {section}{\numberline {5.3}Libreria per elaborazione audio-video: \textsf {FFmpeg}}{22}
+\contentsline {chapter}{\numberline {6}Descrizione plug-in: un manuale d'uso}{24}
+\contentsline {section}{\numberline {6.1}Selezione dell'intervallo temporale da analizzare}{24}
+\contentsline {section}{\numberline {6.2}Finestra di configurazione}{26}
+\contentsline {section}{\numberline {6.3}Interfaccia principale}{28}
+\contentsline {section}{\numberline {6.4}Esportazione dei risultati}{30}
+\contentsline {chapter}{\numberline {7}Dettagli di Implementazione}{31}
+\contentsline {section}{\numberline {7.1}Acquisizione dei dati in ingresso}{32}
+\contentsline {section}{\numberline {7.2}Organizzazione del carico computazionale}{33}
+\contentsline {section}{\numberline {7.3}Livello di fondo scala}{34}
+\contentsline {section}{\numberline {7.4}\emph {Mirroring} dei microfoni virtuali}{35}
+\contentsline {section}{\numberline {7.5}\emph {Meshing} della superficie mediante l'operazione di triangolazione di \emph {Delaunay}}{35}
+\contentsline {section}{\numberline {7.6}Interpolazione dei valori acquisiti e filtraggio in bande d'ottava}{38}
+\contentsline {section}{\numberline {7.7}Mappatura con scale cromatiche e \emph {auto-scaling}}{40}
+\contentsline {section}{\numberline {7.8}Esportazione dei risultati}{41}
+\contentsline {chapter}{\numberline {8}Conclusioni}{43}
+\contentsline {chapter}{\numberline {A}Appendice}{44}
+\contentsline {section}{\numberline {A.1}Propagazione di onde sonore}{44}
+\contentsline {section}{\numberline {A.2}Intensit\`a, densit\`a di energia e potenza}{46}
+\contentsline {section}{\numberline {A.3}Livelli sonori}{47}
+\contentsline {section}{\numberline {A.4}Curve di ponderazione}{49}
+\contentsline {section}{\numberline {A.5}Trasformata di Fourier}{49}
