@@ -3,18 +3,18 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Esempio di mappa acustica generata dal plug-in \emph {Microphone Array Analyzer}}}{2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Moto delle particelle di un fluido elastico compresse e decompresse alternativamente da un pistone, creando l'\emph {onda sonora}.}}{5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Livello sonoro di una sorgente intermittente e relativo livello equivalente $L_{EQ}$.}}{11}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Apparato acustico umano.}}{12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Livello sonoro di una sorgente intermittente e relativo livello equivalente $L_{EQ}$.}}{10}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Apparato acustico umano.}}{11}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Risposta non lineare della coclea}}{12}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Grafico delle curve isofoniche}}{13}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Grafico delle curve di ponderazione}}{15}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Grafico delle curve di ponderazione}}{17}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Struttura del sistema \emph {Eigenmike\textsuperscript {\texttrademark } EM32}}}{19}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Disposizione delle capsule dell' array microfonico \emph {Eigenmike\textsuperscript {\texttrademark } EM32}}}{20}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Angoli di riferimento e loro direzioni relative per la descrizione sferica rispetto al sistema di riferimento antropometrico secondo la norma ISO2631. }}{22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Interfaccia utente dell'host utilizzato, \emph {Audacity\textregistered } sotto diverse piattaforme.}}{28}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Interfaccia utente dell'host utilizzato, \emph {Audacity\textsuperscript {\textregistered }} sotto diverse piattaforme.}}{28}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Intorno per la costruzione di interfacce grafiche \textsf {wxFormBuilder}}}{31}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Selezione dello spezzone di materiale audio da analizzare con il \emph {plug-in}.}}{34}

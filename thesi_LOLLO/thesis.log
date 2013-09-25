@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.7)  24 SEP 2013 21:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.7)  25 SEP 2013 12:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -561,63 +561,51 @@ Package pdftex.def Info: img/motoarmonico.pdf used on input line 20.
  [4
 
 ] [5 <./img/motoarmonico.pdf>] [6] [7]
-Underfull \hbox (badness 1231) in paragraph at lines 131--131
+Underfull \hbox (badness 1231) in paragraph at lines 125--125
 []|\T1/lmr/m/it/12 Variazione di pres-sio-ne
  []
 
 [8] [9] <img/leq.pdf, id=85, 367.6655pt x 163.19188pt>
 File: img/leq.pdf Graphic file (type pdf)
  <use img/leq.pdf>
-Package pdftex.def Info: img/leq.pdf used on input line 215.
+Package pdftex.def Info: img/leq.pdf used on input line 199.
 (pdftex.def)             Requested size: 227.62204pt x 101.03348pt.
 
-[10] <img/orecchio.jpg, id=89, 486.91913pt x 373.99725pt>
+[10 <./img/leq.pdf>] <img/orecchio.jpg, id=132, 486.91913pt x 373.99725pt>
 File: img/orecchio.jpg Graphic file (type jpg)
 
 <use img/orecchio.jpg>
-Package pdftex.def Info: img/orecchio.jpg used on input line 240.
+Package pdftex.def Info: img/orecchio.jpg used on input line 223.
 (pdftex.def)             Requested size: 227.62204pt x 174.83711pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
-
- []
-
-[11 <./img/leq.pdf>] <img/coclea.jpg, id=137, 370.38374pt x 319.94531pt>
+[11 <./img/orecchio.jpg>] <img/coclea.jpg, id=137, 370.38374pt x 319.94531pt>
 File: img/coclea.jpg Graphic file (type jpg)
 
 <use img/coclea.jpg>
-Package pdftex.def Info: img/coclea.jpg used on input line 253.
+Package pdftex.def Info: img/coclea.jpg used on input line 233.
 (pdftex.def)             Requested size: 227.62204pt x 196.62605pt.
- [12 <./img/orecchio.jpg> <./img/coclea.jpg>]
-<img/isophon.jpg, id=141, 629.35126pt x 401.5pt>
+ <img/isophon.jpg, id=138, 629.35126pt x 401.5pt>
 File: img/isophon.jpg Graphic file (type jpg)
- <use img/isophon.jpg>
-Package pdftex.def Info: img/isophon.jpg used on input line 268.
+
+<use img/isophon.jpg>
+Package pdftex.def Info: img/isophon.jpg used on input line 249.
 (pdftex.def)             Requested size: 227.62204pt x 145.21378pt.
- [13 <./img/isophon.jpg>]
-Overfull \hbox (11.55359pt too wide) in paragraph at lines 295--296
-[]\T1/lmr/m/n/12 se la lar-ghez-
- []
-
-
-LaTeX Warning: Reference `sec:fft' on page 14 undefined on input line 305.
-
-[14] <img/ponderaz.jpg, id=148, 704.6325pt x 400.49625pt>
+ [12 <./img/coclea.jpg>] [13 <./img/isophon.jpg>] [14]
+[15] [16] <img/ponderaz.jpg, id=156, 704.6325pt x 400.49625pt>
 File: img/ponderaz.jpg Graphic file (type jpg)
 
 <use img/ponderaz.jpg>
-Package pdftex.def Info: img/ponderaz.jpg used on input line 368.
+Package pdftex.def Info: img/ponderaz.jpg used on input line 357.
 (pdftex.def)             Requested size: 227.62204pt x 129.3714pt.
- [15 <./img/ponderaz.jpg>]) (./array.tex [16] [17]
+) (./array.tex [17 <./img/ponderaz.jpg>]
 Capitolo 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 11.
-<img/eigensystem.png, id=160, 740.7675pt x 351.3125pt>
+<img/eigensystem.png, id=161, 740.7675pt x 351.3125pt>
 File: img/eigensystem.png Graphic file (type png)
 
 <use img/eigensystem.png>
@@ -626,14 +614,14 @@ Package pdftex.def Info: img/eigensystem.png used on input line 21.
  [18
 
 ]
-<img/eigencapsules.png, id=165, 702.625pt x 313.17pt>
+<img/eigencapsules.png, id=166, 702.625pt x 313.17pt>
 File: img/eigencapsules.png Graphic file (type png)
 
 <use img/eigencapsules.png>
 Package pdftex.def Info: img/eigencapsules.png used on input line 33.
 (pdftex.def)             Requested size: 412.56496pt x 183.88942pt.
  [19 <./img/eigensystem.png>]
-<img/normaISO2631.png, id=169, 293.095pt x 336.25626pt>
+<img/normaISO2631.png, id=170, 293.095pt x 336.25626pt>
 File: img/normaISO2631.png Graphic file (type png)
 
 <use img/normaISO2631.png>
@@ -675,7 +663,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 ] [26]
 Capitolo 5.
-<img/audacity.jpg, id=193, 602.25pt x 515.9275pt>
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <24.88> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 1.
+<img/audacity.jpg, id=194, 602.25pt x 515.9275pt>
 File: img/audacity.jpg Graphic file (type jpg)
  <use img/audacity.jpg>
 Package pdftex.def Info: img/audacity.jpg used on input line 7.
@@ -684,19 +676,19 @@ Package pdftex.def Info: img/audacity.jpg used on input line 7.
 [27
 
 ] [28 <./img/audacity.jpg>] [29]
-<img/wxformbuilder.png, id=206, 1156.32pt x 873.2625pt>
+<img/wxformbuilder.png, id=207, 1156.32pt x 873.2625pt>
 File: img/wxformbuilder.png Graphic file (type png)
 
 <use img/wxformbuilder.png>
-Package pdftex.def Info: img/wxformbuilder.png used on input line 47.
+Package pdftex.def Info: img/wxformbuilder.png used on input line 48.
 (pdftex.def)             Requested size: 412.56496pt x 311.5627pt.
  [30] [31 <./img/wxformbuilder.png>]
 
-LaTeX Warning: Reference `sec:ffmpeg' on page 32 undefined on input line 80.
+LaTeX Warning: Reference `sec:ffmpeg' on page 32 undefined on input line 81.
 
 ) (./plugindesc.tex [32]
 Capitolo 6.
-<img/audioselect.png, id=217, 1284.8pt x 739.76375pt>
+<img/audioselect.png, id=219, 1284.8pt x 739.76375pt>
 File: img/audioselect.png Graphic file (type png)
 
 <use img/audioselect.png>
@@ -705,14 +697,14 @@ Package pdftex.def Info: img/audioselect.png used on input line 20.
  [33
 
 ]
-<img/outofmemory.png, id=221, 1284.8pt x 715.67375pt>
+<img/outofmemory.png, id=224, 1284.8pt x 715.67375pt>
 File: img/outofmemory.png Graphic file (type png)
 
 <use img/outofmemory.png>
 Package pdftex.def Info: img/outofmemory.png used on input line 31.
 (pdftex.def)             Requested size: 341.43306pt x 190.18773pt.
  [34 <./img/audioselect.png>]
-<img/confdlgBIG.png, id=225, 717.68124pt x 549.05125pt>
+<img/confdlgBIG.png, id=229, 717.68124pt x 549.05125pt>
 File: img/confdlgBIG.png Graphic file (type png)
 
 <use img/confdlgBIG.png>
@@ -722,7 +714,7 @@ Package pdftex.def Info: img/confdlgBIG.png used on input line 52.
 
 LaTeX Warning: Reference `sec:fir' on page 36 undefined on input line 63.
 
-[36 <./img/confdlgBIG.png>] <img/maadlg.png, id=233, 1334.9875pt x 803.0pt>
+[36 <./img/confdlgBIG.png>] <img/maadlg.png, id=237, 1334.9875pt x 803.0pt>
 File: img/maadlg.png Graphic file (type png)
 
 <use img/maadlg.png>
@@ -743,14 +735,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--114
 Capitolo 7.
 [41
 
-] [42] [43] [44] [45] <img/spheric.pdf, id=267, 233.98286pt x 234.62758pt>
+] [42] [43] [44] [45] <img/spheric.pdf, id=270, 233.98286pt x 234.62758pt>
 File: img/spheric.pdf Graphic file (type pdf)
 
 <use img/spheric.pdf>
 Package pdftex.def Info: img/spheric.pdf used on input line 95.
 (pdftex.def)             Requested size: 312.9803pt x 313.85872pt.
  [46 <./img/spheric.pdf>]
-<img/capsules.pdf, id=293, 430.5799pt x 209.48875pt>
+<img/capsules.pdf, id=296, 430.5799pt x 209.48875pt>
 File: img/capsules.pdf Graphic file (type pdf)
  <use img/capsules.pdf>
 Package pdftex.def Info: img/capsules.pdf used on input line 111.
@@ -762,7 +754,7 @@ Package Fancyhdr Warning: \headheight is too small (14.49998pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47 <./img/capsules.pdf>] <img/delaunay.png, id=318, 301.125pt x 307.90031pt>
+[47 <./img/capsules.pdf>] <img/delaunay.png, id=321, 301.125pt x 307.90031pt>
 File: img/delaunay.png Graphic file (type png)
 
 <use img/delaunay.png>
@@ -828,43 +820,44 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4299 strings out of 493315
- 60371 string characters out of 6137905
- 157869 words of memory out of 5000000
- 7538 multiletter control sequences out of 15000+600000
- 141881 words of font info for 91 fonts, out of 8000000 for 9000
+ 4316 strings out of 493315
+ 60643 string characters out of 6137905
+ 156857 words of memory out of 5000000
+ 7552 multiletter control sequences out of 15000+600000
+ 156686 words of font info for 105 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,16n,44p,866b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
-cal/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
-13/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2013/texmf-dist/
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2013/t
+exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2013/texmf-dist/
 fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvi
 ps/lm/lm-mathex.enc}{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-m
 athsy.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
-l/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2013/tex
-mf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2013/texmf-dist/fo
-nts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
-public/lm/lmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/
-lmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/201
-3/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2013/texmf-dis
-t/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
-1/public/lm/lmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/
-lmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmri10.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local
-/texlive/2013/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2013/texmf-d
-ist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
-type1/public/lm/lmss12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
-ic/lm/lmssbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lm
-sy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on thesis.pdf (73 pages, 7416924 bytes).
+l/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2013/texmf
+-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2013/texmf-dist/fon
+ts/type1/public/lm/lmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
+ublic/lm/lmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/l
+mmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
+e1/public/lm/lmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm
+/lmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmr8.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/public/lm/lmss10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
+c/lm/lmss12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmssb
+x10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on thesis.pdf (73 pages, 7439275 bytes).
 PDF statistics:
- 475 PDF objects out of 1000 (max. 8388607)
- 325 compressed objects within 4 object streams
+ 481 PDF objects out of 1000 (max. 8388607)
+ 330 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
