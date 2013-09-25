@@ -12,7 +12,7 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
 	
 	\section{Selezione dell'intervallo temporale da analizzare}
 	\label{sec:audioselection}
-		Prima ancora di lanciare il \emph{plug-in}, e necessario caricare il file audio della registrazione multicanale acquisita con l'\emph{array microfonico} nell'host \emph{Audacity\textregistered}. 
+		Prima ancora di lanciare il \emph{plug-in}, e necessario caricare il file audio della registrazione multicanale acquisita con l'\emph{array microfonico} nell'host \audacity. 
 		Di tutta la registrazione, che può in alcuni casi durare anche qualche ora, potrebbe essere necessario selezionare solo una parte, in modo da focalizzarsi nell'analisi su un particolare intervallo di tempo, all'occorrenza anche molto breve. 		
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA AUDIO SELECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -22,7 +22,7 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
   \label{fig:audioselect}
 \end{figure}
 		Si pensi per esempio all'analisi delle prime riflessioni in una sala da concerto: in questo tipo di operazioni si è interessati a studiare il comportamento di un ambiente sotto l'aspetto degli echi e altri effetti che possono essere fastidiosi per alcuni utilizzi dell'ambiente stesso: a questo scopo è necessario selezionare la porzione di audio di interesse, come indicato in figura \ref{fig:audioselect}. 
-		Così facendo,  \emph{Audacity\textregistered} riesce a gestire il materiale audio da editare attraverso i \emph{plug-ins} (che nel menù del programma vengono denominati \emph{effects}).
+		Così facendo,  \audacity riesce a gestire il materiale audio da editare attraverso i \emph{plug-ins} (che nel menù del programma vengono denominati \emph{effects}).
 		
 		
 				%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA OUTOFMEMORY %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -44,7 +44,7 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
 		
 	\section{Finestra di configurazione}
 	\label{sec:confdlg}
-		Una volta selezionato il materiale audio da analizzare, dal menu \emph{Effect} di \emph{Audacity\textregistered} è possibile accedere al \emph{plug-in} in oggetto, alla voce \emph{Microphone Array Analyzer}. 
+		Una volta selezionato il materiale audio da analizzare, dal menu \emph{Effect} di \audacity è possibile accedere al \emph{plug-in} in oggetto, alla voce \emph{Microphone Array Analyzer}. 
 		
 						%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA CONFIGURATION DIALOG %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -60,7 +60,7 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
 		Attraverso questa finestra l'utente dovrà specificare:
 		\begin{description}
 		  \item [Un \textbf{videoclip dell'ambiente di background}] acquisito, con una videocamera adatta allo scopo\footnote{per una descrizione delle telecamere nei singoli array si ritorni al capitolo \ref{sec:array} }, durante la registrazione dell'evento sonoro, su cui mappare i livelli \emph{SPL} con le bande di colore.
-		  \item [Un\textbf{ file di configurazione }] in formato \emph{xml}  contenente la mappatura in \emph{pixel} delle posizioni delle singole capsule microfoniche sulla immagine di background, nonché il \emph{filepath} della matrice di filtri matematici (FIR\footnote{vedi appendice \ref{sec:fir}}) utilizzati per sintetizzare tali microfoni nella maniera descritta al capitolo \ref{sec:} e la \emph{frame rate} caratteristica della matrice di filtri, che deve essere la stessa del materiale audio importata nel progetto \emph{Audacity\textregistered}.
+		  \item [Un\textbf{ file di configurazione }] in formato \emph{xml}  contenente la mappatura in \emph{pixel} delle posizioni delle singole capsule microfoniche sulla immagine di background, nonché il \emph{filepath} della matrice di filtri matematici (FIR\footnote{vedi appendice \ref{sec:fir}}) utilizzati per sintetizzare tali microfoni nella maniera descritta al capitolo \ref{sec:} e la \emph{frame rate} caratteristica della matrice di filtri, che deve essere la stessa del materiale audio importata nel progetto \audacity.
 		  Il file contiene anche una serie di informazioni sull'array stesso, come nome e tipologia, casa produttrice ecc, 
 		  \item [Il livello di trasparenza] della colormap al sovrapporsi al video di background.
 		  \item [i livelli di FS e min SPL] cioè i limiti della scala di $dB$ che si vuole analizzare. 	I pixel eventualmente presenti nella \emph{color-map} con valori SPL che eccedessero queste soglie verrebbero disegnati completamente trasparenti.

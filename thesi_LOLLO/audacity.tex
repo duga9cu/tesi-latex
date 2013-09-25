@@ -1,11 +1,11 @@
-\chapter{Ambiente di Sviluppo: l'host Audacity\textsuperscript{\textregistered}} 
+\chapter{Ambiente di Sviluppo: l'host \audacity}
 \label{sec:audacity}
 	Nell'approccio al problema presentato, si sono studiate e discusse diverse possibilità di sviluppo. 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA audacity %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
   \centering
   \includegraphics[width =14.5cm]{img/audacity.jpg}
-  \caption{Interfaccia utente dell'host utilizzato, \emph{Audacity\textsuperscript{\textregistered}} sotto diverse piattaforme.}
+  \caption{Interfaccia utente dell'host utilizzato, \audacity sotto diverse piattaforme.}
   \label{fig:audacity}
 \end{figure}
 	Una prima possibilità presa in considerazione era quella di sviluppare un software stand-alone, completo, in grado quindi di effettuare autonomamente tutte le operazioni necessarie alla creazione della mappa, a partire dalla registrazione del materiale audio proveniente dall'array microfonico, fino alla sintesi della mappa stessa.
@@ -18,11 +18,11 @@
 	Nonostante i grandi vantaggi di portabilità e facilità di utilizzo e di reperibilità di documentazione e supporto, non è stato possibile sviluppare il software con questa \textsf{SDK}.
 	Il problema fondamentale che si è riscontrato era l'impossibilità di effettuare analisi globali nel dominio del tempo, come una riscalatura o una semplice normalizzazione per via della rigida impostazione di questi tipi di \emph{plug-in}, i quali cercano sempre di lavorare a blocchetti di 256 campioni alla volta in modo da simulare il più possibile un effetto \emph{real-time}.
 	
-	Si è optato quindi per la piattaforma più permissiva, comoda e personalizzabile (in quanto progetto \emph{open source}), \emph{Audacity\textsuperscript{\textregistered}}. Questo \emph{host} fornisce ai \emph{plug-in} che ne espandono le funzionalità (i \emph{moduli}) tutte le informazioni di cui dispone, dall'intero \emph{workspace} contenente il materiale audio, fino a arrivare alle preferenze che l'utente sta utilizzando.
+	Si è optato quindi per la piattaforma più permissiva, comoda e personalizzabile (in quanto progetto \emph{open source}), \audacity. Questo \emph{host} fornisce ai \emph{plug-in} che ne espandono le funzionalità (i \emph{moduli}) tutte le informazioni di cui dispone, dall'intero \emph{workspace} contenente il materiale audio, fino a arrivare alle preferenze che l'utente sta utilizzando.
 	inoltre si tratta di un programma nativamente multipiattaforma, come richiesto, e a migliorarne ulteriormente le capacità aggiungiamo che si tratta di uno dei pochissimi programmi che gestiscono registrazioni a $N$ canali a piacimento e che implementano il formato audio \emph{W64}.
 	L'utilizzo di questo formato è a dir poco fondamentale in quanto può succedere di dover registrare eventi  di lunghezza anche superiore a un'ora, utilizzando decine di canali. 
 	Infatti, con l'utilizzo di  formati audio dotati di \textsf{header} inferiori ai 64 bit, non si supera la decina di minuti di acquisizione, se il numero di canali va oltre i 2 della normale codifica stereo o al massimo i 6 o 7 per le codifiche di tipo \emph{surround}.
-	\emph{Audacity\textsuperscript{\textregistered}} consente inoltre la registrazione a 16, 24 o 32 bit float con una frequenza di campionamento fino a 96 KHz.
+	\audacity consente inoltre la registrazione a 16, 24 o 32 bit float con una frequenza di campionamento fino a 96 KHz.
 	
 
 
@@ -37,7 +37,7 @@ maturità del progetto e per la capacità di conferire alla propria \textsf{GUI} i
 del sistema operativo sul quale il codice verrà compilato, grazie all'utilizzo delle \emph{API} della piattaforma invece di una emulazione della interfaccia grafica. 
 Grazie all'utilizzo di \textsf{wxWidgets}, si ha accesso in maniera nativamente multipiattaforma a una serie di funzioni avanzate già implementate e contenute in un \textsf{wrapper} che ne \emph{incapsula} e nasconde al programmatore la dipendenza dalla singola piattaforma, fungendo da sorta di \emph{middle-ware} e ponendo il livello di programmazione al di sopra dei dettagli di implementazione.
 Per notare il livello di maturità del progetto basti pensare che vengono fornite funzionalità di \emph{multithreading}, salvataaggio e caricamento di immagini in una varietà di formati diffusamente utilizzati, supporto per \emph{database}, \textsf{HTML}, \textsf{drag-and-drop}, \textsf{streams} multimediali, gestione della \textsf{clipboard} e altro ancora. 
-Non è un caso che la stessa interfaccia grafica di  \emph{Audacity\textsuperscript{\textregistered}} faccia utilizzo di queste librerie. 
+Non è un caso che la stessa interfaccia grafica di  \audacity faccia utilizzo di queste librerie. 
 Possiamo quindi individuare anche nella coerenza di interfaccia con il proprio host (su qualunque piattaforma si trovi a dover funzionare il programma) un nuovo motivo valido per scegliere di utilizzare proprio \textsf{wxWidget}.
 
 Per la creazione di interfacce grafiche basate su \textsf{wxWidget}, si è individuato un programma  \emph{helper} di tipo \emph{WYSIWYG} \footnote{ (\emph{What You See Is What You Get}) }, di nome \textsf{wxFormBuilder}, sicuramente di grande utilità e immediatezza nonchè di estrema completezza, tanto che si è riusciti a implementare quasi interamente l'interfaccia con questo programma.
@@ -58,7 +58,7 @@ Per la creazione di interfacce grafiche basate su \textsf{wxWidget}, si è indivi
 	Per chi volesse approfondire sono stati allegati a piè pagina i relativi link web dove trovare informazioni supplementari
 	\begin{description}
   \item[\textsf{FFT}] algoritmo\footnote{ https://code.google.com/p/audacity/source/browse/audacity-src/trunk/src/FFT.cpp} massicciamente utilizzato in acustica come sempre in materia di elaborazione di segnali.
-  In questo caso si è utilizzata una implementazione propria dello stesso codice sorgente dell'host \emph{Audacity\textsuperscript{\textregistered}}. 
+  In questo caso si è utilizzata una implementazione propria dello stesso codice sorgente dell'host \audacity. 
   \item[\textsf{Triangle++} ] \emph{wrapper} scritto nel linguaggio \textsf{C++} per la libreria \textsf{Triangle} che implementa il famoso algoritmo della \emph{triangolazione di Delaunay}\footnote{ \,Si veda il testo \cite{delaunay}.} utile a partizionare una superficie con sotto-superfici di area triangolare.\footnote{ \,http://www.compgeom.com/~piyush/scripts/triangle/}
   \item[\textsf{libSndFile} ] libreria gratuita per la lettura-scrittura e elaborazione di file audio.\footnote { \,http://www.mega-nerd.com/libsndfile/}
   \item[\textsf{TinyXML}] libreria di ausilio alla lettura e scrittura su file \textsf{xml} per scambio di dati tra programmi.\footnote{ \,http://www.grinninglizard.com/tinyxml/}
@@ -71,7 +71,7 @@ Di queste librerie e del loro utilizzo si parlerà più approfonditamente nei capi
 \section{Libreria di elaborazione e codifica audio e video: \mbox{\textsf{FFmpeg}}}
 \label{sec:}
 	Essendo lo scopo della tesi in oggetto, lo sviluppo di una mappa acustica dinamica ottenuta dalla sovrapposizione di due video generati dall'elaborazione audio, è facile intendere quanto sia di vitale importanza l'elaborazione audio-video.
-	Per gestire le problematiche legate alla lettura, codifica, interpretazione, sincronizzazione dei due flussi audio video si è deciso di ricorrere a una delle librerie più largamente utilizzate, nonchè già presenti, ancora una volta, nel bundle di \emph{Audacity\textsuperscript{\textregistered}}: \textsf{FFmpeg}. \footnote{ \,http://www.ffmpeg.org/about.html}
+	Per gestire le problematiche legate alla lettura, codifica, interpretazione, sincronizzazione dei due flussi audio video si è deciso di ricorrere a una delle librerie più largamente utilizzate, nonchè già presenti, ancora una volta, nel bundle di \audacity: \textsf{FFmpeg}. \footnote{ \,http://www.ffmpeg.org/about.html}
 	Si tratta di una soluzione completa e, ancora una volta, \emph{cross-platform}, per registrare convertire e elaborare \emph{stream} audio e video.
 	
 	A sua volta, questa suite contiene le librerie \textsf{libavformat}, per interpretare i formati di \emph{multimedia container} con i \textsf{muxers} e \textsf{demuxers} contenuti al suo interno, \textsf{libavcodec}, per l'utilizzo dei \textsf{codec} audio e video, la libreria \textsf{libavutil} contenente molte \emph{core multimedia utilities}, \textsf{libswwresample} la quale è in grado di effettuare operazioni di \textsf{resampling } audio e video nonché di conversione del formato dei sample, in maniera altamente ottimizzata.

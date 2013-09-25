@@ -11,6 +11,16 @@
   acoustical parameters calculation module}}, in {Linux Audio Conference},
   Parma, Italy, 2009.
 
+\bibitem{ebri}
+{\sc L.~Ebri}, {\em {Progetto, costruzione e collaudo di un array cilindrico di
+  microfoni }}, master's thesis, Universitˆ degli Studi di Parma - Dipartimento
+  di ngegneria industriale, 2008.
+
+\bibitem{livevirtmikes}
+{\sc A.~Farina, A.~Capra, L.~Chiesi, e L.~Scopece}, {\em {A spherical
+  microphone array for synthesizing virtual directive microphones in live
+  broadcasting and in post production }}, in AES 40th International Conference.
+
 \bibitem{delaunay}
 {\sc D.~T. Lee e B.~J. Schachter}, {\em {Two Algorithms for Constructing a
   Delaunay Triangulation }}, International Journal of Computer and Information
@@ -33,5 +43,11 @@
   1148 di {\em Lecture Notes in Computer Science}, Springer-Verlag, mag. 1996,
   pp.~203--222.
 \newblock From the First ACM Workshop on Applied Computational Geometry.
+
+\bibitem{zanettini}
+{\sc M.~Zanettini}, {\em {Sintesi di microfoni ad alta direttivitˆ mediante
+  array microfonici planari }}, master's thesis, Universitˆ degli Studi di
+  Parma - Facoltˆ di ingegneria, Corso di Laurea Specialistica in Ingegneria
+  delle Telecomunicazioni, 2012.
 
 \end{thebibliography}

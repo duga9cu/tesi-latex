@@ -32,7 +32,7 @@
 \end{itemize}
 	Di tutti questi dati, viene controllata la coerenza in fase di configurazione\footnote{ ancora come già detto al capitolo  \ref{sec:confdlg}}.
 
-	Per quanto riguarda la \textbf{registrazione multicanale} direttamente proveniente dall'array, è lo stesso host \emph{Audacity\textregistered} a farsi carico di rendere disponibile la registrazione al \emph{plug-in} tramite l'utilizzo di apposite \emph{routines}.
+	Per quanto riguarda la \textbf{registrazione multicanale} direttamente proveniente dall'array, è lo stesso host \audacity a farsi carico di rendere disponibile la registrazione al \emph{plug-in} tramite l'utilizzo di apposite \emph{routines}.
 
 	La seconda componente fondamentale per la costruzione della mappa acustica è il \textbf{videoclip di background}. 
 	Essendo a conoscenza del \emph{path} nel \emph{filesystem}, fornitoci in fase di configurazione dall'utente, utilizziamo alcune \emph{routines} basate sulle \emph{API} fornite dalla suite \textsf{ffmpeg} per acquisire il video, salvarlo in memoria diviso in singoli frames (quindi immagini di tipo bitmap o per meglio dire \textsf{wxBitmap}). 
@@ -109,7 +109,7 @@ continuità ai bordi della mappa.}
 \begin{figure}
   \centering
   \includegraphics[width = 13cm]{img/capsules.pdf}
-  \caption{Direzioni di puntamento delle capsule dell'Eigenmike sovrapposte ad una foto panoramica del Teatro alla Scala di Milano, svolta secondo lo schema di proiezione visto nella sezione~\ref{sec:mirroring}.}
+  \caption{Direzioni di puntamento delle capsule dell'\eigen sovrapposte ad una foto panoramica del Teatro alla Scala di Milano, svolta secondo lo schema di proiezione visto nella sezione~\ref{sec:mirroring}.}
   \label{fig:capsules}
 \end{figure}
 	Per eseguire l'interpolazione di una serie di livelli noti di una funzione in due variabili, l'ascissa e l'ordinata, occorre suddividere l'intero piano in aree più piccole di forma poligonale, aventi come vertici tre o più coppie di coordinate in cui i livelli siano noti; 
@@ -119,7 +119,7 @@ continuità ai bordi della mappa.}
 	Il primo passo da fare è stabilire il metodo da seguire per determinare la griglia, ovvero la forma geometrica delle \emph{mesh} in cui l'intero piano xy andrà suddiviso. 
 La prima ipotesi potrebbe essere la suddivisione in aree di forma quadrata (come i meridiani e i paralleli del planisfero): questa ipotesi è valida se i microfoni virtuali, che costituiscono la griglia dei punti in cui i livelli sonori sono noti, sono disposti su una griglia uniforme. 
 
-	Come si può notare dalla Figura~\ref{fig:capsules}, le posizioni delle capsule dell'Eigenmike\textsuperscript{\textregistered} purtroppo non lo sono, e se anche così fosse, lo sviluppo del plug-in sotto l'ipotesi di griglia uniforme avrebbe portato alla realizzazione di un software utilizzabile per un numero limitato di disposizioni dei microfoni virtuali. 
+	Come si può notare dalla Figura~\ref{fig:capsules}, le posizioni delle capsule dell'\eigen purtroppo non lo sono, e se anche così fosse, lo sviluppo del plug-in sotto l'ipotesi di griglia uniforme avrebbe portato alla realizzazione di un software utilizzabile per un numero limitato di disposizioni dei microfoni virtuali. 
 	
 	La seconda ipotesi è quella di suddividere l'intero piano xy in superfici di forma triangolare; 
 	in questo modo, anche nel caso in cui le posizioni dei microfoni fossero disposte nella maniera più casuale possibile, si potrà sempre determinare un insieme continuo di triangoli che copra l'intera superficie. 
@@ -195,7 +195,7 @@ Sapendo che l'equazione generica di un piano può essere scritta nella forma:
 	Questa ipotesi sarebbe corretta nel caso in cui ad ogni vertice di ciascuna mesh fosse possibile associare un unico livello sonoro, ma ciò non può avvenire. 
 	Come si è visto nei precedenti capitoli, infatti, il \emph{plug-in} consente di effettuare una analisi in bande d'ottava\footnote{si veda la sezione \ref{sec:band} per la definizione delle bande utilizzate} dei livelli sonori, ovvero si avranno non una sola mappa dei livelli, bensì tante mappe quante sono le possibili bande d'ottava selezionabili. 
 	Per risolvere occorre usare come terza "coordinata" di ciascun vertice il numero del microfono virtuale posizionato nelle stesse coordinate del vertice (anzichè il livello sonoro) e memorizzare una matrice dei livelli sonori tale che, confrontando il numero del microfono virtuale con il numero identificativo della banda selezionata, fornisca il livello sonoro corretto per la determinazione dei coefficienti $A$, $B$, $C$ e $\det (M)$ necessari per la costruzione della mappa della particolare banda selezionata. 
-	Il processo di filtraggio è stato affrontato in modo trasparente grazie all'utilizzo di una classe già progettata per la suite di plug-in \textsf{Aurora} per \emph{Audacity\textsuperscript{\textregistered} }\footnote{si veda \cite{aurora}} la quale già disponeva di tutte le funzioni membro necessarie ad implementare i filtraggi in bande d'ottava, come definiti secondo norma IEC-1260.
+	Il processo di filtraggio è stato affrontato in modo trasparente grazie all'utilizzo di una classe già progettata per la suite di plug-in \textsf{Aurora} per \audacity\footnote{si veda \cite{aurora}} la quale già disponeva di tutte le funzioni membro necessarie ad implementare i filtraggi in bande d'ottava, come definiti secondo norma IEC-1260.
 	Infine, dopo l’operazione di filtraggio, è necessario creare un \emph{frame audio} cioè una mappa statica che rappresenti il contenuto del campo acustico nell'intervallo non infinitesimo di un frame\footnote{selezionato dall'utente come al paragrafo \ref{sec:framelength}} del video che si sta andando a costruire; occorre qui un calcolo del valore \emph{$L_{EQ}$}\footnote{definito alla sezione \ref{sec:leq}} dei segnali filtrati. 
 
 
@@ -233,7 +233,7 @@ Sapendo che l'equazione generica di un piano può essere scritta nella forma:
 	Inoltre conterrà una struttura di tipo \textsf{hash-map} contenenti i singoli \textsf{VideoFrame} contrassegnati dal numero di frame come chiave unica.
 	Ogni \textsf{VideoFrame} dal canto suo, conterrà le informazioni seguenti:
 	\begin{itemize}
-	\item \emph{timestamp} del frame ottenuta dal progetto \emph{Audacity\textsuperscript{\textregistered}} al momento del salvataggio del \emph{chunck} audio,
+	\item \emph{timestamp} del frame ottenuta dal progetto \audacity al momento del salvataggio del \emph{chunck} audio,
 	  \item Immagine \textsf{bitmap} di background corrispondente al frame più vicino alla timestamp di cui sopra,
 	  \item una matrice contenente per ogni canale \emph{virtuale} registrato (cioè per ogni microfono virtuale ricavato dai filtri di inversione) i valori $SPL$ filtrati secondo le 10 bande frequenziali con l'aggiunta del valore filtrato A ($dB(A)$) e del filtraggio lineare in banda stretta\footnote{???}
 	  \item una matrice contenente il valore $SPL$ per ogni pixel dell'immagine, ottenuto a seguito dell'interpolazione dei valori dei singoli microfoni virtuali.
