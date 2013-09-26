@@ -1,19 +1,19 @@
-\chapter{Appendice}
-\label{se:appendix}
+\chapter{Richiami teorici}
+\label{sec:appendix}
 
 In questa appendice finale si trovano tutte le definizioni teoriche indispensabili alla comprensione dell'elaborato qui presentato ma il cui studio è considerato prerequisito e quindi noto. Viene dunque riportato un breve riassunto delle nozioni fondamentali in modo da fornire un quadro generale ristretto ma comunque sufficiente per affrontare serenamente la lettura.
 
 \section{Propagazione di onde sonore}
 \label{sec:wavesprop}
 
-Un'onda sonora\footnote{Vedi \cite{amea}, capitolo 3.}, come risaputo, \`e una 
+Un'onda sonora\footnote{ Vedi \cite{amea}, capitolo 3.}, come risaputo, \`e una 
 perturbazione della pressione atmosferica 
 avente la propriet\`a di propagarsi; affinch\'e questo possa avvenire occorrono
 due elementi indispensabili: una causa ed un mezzo. Il primo potr\`a essere un
 sistema meccanico oscillante con sufficiente 
-frequenza\footnote{Un'onda di pressione
+frequenza\footnote{ Un'onda di pressione
    perch\'e venga percepita dall'apparato uditivo umano deve avere frequenza compresa
-   tra 20 Hz e 20000 Hz circa, a seconda dell'individuo.}, mentre il secondo \`e,
+   tra 20 Hz e 20\,000 Hz circa, a seconda dell'individuo.}, mentre il secondo \`e,
 in generale, un fluido, di norma l'aria.\\
 La descrizione fisica della propagazione delle onde suddette avviene tramite 3
 leggi fondamentali che di seguito si riassumono:
@@ -25,7 +25,7 @@ leggi fondamentali che di seguito si riassumono:
 
         \begin{equation}
 	  \label{eq:eulerlaw}
-	  \nabla p = - \rho_0 \frac{\partial \mathbf{u}}{\partial t}.
+	  \nabla p = - \rho_0 \frac{\partial \mathbf{u}}{\partial t}.\\
 	\end{equation}
 
 	La relazione~\ref{eq:eulerlaw} altro non \`e che l'equivalente fluidodinamico della seconda legge
@@ -36,7 +36,7 @@ leggi fondamentali che di seguito si riassumono:
       \emph{condensazione}\footnote{\`E data da
 
           \begin{displaymath}
-	     \delta = \frac{\rho - \rho_0}{\rho}
+	     \delta = \frac{\rho - \rho_0}{\rho}\\
           \end{displaymath}
 
 	  dove $\rho$ \`e densit\`a dell'elemento di fluido considerato.}, del mezzo
@@ -44,7 +44,7 @@ leggi fondamentali che di seguito si riassumono:
 
       \begin{equation}
 	\label{eq:continuity}
-	\delta = - \nabla \cdot \mathbf{s},
+	\delta = - \nabla \cdot \mathbf{s},\\
       \end{equation}
 
       che sintetizza il principio secondo cui il flusso netto di massa, ossia la differenza tra quello
@@ -58,7 +58,7 @@ leggi fondamentali che di seguito si riassumono:
 
       \begin{equation}
 	\label{eq:statelaw}
-	\frac{1}{p_0} \frac{\partial p}{\partial t} = \gamma \frac{\partial \delta}{\partial t}.
+	\frac{1}{p_0} \frac{\partial p}{\partial t} = \gamma \frac{\partial \delta}{\partial t}.\\
       \end{equation}
 
 \end{description}
@@ -68,14 +68,14 @@ ricava l'\emph{equazione di propagazione delle onde sonore}:
 
 \begin{equation}
   \label{eq:wavelaw}
-  \nabla^2 p = \frac{1}{c^2} \frac{\partial^2 p}{\partial t^2},
+  \nabla^2 p = \frac{1}{c^2} \frac{\partial^2 p}{\partial t^2},\\
 \end{equation}
 
 in cui $c$ \`e la velocit\`a di propagazione dell'onda sonora nel gas, definita come
 
 \begin{equation}
   \label{eq:soundspeed}
-  c = \sqrt{\gamma \frac{p_0}{\rho_0}}.
+  c = \sqrt{\gamma \frac{p_0}{\rho_0}}.\\
 \end{equation}
 
 
@@ -84,7 +84,7 @@ in cui $c$ \`e la velocit\`a di propagazione dell'onda sonora nel gas, definita 
 \section{Intensit\`a, densit\`a di energia e potenza}
 \label{sec:power}
 
-Di seguito si riportano le definizioni di alcune grandezze fondamentali\footnote{Per i dettagli si
+Di seguito si riportano le definizioni di alcune grandezze fondamentali\footnote{ Per i dettagli si
     rimanda sempre a~\cite{amea}.}:
 
 \begin{description}
@@ -95,7 +95,7 @@ Di seguito si riportano le definizioni di alcune grandezze fondamentali\footnote
 
        \begin{equation}
 	 \label{eq:istint}
-         I = p_m u_m \cos^2 \left[ \omega \left( t - \frac{x}{c} \right) \right],
+         I = p_m u_m \cos^2 \left[ \omega \left( t - \frac{x}{c} \right) \right],\\
        \end{equation}
 
        dove $p_m$ e $u_m$ sono i valori di picco di pressione e velocit\`a relative alla direzione di
@@ -103,7 +103,7 @@ Di seguito si riportano le definizioni di alcune grandezze fondamentali\footnote
 
        \begin{equation}
 	 \label{eq:meanint}
-         \overline{I} =\frac{p_\textrm{rms}}{\rho_0 c} \quad \left[ \frac{\textrm{W}}{\um^2} \right].
+         \overline{I} =\frac{p_\textrm{rms}}{\rho_0 c} \quad \left[ \frac{\textrm{W}}{\um^2} \right].\\
        \end{equation}
 
 
@@ -113,7 +113,7 @@ Di seguito si riportano le definizioni di alcune grandezze fondamentali\footnote
 
        \begin{equation}
 	 \label{eq:directivity}
-          Q = \frac{I_{\theta, \phi}}{\overline{I}},
+          Q = \frac{I_{\theta, \phi}}{\overline{I}},\\
        \end{equation}
 
        dove $I_{\theta, \phi}$ \`e l'intensit\`a irradiata nella direzione specificata, in coordinate sferiche,
@@ -125,7 +125,7 @@ Di seguito si riportano le definizioni di alcune grandezze fondamentali\footnote
        \begin{equation}
 	 \label{eq:density}
          D = \frac{\overline{I}}{c^2} =\frac{p_\textrm{rms}}{\rho_0 c^2} 
-	                               \quad \left[ \frac{\textrm{W} \cdot \textrm{s}}{\um^3} \right].
+	                               \quad \left[ \frac{\textrm{W} \cdot \textrm{s}}{\um^3} \right].\\
        \end{equation}
 
   \item[Potenza sonora.] Supponendo che tutta l'energia sonora fluente nel mezzo sia prodotta da una sola e
@@ -135,7 +135,7 @@ Di seguito si riportano le definizioni di alcune grandezze fondamentali\footnote
 
        \begin{equation}
 	 \label{eq:power}
-          W = \int_S I_s \, \ud S.
+          W = \int_S I_s \, \ud S.\\
        \end{equation}
 
 
@@ -148,7 +148,7 @@ Di seguito si riportano le definizioni di alcune grandezze fondamentali\footnote
 
 Per via dell'enorme capacit\`a dinamica dell'orecchio umano difficilmente viene adottata la scala
 lineare per rappresentare le grandezze acustiche: dovendo trattare con un campo di valori estremamente
-esteso e disperso\footnote{La minima pressione percepibile da un individuo normo udente \`e di 20 $\mu$Pa,
+esteso e disperso\footnote{ La minima pressione percepibile da un individuo normo udente \`e di 20 $\mu$Pa,
    la soglia del dolore \`e, invece, attorno ai 60 Pa.} \`e universalmente preferita la scala dei decibel,
 codificata nella norma ISO 1648. Premettendo che un valore espresso in decibel implica \emph{sempre} un
 rapporto con un altro valore di riferimento, di seguito si riportano le principali grandezze impiegate:
@@ -167,28 +167,28 @@ rapporto con un altro valore di riferimento, di seguito si riportano le principa
 
        \begin{equation}
 	 \label{eq:pressurelevel2}
-	 L_p = 10 \log p^2 + 94 \quad \textrm{[dB]}.
+	 L_p = 10 \log p^2 + 94 \quad \textrm{[dB]}.\\
        \end{equation}
 
   \item[Livello di potenza sonora.]
 
        \begin{equation}
 	 \label{eq:powerlevel}
-          L_W = 10 \log \frac{W}{W_0} \quad \textrm{[dB]},
+          L_W = 10 \log \frac{W}{W_0} \quad \textrm{[dB]},\\
        \end{equation}
 
        dove $W_0 = 1$ pW. Sostituendo quest'ultimo valore nella~\ref{eq:powerlevel} si ricava
 
       \begin{equation}
 	 \label{eq:powerlevel2}
-          L_W = 10 \log W + 120 \quad \textrm{[dB]}.
+          L_W = 10 \log W + 120 \quad \textrm{[dB]}.\\
        \end{equation}
 
   \item[Livello di intensit\`a sonora.]
   
      \begin{equation}
 	 \label{eq:intensitylevel}
-          L_I = 10 \log \frac{I}{I_0} \quad \textrm{[dB]},
+          L_I = 10 \log \frac{I}{I_0} \quad \textrm{[dB]},\\
        \end{equation}
 
       dove $I_0 = 1$ pW/m$^2$.  \`E largamente in uso esprimere anche la direttivit\`a in decibel: in questo
@@ -208,7 +208,7 @@ relazione
 
 \begin{equation}
   \label{eq:lieqlp}
-  L_I = L_p.
+  L_I = L_p.\\
 \end{equation}
 
 Tale situazione si avrebbe a pressione atmosferica e temperatura di 39$^\circ$C; alla temperatura di
@@ -219,14 +219,14 @@ $W$ si pu\`o scrivere:
 
 \begin{equation}
   \label{eq:lweqlieqls}
-  10 \log \frac{W}{W_0} = 10 \log \frac{I}{I_0} + 10 \log \frac{S}{S_0} \quad \textrm{[dB]};
+  10 \log \frac{W}{W_0} = 10 \log \frac{I}{I_0} + 10 \log \frac{S}{S_0} \quad \textrm{[dB]};\\
 \end{equation}
 
 se, poi, $S_0 = S = 1 \, \um^2$, risulta esattamente 
 
 \begin{equation}
   \label{eq:lweqli}
-  L_W = L_I.
+  L_W = L_I.\\
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -236,14 +236,14 @@ se, poi, $S_0 = S = 1 \, \um^2$, risulta esattamente
 
 La sensibilit\`a dell'orecchio umano non \`e costante in tutta la banda udibile, ma presenta un massimo
 nella regione attorno a 4 kHz ed ha i valori minimi in corrispondenza degli estremi, come evidenziato
-dalle curve isofoniche elaborate da Fletcher e Munson.\footnote{Si veda~\cite{mdaa} al capitolo 2.}
+dalle curve isofoniche elaborate da Fletcher e Munson.\footnote{ Si veda~\cite{mdaa} al capitolo 2.}
 Questo ha portato all'ideazione delle unit\`a di misura \emph{percettive} (la scala dei \emph{phon})
 ed ha suggerito l'adozione negli strumenti di misura di un filtraggio dei livelli rilevati in modo
 da renderli coerenti alla reale sensibilit\`a umana. Il suddetto filtraggio \`e codificato nelle
 cosiddette \emph{curve di ponderazione}, le quali non fanno altro che indicare l'alterazione della
 risposta in frequenza dello strumento, ossia il fattore con cui debbono essere pesate le frequenze
 della banda audio. In figura~\ref{fig:ponderaz} sono riportate le curve di ponderazione A, B e C
-che sono, sostanzialmente, le curve isofoniche a 40, 70 e 100 phon rispettivamente.
+che sono, sostanzialmente, le curve isofoniche a 40, 70 e 100 phon rispettivamente.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -264,14 +264,14 @@ allora la sua trasformata secondo Fourier \`e data dalla relazione
 
 \begin{equation}
  \label{eq:fourier}
-  X(f) = \int_{-\infty}^{\infty} x(t) \, e^{-j2\pi ft} \, \ud t.
+  X(f) = \int_{-\infty}^{\infty} x(t) \, e^{-j2\pi ft} \, \ud t.\\
 \end{equation}
 
 La trasformata inversa del segnale $X(f)$, invece si pu\`o calcolare mediante l'equazione
 
 \begin{equation}
   \label{eq:invfourier}
-  x(t) = \int_{-\infty}^{\infty} X(f) \, e^{j2\pi ft} \, \ud f.
+  x(t) = \int_{-\infty}^{\infty} X(f) \, e^{j2\pi ft} \, \ud f.\\
 \end{equation}
 
 In generale affinch\`e esista la trasformata di Fourier del segnale $x(t)$, per il teorema di Plancherel \`e sufficiente 

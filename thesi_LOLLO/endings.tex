@@ -1,18 +1,10 @@
 \chapter{Conclusioni}
 \label{sec:endings}
+	In questo progetto di tesi si è lavorato alla scrittura di un software che fosse in grado di elaborare registrazioni multicanale prefiltrate, provenienti da un array microfonico generico, congiuntamente a una registrazione video dello stesso evento, in modo da generare in output una mappa sonora dinamica che fornisse una indicazione qualitativa dell'evoluzione del campo acustico.
+	Come scelta di progetto è stata mantenuta la linea di implementare il software in forma di plug-in \audacity , piattaforma che permette ai suoi \emph{plug-ins} o \emph{moduli} di accedere a moltissime proprietà e dati del workspace, cosa non altrettanto vera per tutti gli altri standard diffusi di plug-in come per esempio i \emph{VST} e gli \emph{Audiounits}.
+
 	Il plug-in progettato in questa sede è funzionante ed altamente interattivo, con svariate tipologie di realizzazione della mappa grazie alla possibilità di configurare lo stile della scala di colore, la percentuale di trasparenza della mappa sovrapposta al video di background, l'unità di misura dei livelli mostrati, i valori di fondo scala, la lunghezza del frame video, la percentuale di overlap tra i singoli frame etc.). 
 	
-	Dal confronto degli output del modulo in oggetto con altri calcolate dallo script Matlab\textregistered \; descritto nel documento \cite{spheric-soundfield} si è inoltre riscontrata una certa coerenza tra i risultati ottenuti; ben sapendo che non è ancora stato scoperto un metodo realmente applicabile per tarare una misura effettuata con un array microfonico, si desume che i risultati ottenuti con l’uso del \emph{plug-in} siano corretti. 
-%Il modulo è stato compilato correttamente per tre piattaforme \emph{Windows}, \emph{Mac OS X} e \emph{Linux} , come da obiettivo della tesi.
+	Dal confronto degli output del modulo in oggetto con altri calcolate dallo script Matlab\textsuperscript{\texttrademark} \; descritto nel documento \cite{spheric-soundfield} si è inoltre riscontrata una certa coerenza tra i risultati ottenuti; ben sapendo che non è ancora stato scoperto un metodo realmente applicabile per tarare una misura effettuata con un array microfonico, si desume che i risultati ottenuti con l’uso del \emph{plug-in} siano corretti. 
 
-
-figura delle tre piattaforme
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA tre PIATTAFORME %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-  \centering
-%  \includegraphics[width =12cm]{img/3win.pdf}
-  \caption{Graphic User Interface sotto le tre diverse piattaforme principali: \emph{Windows}, \emph{Mac OS X} e \emph{Linux}.}
-  \label{fig:3win}
-\end{figure}
-
- [...]\\
+	In futuro, se si riuscisse a scoprire questo metodo di taratura per array microfonici, sarebbe possibile utilizzare il plugin in modo molto efficace in campo rumoristico per effettuare misure di livelli sonori.

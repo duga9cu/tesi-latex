@@ -9,29 +9,35 @@
 \bibitem{aurora}
 {\sc S.~Campanini e A.~Farina}, {\em { A new Audacity feature: room objective
   acoustical parameters calculation module}}, in {Linux Audio Conference},
-  Parma, Italy, 2009.
-
-\bibitem{chiesi}
-{\sc L.~Chiesi}, {\em {Sintesi di microfoni ad alta direttivitˆ mediante array
-  microfonici planari }}, master's thesis, Universitˆ degli Studi di Parma -
-  Dipartimento di ingegneria industriale, 2009.
-
-\bibitem{ebri}
-{\sc L.~Ebri}, {\em {Elaborazione del segnale di array microfonici con filtri
-  numerici basati su inversione di misure sperimentali }}, master's thesis,
-  Universitˆ degli Studi di Parma - Dipartimento di ingegneria industriale,
-  2012.
+  Parma, Italy, April 2009.
 
 \bibitem{livevirtmikes}
 {\sc A.~Farina, A.~Capra, L.~Chiesi, e L.~Scopece}, {\em {A spherical
   microphone array for synthesizing virtual directive microphones in live
-  broadcasting and in post production }}, in AES 40th International Conference,
-  Tokyo, Japan, 2010.
+  broadcasting and in post production }}, in AES 40$^\textrm{th}$ International
+  Conference, Tokyo, Japan, october 2010.
+
+\bibitem{inversionfilters}
+{\sc O.~Kirkeby e P.~A.~N. J.}, {\em { Digital Filter Design for Inversion
+  Problems in Sound Reproduction }}, AES, 47, No. 7/8 (1999).
+
+\bibitem{regularization}
+{\sc O.~Kirkeby, P.~A. Nelson, H.~Hamada, e F.~Orduna-Bustamante}, {\em {Fast
+  Deconvolution of Multichannel Systems Using Regularization }}, in IEEE
+  Transaction On Speech and Audio Processing, vol. VOL. 6, no. 2, March 1998.
 
 \bibitem{delaunay}
 {\sc D.~T. Lee e B.~J. Schachter}, {\em {Two Algorithms for Constructing a
   Delaunay Triangulation }}, International Journal of Computer and Information
   Sciences, 9 (1980).
+
+\bibitem{inversefiltering}
+{\sc S.~G. Norcross, G.~A. Soulodre, e M.~C. Lavoie}, {\em {Evaluation of
+  Inverse Filtering Techniques for Room/Speaker Equalization }}, in
+  113$^\textrm{th}$ AES Convention, Los Angels, CA, USA, October 2002.
+
+\bibitem{lascienzadelsuono}
+{\sc J.~R. Pierce}, {\em { La scienza del suono }}, Zanichelli, 1988.
 
 \bibitem{mdaa}
 {\sc {R. Spagnolo (a cura di)}}, {\em {Manuale di acustica applicata}}, UTET,
@@ -50,11 +56,5 @@
   1148 di {\em Lecture Notes in Computer Science}, Springer-Verlag, mag. 1996,
   pp.~203--222.
 \newblock From the First ACM Workshop on Applied Computational Geometry.
-
-\bibitem{zanettini}
-{\sc M.~Zanettini}, {\em {Sintesi di microfoni ad alta direttivitˆ mediante
-  array microfonici planari }}, master's thesis, Universitˆ degli Studi di
-  Parma - Facoltˆ di ingegneria, Corso di Laurea Specialistica in Ingegneria
-  delle Telecomunicazioni, 2008.
 
 \end{thebibliography}
