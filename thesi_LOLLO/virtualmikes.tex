@@ -1,32 +1,70 @@
 \chapter{Sintesi di microfoni virtuali}
 \label{sec:virtmikes}
-[...]\\
+L'utilizzo di array di microfoni avanzati, come abbiamo visto, porta numerose possibilità di analisi, tuttavia i segnali registrati dalle capsule devono essere interpretati in qualche modo e non sono pronti per \emph{l'utilizzo}.
+Come abbiamo visto, la codifica interpretativa tradizionale consiste nel generare le armoniche sferiche \emph{Ambisonics} fino al massimo ordine possibile (\emph{A-format}) a seconda del tipo di array.
+A partire da questi segnali, con opportune combinazioni e elaborazioni, si può fornire in uscita un set di registrazioni che simulano microfoni, chiamati \emph{virtuali} appunto, dalla direzione e apertura polare arbitrarie.
+La parte dell'array microfonico che si occupa di passare da segnali \emph{raw} o \emph{B-format} ai microfoni virtuali è il \emph{sistema di elaborazione}
 
-
-\section{Elaborazione dei segnali microfonici}
-\label{sec:}
-	
-	%cap 1.5 chiesi
-	[...]\\
 
 \section{Sistema di Elaborazione}
 \label{sec:sistelab}
+	Il sistema di elaborazione dei segnali \emph{raw} delle capsule di un array microfonico è dunque di primaria importanza per dare significato alle registrazioni ottenute.
+	Implementato solitamente da processori digitali dedicati o in alternativa da sistemi virtualizzati software generano, in ogni caso tecnologico di implementazione o di codifica, dei segnali digitali esprimibili come sommatoria dei contributi di ogni capsula filtrati opportunamente.
+	L'\emph{i-esimo} segnale di uscita risponderà quindi alla legge generica
+	\begin{equation}
+		y_i(t) = \sum^M_{m=1} x_m(t) \ast h_{m,i}(t)
+	\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA signal processing %%%%%%%%%%%%%%%%%%%%%%
+	\begin{figure}[h]
+\begin{center}
+\includegraphics[width=12cm]{img/signalproc.png}
+\caption{ }
+\label{ fig:signalproc}
+\end{center}
+\end{figure}
+	Il processing compiuto da questo componente del sistema \emph{array microfonico} non costituisce dunque un problema oneroso, infatti si tratta di una somma di convoluzioni facilmente implementabile su un calcolatore con algoritmi noti.
+	La cosa interessante in questa fase consiste nel capire come generare i microfoni voluti cioè quali filtri utilizzare per ottenere questo risultato.
+	%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA ambisonicsdecod %%%%%%%%%%%%%%%%%%%%%%
+	\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=8cm]{img/ambisonicsdecod.png}
+\caption{ Possibili microfoni virtuali a ordine di direttività crescente (sulla destra) calcolati a partire da armoniche sferiche \emph{Ambisonics} fino al terzo ordine (sulla sinistra).}
+\label{fig:ambisonicsdecod}
+\end{center}
+\end{figure}	
+	Come possiamo vedere dalla figura~\ref{fig:ambisonicsdecod}, combinando le armoniche sferiche \emph{Ambisonics} di ordine dallo 0 al 3 della colonna di sinistra, è possibile generare microfoni virtuali supercardioidi con direttività crescente dall'ordine 1 all'ordine 3.
+	La direttività di un microfono virtuale di ordine $h$, espressa in coordinate sferiche, segue l'espressione:
+		\begin{equation}
+		D_H(\vartheta,\varphi,h) = sign{(D_1(\vartheta,\varphi)) \cdot |D_1(\vartheta,\varphi)|^h},
+	\end{equation}
 	
-	%cap 1.4.1 chiesi
-	[...]\\
+	dove $D_1(\vartheta,\varphi) $ è la direttività del microfono virtuale del primo ordine che è pari a:
+	\begin{equation}
+		D_1(\vartheta,\varphi) = P+G \cdot \cos{\vartheta} \cdot \cos{\varphi}
+	\end{equation}
 	
-\section{Sintesi della matrice dei filtri FIR}
-\label{sec:}
-	[...]\\
+	Questo approccio costituisce la tradizione e la storia di questo tipo di codifiche fin dagli anni '70. quando vennero introdotte, con la sola miglioria dell'incremento di ordine di armoniche raggiungibile.
+	Essendo però nella maggior parte dei casi precisa volontà del utilizzatore di questi sistemi codificare un determinato set di microfoni virtuali noto a priori, può essere conveniente evitare di passare attraverso la codifica \emph{Ambisonics} troppo teorica e soggetta a moltissimi scostamenti dovuti a non idealità dei sistemi.
+	Si è provato a seguire una strada alternativa, definendo direttamente le uscite del sistema di elaborazione come segnali monofonici corrispondenti ad un set di microfoni con l'orientazione e direttività cercate.
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA cardioid %%%%%%%%%%%%%%%%%%%%%%
+	\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=8cm]{img/cardioid.png}
+\caption{ Diagramma polare di un microfono virtuale cardioide in funzione dell'ordine di direttività.}
+\label{fig:cardioid}
+\end{center}
+\end{figure}
+
+
 	
 	
+	\subsection{Approccio innovativo di inversione numerica}	
+		Dalle considerazioni fatte sullo stato dell’arte nell’elaborazione dei segnali degli array microfonici emerge che le tecniche utilizzate sono basate esclusivamente su modelli teorici fortemente semplificati della struttura fisica del microfono e delle caratteristiche delle capsule. 
+
+	L’approccio innovativo proposto prevede di caratterizzare l’intero array microfonico sperimentalmente, determinando, mediante misure di risposta all’impulso, la funzione di trasferimento tra un certo numero di onde piane incidenti sull’array microfonico da diverse direzioni e i segnali elettrici generati dalle singole capsule. 
+	Elaborando mediante opportune tecniche di inversione numerica la matrice di risposte all’impulso ottenuta, si vuole determinare una matrice di filtri che, convoluti con i segnali delle capsule microfoniche, permetta di ottenere i segnali di un set di microfoni virtuali con direttività arbitraria. 		
+La scelta dei coefficienti che caratterizzano i filtri viene fatta mediante metodi numerici che utilizzano tecniche di inversione basate sulla minimizzazione dell’errore ai minimi quadrati. 
+I risultati ottenuti saranno quindi “massimamente simili” a quelli desiderati.\footnote{si veda \cite{chiesi} per una descrizione più accurata del procedimento qui riassunto.} 
+
 		
-\section{Implementazione del calcolo convolutivo}
-\label{sec:}
-	[...]\\
-	
-	%
-%\section{}
-%\label{sec:}
-%	[...]\\
-	%
