@@ -1,4 +1,3 @@
-
 \chapter{Dettagli di Implementazione}
 \label{sec:internalfunct}
 	In questo capitolo si analizzeranno i dettagli del lavoro computazionale che il tracciamento della mappa comporta. 
@@ -88,7 +87,7 @@
 \begin{figure}
   \centering
   \includegraphics[width = 13cm]{img/hanning.jpg}
-  \caption{Finestra di Hanning nel dominio del tempo per l'analisi digitale.}
+  \caption{Finestra di Hanning nel dominio del tempo per l'analisi digitale.\\}
   \label{fig:hanning}
 \end{figure}
 	
@@ -181,21 +180,38 @@ La prima ipotesi potrebbe essere la suddivisione in aree di forma quadrata (come
 	Si otterrà quindi una rappresentazione dello spettro di potenza composta da un numero N di righe spettrali, corrispondente alla frequenza di \emph{Nyquist}, cioè alla metà dei campioni analizzati:
 	\begin{equation}
 \label{eq:nyquist }
-	N=\frac {sample\_length}{2} +1
+	N=\frac {sample\_length}{2} +1\\
 	\end{equation}
 	
 	Inoltre per il \emph{teorema di Shannon} la banda passante $B$ rappresentabile dallo spettro di potenza sarà :
 		\begin{equation}
 \label{eq:shannon }
-	B=\frac {sample\_rate}{2}
+	B=\frac {sample\_rate}{2}\\
 	\end{equation}
 	
 	Quindi ad ogni riga spettrale così calcolata corrisponderà un intervallo di frequenze $\Delta f$ calcolato come segue:
 	\begin{equation}
-		\Delta f = \frac{B}{N}
+		\Delta f = \frac{B}{N}\\
 	\end{equation}
 	
 	A questo punto si prosegue accumulando le potenze contenute nelle singole righe spettrali per ogni banda analizzata nonchè per tutto lo spettro ad esclusione delle due bande più basse in cui l'array non può avere una buona risoluzione (analisi \emph{lineare}) e infine si calcola una versione dell'analisi lineare misurata in dB(A).\footnote{\;Per i filtri di ponderazione si vedano la sezione~\ref{sec:ponderaz}  e l'appendice~\ref{sec:pondcurves}}
+	I livelli vengono sommati su un \textsf{array} che contiene un accumulatore per banda. 
+	Su ogni accumulatore verranno sommate le righe spettrali che cadono nella banda di pertinenza, cioè il cui indice di riga spettrale $n$ soddisfa la relazione
+	\begin{equation}
+	\label{ }
+		n \cdot \Delta f \in [f_i, f_s] \;\; ,\\
+	\end{equation}
+	dove $f_i$ e $f_s$ sono le frequenze di bordo che caratterizzano la banda stessa.
+	
+	Per quanto riguarda l'accumulatore denominato \emph{Lineare} esso comprende tutte le bande ad eccezione delle prime due le quali si è reputato non contenessero altro che rumore in quanto fuori dalla zona di risoluzione frequenziale dell'array.
+	
+	Il valore pesato A invece le comprende proprio perchè a seguito della pesatura con la curva di ponderazione, sono proprio quelle frequenze le più penalizzate in quanto anche il sistema uditivo umano risponde male ai segnali all'estremità grave dello spettro udibile.
+	
+	Per l'implementazione della pesatura con la curva A si è utilizzato l'approccio analitico codificando la funzione che definisce tale curva, cioè che rappresenta il peso $A$ dipendente dalla frequenza della riga spettrale come nella relazione
+	\begin{equation}
+	\label{ }
+		A = 10 \log \left( \frac{3.5041384 \cdot 10^{16} \cdot f^8\cdot (122194.217^2 + f^2)^{-2}}{(20.598997^2 + f^2)^2 \cdot (107.65265^2 + f^2)\cdot (737.86223^2 + f^2)}	\right) \\
+	\end{equation}
 	
 	Tutti questi valori vengono calcolati per ogni microfono virtuale.\\
 	

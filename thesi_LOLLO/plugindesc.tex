@@ -6,7 +6,7 @@ Le operazioni compiute dal software qui descritto si dividono sostanzialmente in
   \item una parte di \emph{precalcolo}
   \item una parte di \emph{customizzazione} dei risultati tramite l'utilizzo di varie opzioni fornite dalla \emph{GUI}
 \end{itemize}
-In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'utente, nell'utilizzo del \emph{plug-in}, sia in fase di configurazione che in fase di presentazione e analisi dei risultati, mentre la parte di calcolo verrà descritta più approfonditamente nel capitolo \ref{sec:internalfunct} alla luce dei parametri utilizzati e presentati ora.\\
+In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'utente, nell'utilizzo del \emph{plug-in}, sia in fase di configurazione che in fase di presentazione e analisi dei risultati, mentre la parte di calcolo verrà descritta più approfonditamente nel capitolo \ref{sec:internalfunct} alla luce dei parametri utilizzati e presentati.\\
 
 
 
@@ -14,7 +14,7 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
 	
 	\section{Selezione dell'intervallo temporale da analizzare}
 	\label{sec:audioselection}
-		Prima ancora di lanciare il \emph{plug-in}, e necessario caricare il file audio della registrazione multicanale acquisita con l'\emph{array microfonico} nell'host \audacity. 
+		Prima di lanciare il \emph{plug-in}, è necessario caricare il file audio della registrazione multicanale acquisita con l'\emph{array microfonico} nell'host \audacity. 
 		
 		Di tutta la registrazione, che può in alcuni casi durare anche qualche ora, potrebbe essere necessario selezionare solo una parte, in modo da focalizzarsi nell'analisi su un particolare intervallo di tempo, all'occorrenza anche molto breve. 		
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA AUDIO SELECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,9 +24,9 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
   \caption{Selezione dello spezzone di materiale audio da analizzare con il \emph{plug-in}.\\}
   \label{fig:audioselect}
 \end{figure}
-		Si pensi per esempio all'analisi delle prime riflessioni in una sala da concerto: in questo tipo di operazioni si è interessati a studiare il comportamento di un ambiente sotto l'aspetto degli echi e altri effetti che possono essere fastidiosi per alcuni utilizzi dell'ambiente stesso.
+		Si pensi per esempio all'analisi delle prime riflessioni in una sala da concerto: in questo tipo di studio, si è interessati al comportamento di un ambiente sotto l'aspetto degli echi e altri effetti.
 		A questo scopo è necessario selezionare la porzione di audio di interesse, come indicato in figura \ref{fig:audioselect}. 
-		Così facendo si limita il materiale audio che \audacity deve editare attraverso i \emph{plug-ins} (che nel menù del programma vengono denominati \emph{effects}).
+		Così facendo si limita il materiale audio che \audacity deve editare attraverso i \emph{plug-in} (denominati \emph{effects}).
 		
 		
 				%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA OUTOFMEMORY %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,9 +37,9 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
   \label{fig:outofmemory}
 \end{figure}
 
-		In alternativa è possibile selezionare anche l'intera registrazione, consapevoli che essendo l'analisi compiuta nel \emph{precalcolo} computazionalmente molto onerosa, nonché esigente per quanto riguarda l'utilizzo delle \emph{risorse}, si va incontro alla possiblità che in questa fase il programma si interrompa prima di aver analizzato tutti i frame, a conseguenza  dell'esaurimento delle risorse a disposizione. 
+		In alternativa è possibile selezionare anche l'intera registrazione, ben sapendo che l'analisi compiuta nel \emph{precalcolo} è computazionalmente molto onerosa, nonché esigente per quanto riguarda l'utilizzo delle \emph{risorse}, perciò va incontro alla possiblità che in questa fase il programma si interrompa prima di aver analizzato tutti i frame.
 		In tal caso verrà presentato un messaggio di avviso, come da figura \ref{fig:outofmemory}, e il programma passerà alla visualizzazione dei soli risultati analizzati fino a quel momento.
-		Si tenga presente, a titolo di riferimento, che su un normale laptop con processore \emph{dual core} da $2.0 \; GHz$ con $2\;Gb$ di $RAM$, l'elaborazione più lunga complessivamente effettuabile consta di circa $60$ frames e impiega circa 90 secondi per il \emph{precalcolo}.
+		Si tenga presente che su un normale laptop con processore \emph{dual core} da $2.0 \; GHz$ con $2\;Gb$ di $RAM$, l'elaborazione più lunga complessivamente effettuabile consta di circa $60$ frames e impiega circa 90 secondi per il \emph{precalcolo}.
 		
 		Sarà sempre possibile costruire un video a partire dai singoli frames esportati in diverse elaborazioni del plug-in, operando su spezzoni audio consecutivi. \\
 		
@@ -59,7 +59,7 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
 \end{figure}
 		
 		La prima finestra che appare all'utente è mostrata in figura \ref{fig:confdlg}. 
-		Si tratta di una finestra di dialogo atta all'inserimento di alcuni parametri per l'analisi del materiale audio precedentemente selezionato. 
+		Si tratta di una finestra di dialogo dedicata all'inserimento di alcuni parametri per l'analisi del materiale audio precedentemente selezionato. 
 		
 		Attraverso questa finestra l'utente dovrà specificare:
 		\begin{description}
@@ -94,20 +94,20 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
  		 \item[Selettore di banda di frequenze] secondo cui filtrare i risultati e osservare quindi al meglio il comportamento delle onde sonore in una banda particolare. 
 		 Si può quindi discriminare l'emissione di energia sonora in una particolare regione di spettro.
 		 Questo tipo di analisi può essere molto utile quando si cerca di studiare un campo acustico dovendo discriminare diverse sorgenti sonore o particolari riflessioni di uno stesso impulso. Grazie al \emph{filtro passa-banda} è possibile eliminare dall'analisi del campo acustico tutto il materiale sonoro di minor interesse evidenziando quindi l'oggetto di attenzione in fase di test.
-		 \item[Selettore di scala di colore] nella modalità di un semplice menù a tendina che fornisce una gamma di tre possibilità cromatiche, \emph{hot} o \emph{cold}, intuitivamente colori caldi o freddi, e \emph{jet} che invece passa dai freddi ai caldi mano a mano che aumenta il SPL che si vuole rappresentare.
+		 \item[Selettore di scala di colore] nella modalità di un semplice menù a tendina che fornisce una gamma di tre possibilità cromatiche, \emph{hot} o \emph{cold}, intuitivamente colori caldi o freddi, e \emph{jet} che invece passa dai freddi ai caldi mano a mano che aumenta il valore SPL che si vuole rappresentare.
 		 Grazie a questa opzione è possibile variare la gradazione di colore usata per rappresentare i valori numerici sulla mappa, in modo da massimizzare il contrasto con il video sullo sfondo e rendere il grafico di più comoda interpretazione. 
 		 Naturalmente, è possibile cambiare opzione anche durante la riproduzione video, come nel caso del cambio di \emph{filtro passa-banda} in modo da analizzare con due scale (o filtri) diversi due parti diverse del video.
 		  \item[Selettore di unità di misura] con cui rappresentare i livelli sonori. 
-		  La scelta può ricadere in una delle quattro possibilità offerte dal menù a tendina: decibel ($dB$), Pascal ($Pa$), radici quadrata e cubica della pressione ($\sqrt{Pa}$ e $\sqrt[3]{Pa}$)
+		  La scelta può ricadere in una delle quattro possibilità offerte dal menù a tendina: decibel ($dB$), Pascal ($Pa$), radice quadrata e cubica della pressione ($\sqrt{Pa}$ e $\sqrt[3]{Pa}$)
 		  \item[Mostra/nascondi i microfoni virtuali] consente, selezionando l'apposita \emph{checkbox}, di visualizzare sulla colormap le posizioni dei microfoni virtuali contrassegnati da una piccola croce bianca.
 		  \item[abilita/disabilita autoscale] permette di modificare i valori di massimo e minimo dei livelli SPL associati alla scala di colore rispettivamente considerando il massimo e minimo rispetto al materiale audio filtrato nella banda di frequenze attualmente selezionata, o semplicemente utilizzando i valori pre-filtraggio nel caso in cui la funzione di autoscale non sia selezionata.
-		  questo permette di apprezzare maggiormente i piccoli cambiamenti di livello di pressione misurati in punti vicini tra loro, al fine di notare maggiormente la direzione di provenienza di una sorgente piuttosto che di una riflessione particolare all'interno di un campo acustico complesso. Sarà sufficiente selezionare la banda di frequenze in cui risiede il suono che si vuole evidenziare per ottenere il risultato voluto \footnote{\; Si noti che attraverso la medesima operazione è anche possibile effettuare l'analisi opposta e cioè risalire alla banda frequenziale di maggior rilievo in $dB$ per quanto riguarda il rumore di una sorgente di cui si conosce la direzione, magari nel caso in cui ci si trovi all'interno di un campo acustico complesso in cui è impossibile isolare la sola sorgente interessata.}.
+		  Questo permette di apprezzare maggiormente i piccoli cambiamenti di livello di pressione misurati in punti vicini tra loro, al fine di notare maggiormente la direzione di provenienza di una sorgente piuttosto che di una riflessione particolare all'interno di un campo acustico complesso. Sarà sufficiente selezionare la banda di frequenze in cui risiede il suono che si vuole evidenziare per ottenere il risultato voluto \footnote{\; Si noti che attraverso la medesima operazione è anche possibile effettuare l'analisi opposta e cioè risalire alla banda frequenziale di maggior rilievo in $dB$ per quanto riguarda il rumore di una sorgente di cui si conosce la direzione, magari nel caso in cui ci si trovi all'interno di un campo acustico complesso in cui è impossibile isolare la sola sorgente interessata.}.
 		  \item[disabilita/abilita lo sfondo] in modo da poter vedere correttamente i colori della mappa acustica senza \emph{l'interferenza} del video di background visibile in trasparenza. 
-		  Per esempio sarebbe utile, in un momento del video in cui il campo acustico evolve in maniera complicata, poter visionare solo alcuni frame, \emph{spegnendo} il video di background, per poterlo poi riaccendere per la rimanente parte del video.	  
+		  Per esempio potrebbe essere utile in casi complessi, poter visionare solo alcuni frame, \emph{spegnendo} il video di background, per poterlo poi riaccendere in seguito.
 \end{description}
-	Oltre a questi pannelli di opzioni con cui personalizzare i risultati ottenuti, è presente nell'interfaccia grafica anche un ultimo pannello non interattivo ma che fornisce l'importante informazione riguardante il livello sonoro, nell'unità di misura scelta, relativo alla posizione del mouse sulla mappa e quindi a una coordinata sferica nel già citato\footnote{ \;Secondo la norma ISO2631, come descritto al capitolo \ref{sec:eigensystem} e in figura \ref{fig:normaISO2631}} sistema di riferimento antropometrico centrato sull'array microfonico.
+	Oltre a queste opzioni con cui personalizzare i risultati ottenuti, è presente nell'interfaccia grafica anche un ultimo pannello non interattivo che fornisce l'informazione riguardante il livello sonoro, nell'unità di misura scelta, relativo alla posizione del mouse sulla mappa e quindi a una coordinata sferica nel già citato\footnote{ \;Secondo la norma ISO2631, come descritto al capitolo \ref{sec:eigensystem} e in figura \ref{fig:normaISO2631}} sistema di riferimento antropometrico centrato sull'array microfonico.
 	
-	Al termine delle operazioni, quando ci si ritenga soddisfatti del video ottenuto tramite le opzioni selezionate è possibile esportare i risultati tramite l'apposito bottone \emph{Esporta}.\\
+	Al termine delle operazioni, è possibile esportare i risultati tramite l'apposito bottone \emph{Esporta}.\\
 
 
 		

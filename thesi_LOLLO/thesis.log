@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.7)  26 SEP 2013 22:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.9.7)  27 SEP 2013 02:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -447,6 +447,12 @@ LaTeX Warning: Label `eq:lambdac ' multiply defined.
 
 LaTeX Warning: Label ` eq:SPL' multiply defined.
 
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
 )
 \openout1 = `thesis.aux'.
 
@@ -636,19 +642,19 @@ Capitolo 1.
 File: img/acousticmap.png Graphic file (type png)
 
 <use img/acousticmap.png>
-Package pdftex.def Info: img/acousticmap.png used on input line 15.
+Package pdftex.def Info: img/acousticmap.png used on input line 16.
 (pdftex.def)             Requested size: 412.56496pt x 204.66165pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 20.
+(Font)              <10> on input line 21.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 20.
+(Font)              <7> on input line 21.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 20.
+(Font)              <5> on input line 21.
  [9
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
@@ -733,15 +739,15 @@ Package pdftex.def Info: img/coclea.jpg used on input line 233.
 File: img/isophon.jpg Graphic file (type jpg)
 
 <use img/isophon.jpg>
-Package pdftex.def Info: img/isophon.jpg used on input line 249.
+Package pdftex.def Info: img/isophon.jpg used on input line 251.
 (pdftex.def)             Requested size: 227.62204pt x 145.21378pt.
  [20 <./img/coclea.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
 
 [21 <./img/isophon.jpg>] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 293--294
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
 
  []
 
@@ -753,7 +759,7 @@ Overfull \vbox (15.08951pt too high) has occurred while \output is active []
 File: img/ponderaz.jpg Graphic file (type jpg)
 
 <use img/ponderaz.jpg>
-Package pdftex.def Info: img/ponderaz.jpg used on input line 353.
+Package pdftex.def Info: img/ponderaz.jpg used on input line 355.
 (pdftex.def)             Requested size: 227.62204pt x 129.3714pt.
 ) (./array.tex [25 <./img/ponderaz.jpg>]
 Capitolo 3.
@@ -830,17 +836,14 @@ File: img/eigensystem.png Graphic file (type png)
 Package pdftex.def Info: img/eigensystem.png used on input line 82.
 (pdftex.def)             Requested size: 412.56496pt x 195.66153pt.
  [30 <./img/eigensystem.png>]
-
-LaTeX Warning: Reference `sec:' on page 31 undefined on input line 89.
-
-<img/eigencapsules.png, id=651, 702.625pt x 313.17pt>
+<img/eigencapsules.png, id=652, 702.625pt x 313.17pt>
 File: img/eigencapsules.png Graphic file (type png)
 
 <use img/eigencapsules.png>
 Package pdftex.def Info: img/eigencapsules.png used on input line 94.
 (pdftex.def)             Requested size: 412.56496pt x 183.88942pt.
  [31 <./img/eigencapsules.png>]
-<img/normaISO2631.png, id=657, 293.095pt x 336.25626pt>
+<img/normaISO2631.png, id=658, 293.095pt x 336.25626pt>
 File: img/normaISO2631.png Graphic file (type png)
 
 <use img/normaISO2631.png>
@@ -889,7 +892,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-<img/lineare.png, id=678, 848.16875pt x 288.07625pt>
+<img/lineare.png, id=679, 848.16875pt x 288.07625pt>
 File: img/lineare.png Graphic file (type png)
  <use img/lineare.png>
 Package pdftex.def Info: img/lineare.png used on input line 234.
@@ -899,7 +902,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--241
 
  []
 
-[35] <img/planare.png, id=685, 616.3025pt x 294.09875pt>
+[35] <img/planare.png, id=686, 616.3025pt x 294.09875pt>
 File: img/planare.png Graphic file (type png)
  <use img/planare.png>
 Package pdftex.def Info: img/planare.png used on input line 249.
@@ -910,7 +913,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--256
  []
 
 [36 <./img/lineare.png> <./img/planare.png>]
-<img/cilindrico.png, id=691, 653.44125pt x 548.0475pt>
+<img/cilindrico.png, id=692, 653.44125pt x 548.0475pt>
 File: img/cilindrico.png Graphic file (type png)
 
 <use img/cilindrico.png>
@@ -926,14 +929,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
 [39
 
-] <img/signalproc.png, id=708, 462.72874pt x 309.155pt>
+] <img/signalproc.png, id=709, 462.72874pt x 309.155pt>
 File: img/signalproc.png Graphic file (type png)
 
 <use img/signalproc.png>
 Package pdftex.def Info: img/signalproc.png used on input line 25.
 (pdftex.def)             Requested size: 341.43306pt x 228.12012pt.
 
-<img/ambisonicsdecod.png, id=709, 293.095pt x 236.885pt>
+<img/ambisonicsdecod.png, id=710, 293.095pt x 236.885pt>
 File: img/ambisonicsdecod.png Graphic file (type png)
 
 <use img/ambisonicsdecod.png>
@@ -950,7 +953,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
  []
 
 [41 <./img/ambisonicsdecod.png>]
-<img/cardioid.png, id=723, 269.005pt x 253.94875pt>
+<img/cardioid.png, id=724, 269.005pt x 253.94875pt>
 File: img/cardioid.png Graphic file (type png)
  <use img/cardioid.png>
 Package pdftex.def Info: img/cardioid.png used on input line 61.
@@ -979,7 +982,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <24.88> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 1.
-<img/audacity.jpg, id=741, 602.25pt x 515.9275pt>
+<img/audacity.jpg, id=742, 602.25pt x 515.9275pt>
 File: img/audacity.jpg Graphic file (type jpg)
  <use img/audacity.jpg>
 Package pdftex.def Info: img/audacity.jpg used on input line 7.
@@ -1001,7 +1004,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--28
 
  []
 
-[46] <img/wxformbuilder.png, id=756, 1156.32pt x 873.2625pt>
+[46] <img/wxformbuilder.png, id=757, 1156.32pt x 873.2625pt>
 File: img/wxformbuilder.png Graphic file (type png)
 
 <use img/wxformbuilder.png>
@@ -1026,14 +1029,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
 [50
 
-] <img/audioselect.png, id=793, 1284.8pt x 739.76375pt>
+] <img/audioselect.png, id=794, 1284.8pt x 739.76375pt>
 File: img/audioselect.png Graphic file (type png)
 
 <use img/audioselect.png>
 Package pdftex.def Info: img/audioselect.png used on input line 23.
 (pdftex.def)             Requested size: 341.43306pt x 196.58955pt.
 
-<img/outofmemory.png, id=795, 1284.8pt x 715.67375pt>
+<img/outofmemory.png, id=796, 1284.8pt x 715.67375pt>
 File: img/outofmemory.png Graphic file (type png)
 
 <use img/outofmemory.png>
@@ -1051,7 +1054,7 @@ re, dal me-nu \T1/lmr/m/it/12 Ef-fect \T1/lmr/m/n/12 di \T1/lmr/m/it/12 Audacit
 y$[]$
  []
 
-<img/confdlgBIG.png, id=801, 717.68124pt x 549.05125pt>
+<img/confdlgBIG.png, id=802, 717.68124pt x 549.05125pt>
 File: img/confdlgBIG.png Graphic file (type png)
 
 <use img/confdlgBIG.png>
@@ -1062,7 +1065,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-<img/maadlg.png, id=816, 1334.9875pt x 803.0pt>
+<img/maadlg.png, id=817, 1334.9875pt x 803.0pt>
 File: img/maadlg.png Graphic file (type png)
  <use img/maadlg.png>
 Package pdftex.def Info: img/maadlg.png used on input line 86.
@@ -1084,60 +1087,60 @@ Capitolo 7.
 [58
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 21.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 20.
  (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 [59]
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 [60]
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
+Underfull \hbox (badness 10000) in paragraph at lines 64--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--81
+Underfull \hbox (badness 10000) in paragraph at lines 74--80
 
  []
 
-[61] <img/hanning.jpg, id=886, 482.55281pt x 294.34969pt>
+[61] <img/hanning.jpg, id=887, 482.55281pt x 294.34969pt>
 File: img/hanning.jpg Graphic file (type jpg)
 
 <use img/hanning.jpg>
-Package pdftex.def Info: img/hanning.jpg used on input line 90.
+Package pdftex.def Info: img/hanning.jpg used on input line 89.
 (pdftex.def)             Requested size: 369.88582pt x 225.6304pt.
  [62]
-<img/spheric.pdf, id=894, 233.98286pt x 234.62758pt>
+<img/spheric.pdf, id=895, 233.98286pt x 234.62758pt>
 File: img/spheric.pdf Graphic file (type pdf)
  <use img/spheric.pdf>
-Package pdftex.def Info: img/spheric.pdf used on input line 110.
+Package pdftex.def Info: img/spheric.pdf used on input line 109.
 (pdftex.def)             Requested size: 312.9803pt x 313.85872pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-<img/capsules.pdf, id=895, 430.5799pt x 209.48875pt>
+<img/capsules.pdf, id=896, 430.5799pt x 209.48875pt>
 File: img/capsules.pdf Graphic file (type pdf)
  <use img/capsules.pdf>
-Package pdftex.def Info: img/capsules.pdf used on input line 126.
+Package pdftex.def Info: img/capsules.pdf used on input line 125.
 (pdftex.def)             Requested size: 369.88582pt x 179.96501pt.
 
 [63 <./img/hanning.jpg>]
@@ -1148,90 +1151,90 @@ Package Fancyhdr Warning: \headheight is too small (14.49998pt):
  This may cause the page layout to be inconsistent, however.
 
 [64 <./img/spheric.pdf>]
-Overfull \hbox (0.3553pt too wide) in paragraph at lines 137--138
+Overfull \hbox (0.3553pt too wide) in paragraph at lines 136--137
 []\T1/lmr/m/n/12 Come si può no-ta-re dal-la Fi-gu-ra []7.3[], le po-si-zio-ni 
 del-le cap-su-le dell'\T1/lmr/m/it/12 Eigenmike$[]$
  []
 
-[65 <./img/capsules.pdf>] <img/delaunay.png, id=955, 301.125pt x 307.90031pt>
+[65 <./img/capsules.pdf>] <img/delaunay.png, id=956, 301.125pt x 307.90031pt>
 File: img/delaunay.png Graphic file (type png)
 
 <use img/delaunay.png>
-Package pdftex.def Info: img/delaunay.png used on input line 149.
+Package pdftex.def Info: img/delaunay.png used on input line 148.
 (pdftex.def)             Requested size: 227.62204pt x 232.75224pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--163
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
 
  []
 
 [66 <./img/delaunay.png (PNG copy)>] [67]
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
 [68]
-Underfull \hbox (badness 10000) in paragraph at lines 215--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+Underfull \hbox (badness 10000) in paragraph at lines 231--233
 
  []
 
 [69]
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
 [70]
-Underfull \hbox (badness 10000) in paragraph at lines 270--273
-
- []
-
-[71]
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--311
+Underfull \hbox (badness 10000) in paragraph at lines 286--289
 
  []
 
-[72] [73]
-Underfull \hbox (badness 10000) in paragraph at lines 334--336
+[71] [72]
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
-) (./endings.tex [74]
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--327
+
+ []
+
+[73]
+Underfull \hbox (badness 10000) in paragraph at lines 350--352
+
+ []
+
+[74]) (./endings.tex [75]
 Capitolo 8.
-) [75
+[76
 
-] (./appendix.tex [76]
+]) (./appendix.tex [77]
 Appendice A.
-[77
+[78
 
 ]
-Overfull \hbox (0.58997pt too wide) in paragraph at lines 54--58
+Overfull \hbox (0.58997pt too wide) in paragraph at lines 53--57
 []\T1/lmr/m/n/12 Ipotizzando ra-gio-ne-vol-men-te va-ria-zio-
  []
 
-[78] [79] [80] [81]
-Underfull \hbox (badness 10000) in paragraph at lines 237--247
+[79] [80] [81] [82]
+Underfull \hbox (badness 10000) in paragraph at lines 236--246
 
  []
 
-[82]
-Underfull \hbox (badness 10000) in paragraph at lines 277--279
+[83]
+Underfull \hbox (badness 10000) in paragraph at lines 276--278
 
  []
 
-) (./thesis.bbl [83] [84
+) (./thesis.bbl [84] [85
 
-]) (./thanks.tex [85]) [86]
+]) (./thanks.tex [86]) [87]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
- [87]
+ [88]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
@@ -1240,18 +1243,15 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 0F13B6C06B3E3ECBBC38C1DF33592CCE;3893.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
  ) 
 Here is how much of TeX's memory you used:
- 9149 strings out of 493315
- 137002 string characters out of 6137905
- 253409 words of memory out of 5000000
- 12065 multiletter control sequences out of 15000+600000
+ 9151 strings out of 493315
+ 137031 string characters out of 6137905
+ 253425 words of memory out of 5000000
+ 12064 multiletter control sequences out of 15000+600000
  163505 words of font info for 106 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  36i,16n,48p,870b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1284,10 +1284,10 @@ pe1/public/lm/lmro12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2013
 /texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on thesis.pdf (88 pages, 9256171 bytes).
+Output written on thesis.pdf (89 pages, 9257524 bytes).
 PDF statistics:
- 1300 PDF objects out of 1440 (max. 8388607)
- 1109 compressed objects within 12 object streams
- 289 named destinations out of 1000 (max. 500000)
+ 1307 PDF objects out of 1440 (max. 8388607)
+ 1115 compressed objects within 12 object streams
+ 292 named destinations out of 1000 (max. 500000)
  567 words of extra memory for PDF output out of 10000 (max. 10000000)
 

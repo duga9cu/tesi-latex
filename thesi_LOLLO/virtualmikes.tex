@@ -1,6 +1,6 @@
 	\chapter{Sintesi di microfoni virtuali}
 	\label{sec:virtmikes}
-	L'utilizzo di array di microfoni avanzati, come abbiamo visto, porta numerose possibilità di analisi, tuttavia i segnali registrati dalle capsule devono essere interpretati in qualche modo e non sono pronti per \emph{l'utilizzo}.
+	L'utilizzo di array di microfoni avanzati, come abbiamo visto, genera numerose possibilità di analisi, tuttavia i segnali registrati dalle capsule devono essere interpretati e non hanno una valenza di per sé.
 	Come abbiamo visto, la codifica interpretativa tradizionale consiste nel generare le armoniche sferiche \emph{Ambisonics} fino al massimo ordine possibile a seconda del tipo di array.
 	
 	A partire da questi segnali, con opportune combinazioni e elaborazioni, si può fornire in uscita un set di registrazioni che simulano microfoni, chiamati \emph{virtuali} appunto, dalla direzione e apertura polare arbitrarie.
@@ -14,7 +14,7 @@
 	\section{Sistema di Elaborazione}
 	\label{sec:sistelab}
 		Il sistema di elaborazione dei segnali \emph{raw} delle capsule di un array microfonico è dunque di primaria importanza per dare significato alle registrazioni ottenute.
-		Implementato solitamente da processori digitali dedicati o in alternativa da sistemi virtualizzati software generano, in ogni caso tecnologico di implementazione o di codifica, dei segnali digitali esprimibili come sommatoria dei contributi di ogni capsula filtrati opportunamente.
+		Implementato solitamente da processori digitali dedicati o in alternativa da sistemi virtualizzati software generano dei segnali digitali esprimibili come sommatoria dei contributi di ogni capsula filtrati opportunamente.
 		L'\emph{i-esimo} segnale di uscita risponderà quindi alla legge generica
 		\begin{equation}
 			y_i(t) = \sum^M_{m=1} x_m(t) \ast h_{m,i}(t)\\
@@ -51,7 +51,7 @@
 		\end{equation}
 		
 		Questo approccio costituisce la tradizione e la storia di questo tipo di codifiche fin dagli anni '70, quando vennero introdotte, con la sola miglioria dell'incremento di ordine di armoniche raggiungibile.
-		Essendo però nella maggior parte dei casi precisa volontà del utilizzatore di questi sistemi codificare un determinato set di microfoni virtuali noto a priori, può essere conveniente evitare di passare attraverso la codifica \emph{Ambisonics} troppo teorica e soggetta a moltissimi scostamenti dovuti a non idealità dei sistemi.\\
+		Essendo però nella maggior parte dei casi precisa volontà del utilizzatore di questi sistemi codificare un determinato set di microfoni virtuali noto a priori, può essere conveniente evitare di passare attraverso la codifica \emph{Ambisonics} troppo teorica e soggetta a moltissimi scostamenti dovuti alle non idealità dei sistemi.\\
 		
 		Si è provato a seguire una strada alternativa, definendo direttamente le uscite del sistema di elaborazione come segnali monofonici corrispondenti ad un set di microfoni con l'orientazione e direttività cercate.\\
 		
