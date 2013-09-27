@@ -17,7 +17,7 @@
 	\end{enumerate}
 
 	Al capitolo \ref{sec:virtmikes} si è già analizzato lo step preliminare che consiste nella sintesi della matrice dei filtri che consentono di ottenere i microfoni virtuali.
-	Sarà quindi necessario, a monte dell'utilizzo del plugin effettuare la convoluzione tra i dati registrati dall'array e i filtri sintetizzati  attraverso un modulo esterno, come per esempio il convolutore della suite \emph{Aurora}\footnote{\;Si veda \cite{aurora}}, di nome \emph{Convolver}.\footnote{\;Scaricabile gratuitamente in versione per Windows, Linux o Mac OS, dal sito\\ \url{http://pcfarina.eng.unipr.it/Public/Aurora-for-Audacity}}    
+	Sarà quindi necessario, a monte dell'utilizzo del \emph{plug-in}, effettuare la convoluzione tra i dati registrati dall'array e i filtri sintetizzati  attraverso un modulo esterno, come per esempio il convolutore della suite \emph{Aurora}\footnote{\;Si veda \cite{aurora}}, di nome \emph{Convolver}.\footnote{\;Scaricabile gratuitamente in versione per Windows, Linux o Mac OS, dal sito\\ \url{http://pcfarina.eng.unipr.it/Public/Aurora-for-Audacity}}    
 	
 	Si procederà di seguito con la spiegazione in dettaglio dei singoli passaggi di implementazione.\\
 
@@ -27,20 +27,20 @@
 	\label{sec:dataacquisition}
 	Per il corretto funzionamento del \emph{plug-in}, abbiamo visto, nel capitolo precedente alla sezione \ref{sec:confdlg}, che sono necessari i seguenti dati in ingresso:
 	\begin{itemize}
-  \item Una \textbf{registrazione multicanale} effettuata con l'array microfonico in uso e prefiltrata in modo che i segnali rappresentino già le uscite dei microfoni virtuali,
-  \item Un \textbf{videoclip dell'ambiente di background},
+  \item una \textbf{registrazione multicanale} effettuata con l'array microfonico in uso e prefiltrata in modo che i segnali rappresentino già le uscite dei microfoni virtuali;
+  \item un \textbf{videoclip dell'ambiente di background};
   \item le \textbf{coordinate} in \emph{pixel} delle posizioni dei singoli microfoni virtuali sulla immagine di background.
 \end{itemize}
-	Di tutti questi dati, viene controllata la coerenza in fase di configurazione.\footnote{\; Di nuovo si confronti il capitolo  \ref{sec:confdlg}}.\\
+	Di tutti questi dati viene controllata la coerenza in fase di configurazione.\footnote{\; Di nuovo si confronti il capitolo  \ref{sec:confdlg}}\\
 
 	Per quanto riguarda la \textbf{registrazione multicanale} direttamente proveniente dall'array, è lo stesso host \audacity a farsi carico di rendere disponibile la registrazione al \emph{plug-in} tramite l'utilizzo di apposite \emph{routines}.\\
 
 	La seconda componente fondamentale per la costruzione della mappa acustica è il \textbf{videoclip di background}. 
-	Essendo a conoscenza del \emph{path} nel \emph{filesystem}, fornitoci in fase di configurazione dall'utente, utilizziamo alcune \emph{routines} basate sulle \emph{API} della suite \textsf{FFmpeg} per acquisire il video, salvarlo in memoria diviso in singoli frames (quindi immagini di tipo bitmap o per meglio dire \textsf{wxBitmap}). 
+	Essendo a conoscenza del \emph{path} nel \emph{filesystem}, fornitoci in fase di configurazione dall'utente, utilizziamo alcune \emph{routines} basate sulle \emph{API} della suite \textsf{FFmpeg} per acquisire il video e salvarlo in memoria diviso in singoli frames (quindi immagini di tipo bitmap o per meglio dire \textsf{wxBitmap}). 
 	A tale scopo è stata creata una struttura dati complessa composta da due classi fondamentali:
 	
 	\begin{itemize}
-	  \item la classe \textsf{Video} che si occupa di modellizzare il video finale di output,
+	  \item la classe \textsf{Video} che si occupa di modellizzare il video finale di output;
 	  \item la classe \textsf{VideoFrame} la quale implementa la struttura logica dei singoli frame del video e contiene tutte le informazioni di pressione, livelli \emph{SPL}, le varie bitmap di sfondo e di mappe di colore per ogni banda frequenziale, nonché le informazioni temporali di \emph{timestamp} riguardanti la sincronizzazione tra audio e relativa mappa acustica e video.
 \end{itemize}
 
@@ -299,7 +299,7 @@ Sapendo che l'equazione generica di un piano può essere scritta nella forma:
 	La scala di colore che si utilizza è una funzione in una incognita a tre variabili dipendenti: l'incognita è il livello sonoro in un dato punto ed i tre valori di uscita della funzione coincidono con i tre canali $R$ ($red$), $G$ ($green$) e $B$ ($blue$) di una interfaccia video. 
 	A seconda della scala di colore disederata, sarà utilizzata una \emph{routine} diversa per determinare il valore delle tre componenti cromatiche del pixel interessato, il quale sarà successivamente inserito in una \emph{mappa RGB} (una bitmap, appunto). 
 	Per assegnare ai valori di $SPL$ un valore cromatico è necessario stabilire gli estremi SPL da rappresentare per poi successivamente effettuare tutta la scalatura tra i livelli in modo proporzionale. Infatti le relazioni tra i valori $R$, $G$ e $B$ e il livello che si vuole mappare sono parametrizzate in funzione dei valori di minimo e massimo rappresentabili. 
-	Non si tratta di un operazione banalissima in quanto per definire univocamente questi valori è necessario analizzare tutto il video alla ricerca degli estremi.
+	Non si tratta di un'operazione banalissima in quanto per definire univocamente questi valori è necessario analizzare tutto il video alla ricerca degli estremi.
 	Questo comporta la perdita della possibilità di lavorare in tempo reale con una registrazione; sarà invece necessario analizzare un audio pre-registrato.
 	Dopo aver calcolato tutti i livelli corrispondenti ai microfoni virtuali, filtrati per ogni banda, ed effettuata questa operazione per ogni singolo frame\footnote{\; Cioè in seguito al precalcolo descritto in questo capitolo}, il programma è in grado di ottenere e salvare in una struttura dati i valori di $SPL$ massimi e minimi per ogni banda e per ogni frame.
 	In questo modo sarà possibile individuare gli estremi cercati.
@@ -332,18 +332,18 @@ Sapendo che l'equazione generica di un piano può essere scritta nella forma:
 	\section{Esportazione dei risultati}
 	La struttura dati \textsf{Video} conterrà le seguenti informazioni generali:
 	\begin{itemize}
-	  \item il livello di trasparenza delle bande colorate rispetto allo sfondo,
-	  \item \emph{l'aspect ratio} proprio del video (in \emph{pixel}),
-	  \item il numero totale dei frame del video
-	  \item i valori di $SPL$ massimo e minimo assoluti per ogni banda
+	  \item il livello di trasparenza delle bande colorate rispetto allo sfondo;
+	  \item \emph{l'aspect ratio} proprio del video (in \emph{pixel});
+	  \item il numero totale dei frame del video;
+	  \item i valori di $SPL$ massimo e minimo assoluti per ogni banda.
 	\end{itemize}
 	Inoltre conterrà una struttura di tipo \textsf{hash-map} contenenti i singoli \textsf{VideoFrame} contrassegnati dal numero di frame come chiave unica.
 	Ogni \textsf{VideoFrame} dal canto suo, conterrà le informazioni seguenti:
 	\begin{itemize}
-	\item \emph{timestamp} del frame ottenuta dal progetto \audacity al momento del salvataggio del \emph{chunck} audio,
-	  \item Immagine \textsf{bitmap} di background corrispondente al frame più vicino alla timestamp di cui sopra,
-	  \item una matrice contenente per ogni canale \emph{virtuale} registrato (cioè per ogni microfono virtuale ricavato dai filtri di inversione) i valori SPL filtrati secondo le 10 bande frequenziali con l'aggiunta del valore filtrato A (dB(A)) e del filtraggio lineare.
-	  \item una matrice contenente il valore SPL per ogni pixel dell'immagine, ottenuto a seguito dell'interpolazione dei valori dei singoli microfoni virtuali.
+	\item \emph{timestamp} del frame ottenuta dal progetto \audacity al momento del salvataggio del \emph{chunck} audio;
+	  \item immagine \textsf{bitmap} di background corrispondente al frame più vicino alla timestamp di cui sopra;
+	  \item una matrice contenente per ogni canale \emph{virtuale} registrato (cioè per ogni microfono virtuale ricavato dai filtri di inversione) i valori SPL filtrati secondo le 10 bande frequenziali con l'aggiunta del valore filtrato A (dB(A)) e del filtraggio lineare;
+	  \item una matrice contenente il valore SPL per ogni pixel dell'immagine, ottenuto a seguito dell'interpolazione dei valori dei singoli microfoni virtuali;
 	  \item i valori di massimo e minimo SPL per ognuna delle 10 bande e per gli altri 2 filtraggi descritti (dB(A) e $lineare$).  
 	\end{itemize}
 	

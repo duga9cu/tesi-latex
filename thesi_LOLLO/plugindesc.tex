@@ -63,15 +63,15 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
 		
 		Attraverso questa finestra l'utente dovrà specificare:
 		\begin{description}
-		  \item [Un \textbf{videoclip dell'ambiente di background}] acquisito, con una videocamera adatta allo scopo\footnote{\;Per una descrizione delle telecamere nei singoli array si ritorni al capitolo \ref{sec:array} }, durante la registrazione dell'evento sonoro, su cui mappare i livelli \emph{SPL} con le bande di colore.
-		  \item [Un\textbf{ file di configurazione }] in formato \emph{xml}  contenente la mappatura in \emph{pixel} delle posizioni delle singole capsule microfoniche sulla immagine di background.
+		  \item [un \textbf{videoclip dell'ambiente di background}] acquisito, con una videocamera adatta allo scopo\footnote{\;Per una descrizione delle telecamere nei singoli array si ritorni al capitolo \ref{sec:array} }, durante la registrazione dell'evento sonoro, su cui mappare i livelli \emph{SPL} con le bande di colore;
+		  \item [un\textbf{ file di configurazione }] in formato \emph{xml}  contenente la mappatura in \emph{pixel} delle posizioni delle singole capsule microfoniche sulla immagine di background.
 		  Il file contiene anche una serie di informazioni sull'array stesso, come nome e tipologia, casa produttrice ecc, 
-		  \item [Il livello di trasparenza] della colormap al sovrapporsi al video di background.
-		  \item [il livello min SPL] cioè il limitie inferiore della scala di $dB$ che si vuole analizzare. 	
-		  I pixel eventualmente presenti nella \emph{color-map} con valori SPL che non superassero questa soglia verrebbero disegnati completamente trasparenti.
-		  \item[livello di fondo scala FS] utile per effettuare una sorta di taratura che adeguerà verso quel limite tutti gli altri valori misurati per dare loro una verosimiglianza fisica.
-		  \item [frame length] dello spezzone audio elementare in cui si vuole suddividere il materiale importato per effettuarne l'analisi. Corrisponde alla lunghezza del frame del video finale di output.
-		  \item [frame overlap] cioè la percentuale con cui ogni frame si sovrappone nel tempo a quello a lui immediatamente precedente in modo da aggiungere un certo grado di \emph{smoothing} per controbilanciare l'operazione di finestratura\footnote{\; Descritta al capitolo \ref{sec:windowing}} svolta dal \emph{plug-in} in seguito alla suddivisione del materiale di analisi.
+		  \item [il livello di trasparenza] della colormap al sovrapporsi al video di background;
+		  \item [il livello min SPL] cioè il limitie inferiore della scala di $dB$ che si vuole analizzare; 	
+		  I pixel eventualmente presenti nella \emph{color-map} con valori SPL che non superassero questa soglia verrebbero disegnati completamente trasparenti;
+		  \item[livello di fondo scala FS] utile per effettuare una sorta di taratura che adeguerà verso quel limite tutti gli altri valori misurati per dare loro una verosimiglianza fisica;
+		  \item [frame length] dello spezzone audio elementare in cui si vuole suddividere il materiale importato per effettuarne l'analisi. Corrisponde alla lunghezza del frame del video finale di output;
+		  \item [frame overlap] cioè la percentuale con cui ogni frame si sovrappone nel tempo a quello a lui immediatamente precedente in modo da aggiungere un certo grado di \emph{smoothing} per controbilanciare l'operazione di finestratura\footnote{\; Descritta al capitolo \ref{sec:windowing}} svolta dal \emph{plug-in} in seguito alla suddivisione del materiale di analisi;
 		\end{description}		
 		La coerenza dei dati verrà verificata automaticamente e, in caso di rilevamento di incongruenze, verrà visualizzato un messaggio di errore con una breve spiegazione.\\
 
@@ -100,14 +100,14 @@ In questo capitolo si vogliono descrivere le funzionalità a disposizione dell'ut
 		  \item[Selettore di unità di misura] con cui rappresentare i livelli sonori. 
 		  La scelta può ricadere in una delle quattro possibilità offerte dal menù a tendina: decibel ($dB$), pascal ($Pa$), radice quadrata e cubica della pressione ($\sqrt{Pa}$ e $\sqrt[3]{Pa}$)
 		  \item[Mostra/nascondi i microfoni virtuali] consente, selezionando l'apposita \emph{checkbox}, di visualizzare sulla colormap le posizioni dei microfoni virtuali contrassegnati da una piccola croce bianca.
-		  \item[abilita/disabilita autoscale] permette di modificare i valori di massimo e minimo dei livelli SPL associati alla scala di colore rispettivamente considerando il massimo e minimo rispetto al materiale audio filtrato nella banda di frequenze attualmente selezionata, o semplicemente utilizzando i valori pre-filtraggio nel caso in cui la funzione di autoscale non sia selezionata.
+		  \item[Abilita/disabilita autoscale] permette di modificare i valori di massimo e minimo dei livelli SPL associati alla scala di colore rispettivamente considerando il massimo e minimo rispetto al materiale audio filtrato nella banda di frequenze attualmente selezionata, o semplicemente utilizzando i valori pre-filtraggio nel caso in cui la funzione di autoscale non sia selezionata.
 		  Questo permette di apprezzare maggiormente i piccoli cambiamenti di livello di pressione misurati in punti vicini tra loro, al fine di notare maggiormente la direzione di provenienza di una sorgente piuttosto che di una riflessione particolare all'interno di un campo acustico complesso. Sarà sufficiente selezionare la banda di frequenze in cui risiede il suono che si vuole evidenziare per ottenere il risultato voluto.\footnote{\; Si noti che attraverso la medesima operazione è anche possibile effettuare l'analisi opposta e cioè risalire alla banda frequenziale di maggior rilievo in $dB$ per quanto riguarda il rumore di una sorgente di cui si conosce la direzione, magari nel caso in cui ci si trovi all'interno di un campo acustico complesso in cui è impossibile isolare la sola sorgente interessata.}
-		  \item[disabilita/abilita lo sfondo] in modo da poter vedere correttamente i colori della mappa acustica senza \emph{l'interferenza} del video di background visibile in trasparenza. 
-		  Per esempio potrebbe essere utile in casi complessi, poter visionare solo alcuni frame, \emph{spegnendo} il video di background, per poterlo poi riaccendere in seguito.
+		  \item[Disabilita/abilita lo sfondo] in modo da poter vedere correttamente i colori della mappa acustica senza \emph{l'interferenza} del video di background visibile in trasparenza. 
+		  Per esempio potrebbe essere utile in casi complessi poter visionare solo alcuni frame, \emph{spegnendo} il video di background, per poterlo poi riaccendere in seguito.
 \end{description}
 	Oltre a queste opzioni con cui personalizzare i risultati ottenuti, è presente nell'interfaccia grafica anche un ultimo pannello non interattivo che fornisce l'informazione riguardante il livello sonoro, nell'unità di misura scelta, relativo alla posizione del mouse sulla mappa e quindi a una coordinata sferica nel già citato\footnote{ \;Secondo la norma ISO2631, come descritto al capitolo \ref{sec:eigensystem} e in figura \ref{fig:normaISO2631}} sistema di riferimento antropometrico centrato sull'array microfonico.
 	
-	Al termine delle operazioni, è possibile esportare i risultati tramite l'apposito bottone \emph{Esporta}.\\
+	Al termine delle operazioni è possibile esportare i risultati tramite l'apposito bottone \emph{Esporta}.\\
 
 
 		

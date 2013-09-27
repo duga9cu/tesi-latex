@@ -23,7 +23,7 @@
 \end{figure}
 	Consideriamo l'esempio di un fluido che viene compresso dal movimento armonico di un pistone come rappresentato in figura~\ref{fig:motoarmonico}. 
 	Le particelle del fluido adiacenti alla superficie del pistone saranno spostate dal suo movimento verso le particelle prossime ad esse e si verificherà quindi una compressione locale. 
-	Subito dopo il pistone retrocederà lasciando un spazio libero dietro di sé che tenderà a richiamare le particelle che erano state spinte inizialmente, mente le particelle adiacenti ad esse continueranno il loro movimento nella direzione opposta creando una regione di decompressione locale attigua al pistone.
+	Subito dopo il pistone retrocederà lasciando uno spazio libero dietro di sé che tenderà a richiamare le particelle che erano state spinte inizialmente, mentre le particelle adiacenti ad esse continueranno il loro movimento nella direzione opposta creando una regione di decompressione locale attigua al pistone.
 	Questo andamento alternativo è responsabile della creazione del fenomeno ondulatorio, il quale viene denominato \emph{onda sonora} nel momento in cui viene percepito dalle nostre orecchie. \\	
 	
 	
@@ -191,7 +191,7 @@
 L_{EQ} = 10 \log\biggr(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt\biggr) \quad \textrm{[dB]}\\
 \end{equation}
 	Il livello equivalente rappresenta una sorta di media del livello sonoro sul periodo di tempo T considerato. 
-	In figura~\ref{fig:leq} è rappresentato l’andamento (quantitativo) del livello emesso da una sorgente intermittente ed il corrispondente livello equivalente: 
+	In figura~\ref{fig:leq} è rappresentato l’andamento (quantitativo) del livello emesso da una sorgente intermittente ed il corrispondente livello equivalente.
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA livello equivalente %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
   \centering
@@ -202,7 +202,7 @@ L_{EQ} = 10 \log\biggr(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt\biggr) \quad \
 	Come si vede dal grafico, il livello equivalente raggiunge valori sempre più stabili all’aumentare della lunghezza della finestra di integrazione considerata. 
 	L’importanza di questo valore misurabile è quella di consentirci di quantificare il livello sonoro complessivo emesso da una sorgente in un determinato intervallo di tempo, attraverso un unico numero. 
 	Il livello equivalente, infatti,  è usato nella legislazione come riferimento principale rispetto al quale emettere normative riguardanti l'inquinamento acustico.	
-	In particolare la legge italiana  stabilisce tre intervalli di tempo diversi per effettuare le rilevazioni: 
+	In particolare la Legge Italiana stabilisce tre intervalli di tempo diversi per effettuare le rilevazioni: 
 	\begin{description}
   \item[dalle 6:00 alle 22:00] corrispondente al periodo diurno.
   \item[dalle 22:00 alle 6:00] corrispondente al periodo notturno.
@@ -251,7 +251,7 @@ L_{EQ} = 10 \log\biggr(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt\biggr) \quad \
   \caption{Grafico delle curve isofoniche\\}
   \label{fig:isophon}
 \end{figure}
-	Per il questo ed altri motivi che non approfondiremo in questa sede, il sistema uditivo umano presenta una sensibilità meno accentuata alle frequenze molto basse (poche decine di $Hz$) ed a quelle elevate (oltre i $15 \; kHz$). 
+	Per questo ed altri motivi che non approfondiremo in questa sede, il sistema uditivo umano presenta una sensibilità meno accentuata alle frequenze molto basse (poche decine di $Hz$) ed a quelle elevate (oltre i $15 \; kHz$). 
 	Inoltre per procurare la stessa \emph{sensazione sonora} (che si misura in $phon$) occorrono, a frequenze diverse, livelli di pressioni sonore diverse, allo stesso modo suoni di stessa intensità ma frequenza diversa vengono percepiti dall’orecchio in modo diverso.\footnote{ Si veda~\cite{mdaa} al capitolo 2.}
 	
 	Tutti questi effetti sono osservabili nel grafico in figura~\ref{fig:isophon}. 
@@ -268,7 +268,7 @@ L_{EQ} = 10 \log\biggr(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt\biggr) \quad \
 		La descrizione della composizione in frequenza dei segnali sonori può essere condotta valutando il contenuto di energia sonora all’interno di prefissati intervalli di frequenze, le \emph{bande di frequenza}, ognuna di esse definita all'interno dell'intervallo delimitato da una frequenza di taglio superiore $f_s$ e da una frequenza di taglio inferiore $f_i$, e caratterizzato dalla propria frequenza di banda centrale $f_c$.
 		A seconda del numero e della posizione delle bande che si decide di utilizzare al fine di dividere lo spettro sonoro, si possono condurre principalmente due tipi di analisi:
 		\begin{description}
-		\item[analisi a banda costante: ] In questo tipo di suddivisione si utilizzano bande frequenziali di uguale larghezza, nello specifico che godono della proprietà:
+		\item[analisi a banda costante: ] in questo tipo di suddivisione si utilizzano bande frequenziali di uguale larghezza, nello specifico che godono della proprietà:
 		\begin{equation}
 			\Delta f=f_s - f_i=costante\\
 		\end{equation}
@@ -343,7 +343,10 @@ L_{EQ} = 10 \log\biggr(\frac{1}{T}\int^T_0 \frac{p^2(t)}{p_0^2}dt\biggr) \quad \
 		
 	\subsection{Filtri di ponderazione}
 		\label{sec:ponderaz}
-		come descritto nel paragrafo~\ref{sec:nonlinearear}, la sensibilità dell’orecchio varia al variare della frequenza. Per tale motivo il livello di pressione $SPL$ che misuriamo in realtà non corrisponde a una reale sensazione acustica, cioè variazioni del valore di SPL non necessariamente corrispondono a uguali variazioni nella percezione acustica (variazioni di \emph{volume}). Per rendere più aderente alla sensazione umana e quindi rendere più intuitiva la misura di un fenomeno sonoro, occorre utilizzare dei  filtri di pesatura o \emph{ponderazione}. Quelli attualmente utilizzati sono rappresentati in figura~\ref{fig:ponderaz}.
+		Come descritto nel paragrafo~\ref{sec:nonlinearear}, la sensibilità dell’orecchio varia al variare della frequenza. 
+		Per tale motivo il livello di pressione $SPL$ che misuriamo in realtà non corrisponde a una reale sensazione acustica, cioè variazioni del valore di SPL non necessariamente corrispondono a uguali variazioni nella percezione acustica (variazioni di \emph{volume}). 
+		Per rendere più aderente alla sensazione umana e quindi rendere più intuitiva la misura di un fenomeno sonoro, occorre utilizzare dei  filtri di pesatura o \emph{ponderazione}. 
+		Quelli attualmente utilizzati sono rappresentati in figura~\ref{fig:ponderaz}.
 		Analizzando il grafico notiamo le curve più importanti\footnote{ Per un approfondimento sulle curve di ponderazione si veda l'appendice~\ref{sec:pondcurves}}:
 		\begin{description}
   \item[filtro di ponderazione “A”]: il più comunemente impiegato e il cui andamento si conforma alla risposta dell’orecchio umano a livelli medio-bassi. Il livello misurato con la ponderazione del filtro $A$ viene chiamato $dB(A)$.

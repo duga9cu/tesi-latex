@@ -54,6 +54,7 @@
 	  \caption{Diagramma polare delle armoniche \emph{Ambisonics}\\}
 	  \label{fig:ambisonics}
 	\end{figure}
+	
 	Combinando tra loro un set di segnali codificati in formato \emph{Ambisonics} (\emph{B-format}), attraverso un opportuno decoder che opera un semplice missaggio, è possibile ricreare un segnale equivalente a quello registrato da un microfono virtuale con orientazione arbitraria e direttività di ordine massimo pari all’ordine di troncamento del set di armoniche utilizzato.\footnote{ Vedi il capitolo~\ref{sec:virtmikes} sulla sintesi dei microfoni virtuali.}
 	
 	Nel presente capitolo verranno presentati i tre diversi tipi di array microfonici presi in considerazione e sui quali questa tesi è stata collaudata.
@@ -100,7 +101,7 @@
 	All’interno della sfera sono alloggiati l’intera circuiteria analogica di preamplificazione con guadagno controllabile via software, nonché i convertitori A/D in grado di campionare i segnali delle capsule con risoluzione fino a $24\, bit$ e frequenza di campionamento di 48\,000~Hz.
 	I segnali vengono quindi trasferiti all’interfaccia \emph{EMIB} mediante un collegamento digitale garantendo l'immunità ai disturbi e con grande guadagno in comodità, ingombro e risparmio di cablaggi audio XLR.
 	Lo stesso sistema di preamplificazione analogica consente anche di compensare le differenze di sensibilità esistenti tra una capsula e l'altra per ottenere scostamenti compresi tra $\pm0.5$~dB. 
-	La mhAcoustics caratterizza infatti la sensibilità delle capsule una a una, e fornisce all'acquirente un file di testo contenente i 32 valori che corrispondono ai guadagni in dB necessari alla compensazione
+	La mhAcoustics caratterizza infatti la sensibilità delle capsule una a una, e fornisce all'acquirente un file di testo contenente i 32 valori che corrispondono ai guadagni in dB necessari alla compensazione.
 	Questi valori, una volta caricati sulla EEPROM contenuta all'interno del microfono stesso, vengono automaticamente sommati ad ogni variazione del guadagno in modo da effettuare la compensazione di sensibilità in modo totalmente trasparente. 
 		
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA normaISO2631  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -170,7 +171,7 @@
 	Per la morfologia dell'oggetto \emph{array di microfoni} in questione è possibile calcolare alcuni limiti operativi intrinseci e confrontarli con quelli dichiarati dalla casa produttrice.
 	
 	In primo luogo, secondo il \emph{teorema di Shannon}, dovrebbe verificarsi un fenomeno di \emph{aliasing spaziale} se si tentassero di decodificare segnali di una frequenza maggiore di quella limite. 
-	Per poter essere decodificata correttamente, infatti, un onda sonora di lunghezza d'onda $\lambda$, dovrebbe essere campionata \emph{nello spazio} un numero doppio di volte rispetto alla frequenza dell'onda che si vuole campionare.
+	Per poter essere decodificata correttamente, infatti, un'onda sonora di lunghezza d'onda $\lambda$, dovrebbe essere campionata \emph{nello spazio} un numero doppio di volte rispetto alla frequenza dell'onda che si vuole campionare.
 	Si può quindi scrivere una relazione che lega la massima frequenza decodificabile prima dell'introduzione di effetti di \emph{aliasing}, che chiameremo $f_{alias}$, con la distanza di campionamento, cioè la distanza minima tra le capsule $d$, che è funzione dell'angolo tra le capsule $\gamma$ e il raggio $R$ della sfera, e quindi anche del numero di capsule del microfono:
 	\begin{equation}
 	\label{eq:eigenalias}
@@ -267,4 +268,4 @@
 \end{figure}
 	Questo tipo di array si pone l'obiettivo di scansionare principalmente l'asse orizzontale a scapito della risoluzione sull'asse verticale, un po' a immagine e somiglianza della naturale percezione dell'apparato acustico umano e di conseguenza anche più utile nella maggioranza delle applicazioni.
 	L'array cilindrico fornisce quindi la possibilità di sintetizzare microfoni virtuali a direttività arbitraria con una zona di puntamento e focalizzazione di 360° sul piano orizzontale e di circa 90° sul piano verticale ($\pm$45° dall’orizzonte). 
-	L'array costruito dal gruppo di ricerca sopraccitato è inoltre dotato di una telecamera IP che puntando ad uno specchio per visione omnidirezionale consente di avere un’immagine di servizio da utilizzarsi come background per la mappa acustica o per il sistema di puntamento real-time dei microfoni virtuali.\footnote{ Si tratta di un progetto parallelo di cui è consultabile una pubblicazione \cite{livevirtmikes} della società di acustica AIDA srl di Parma in collaborazione con la RAI} 
+	L'array costruito dal gruppo di ricerca sopraccitato è inoltre dotato di una telecamera IP che, puntando ad uno specchio per visione omnidirezionale, consente di avere un’immagine di servizio da utilizzarsi come background per la mappa acustica o per il sistema di puntamento real-time dei microfoni virtuali.\footnote{ Si tratta di un progetto parallelo di cui è consultabile una pubblicazione \cite{livevirtmikes} della società di acustica AIDA srl di Parma in collaborazione con la RAI} 
