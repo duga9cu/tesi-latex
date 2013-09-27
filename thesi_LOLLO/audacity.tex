@@ -1,4 +1,4 @@
-\chapter{Ambiente di Sviluppo: l'host \audacity}
+\chapter{Ambiente di sviluppo: l'host \audacity}
 \label{sec:audacity}
 	Nell'approccio al problema presentato, si sono studiate e discusse diverse possibilità di sviluppo. 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA audacity %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -13,17 +13,18 @@
 	Per massimizzare la granularità del progetto e per sfruttare risorse già disponibili gratuitamente, si è preferito invece di sviluppare un \emph{plug-in} che si installasse quindi su un sistema pre-esistente, in grado di svolgere tutte le funzioni di base di recording e editing audio, nonchè di poter essere in un futuro espandibile con altre funzioni attraverso l'uso di altri \emph{plug-in} creando quindi una \emph{suite} multifunzionale.
 	
 	A questo punto si sono presi in considerazione diversi tipi di plug-in e SDK tra le più diffuse e utilizzate, che avessero le caratteristiche cercate di compatibilità multipiattaforma.
-	Principalmente si era discusso sulla possibilità di sviluppare un plug-in utilizzando la SDK della Steinberg\textsuperscript{\textregistered}, per via della diffusione universale e implementazione su quasi tutti i tipi di host e su ogni piattaforma esistente. 
-	Questo tipo di software prendono il nome di \textsf{VST}.
+	Inizialmente si era valutata la possibilità di sviluppare un \emph{plug-in} utilizzando l'interfaccia VST (Virtual Studio Technology) della Steinberg\textsuperscript{\textregistered}, per via della universale diffusione e implementazione su quasi tutti i tipi di host su ogni piattaforma esistente.
 	
-	Nonostante i grandi vantaggi di portabilità e facilità di utilizzo e di reperibilità di documentazione e supporto, non è stato possibile sviluppare il software con questa \textsf{SDK}.\\
+Nonostante gli indiscutibili pregi di portabilità, facilità di utilizzo e di reperibilità di documentazione e supporto, non è stato ritenuto vantaggioso sviluppare il software con questa \textsf{SDK}.\\
 	
 	Il problema fondamentale che si è riscontrato è stato l'impossibilità di effettuare analisi globali nel dominio del tempo, come una riscalatura o una semplice normalizzazione per via della rigida impostazione di questi tipi di \emph{plug-in}, i quali sono pensati per lavorare a blocchetti di 256 campioni alla volta in modo da simulare il più possibile un effetto \emph{real-time}.
+	Inoltre sarebbe venuto a mancare la possibilità di portare il software sui sistemi GNU/Linux, sui quali la tecnologia VST è scarsamente supportata.
 	
-	Si è optato quindi per la piattaforma più flessibile, comoda e personalizzabile (in quanto progetto \emph{open source}), \audacity. Questo \emph{host} fornisce ai \emph{plug-in} che ne espandono le funzionalità (i \emph{moduli}) tutte le informazioni di cui dispone, dall'intero \emph{workspace} contenente il materiale audio, fino a arrivare alle preferenze che l'utente sta utilizzando.
+	Si è optato quindi per una piattaforma più flessibile, comoda e personalizzabile (in quanto progetto \emph{open source}), \audacity. Questo \emph{host} fornisce ai \emph{plug-in} che ne espandono le funzionalità (i \emph{moduli}) tutte le informazioni di cui dispone, dall'intero \emph{workspace} contenente il materiale audio, fino a arrivare alle preferenze che l'utente sta utilizzando.
 	inoltre si tratta di un programma nativo multipiattaforma, come richiesto, e a migliorarne ulteriormente le capacità si noti che si tratta di uno dei pochissimi programmi in grado di gestire file audio multicanale e che implementano il formato audio \emph{W64}.
 	L'utilizzo di questo formato è a fondamentale in quanto può essere necessario dover registrare eventi  di lunghezza anche superiore a un'ora, utilizzando decine di canali. 
-	Infatti, con l'utilizzo di  formati audio dotati di \textsf{header} inferiori ai 64 bit, non si supera la decina di minuti di acquisizione, se il numero di canali va oltre i 2 della normale codifica stereo o al massimo i 6 o 7 per le codifiche di tipo \emph{surround}.
+	Infatti, con l'utilizzo di  formati audio dotati di \textsf{header} inferiori ai 64 bit, non si supera la decina di minuti di acquisizione, se il numero di canali va oltre i 2 della normale codifica stereo o al massimo i 6 o 7 per le codifiche di tipo \emph{surround}, per un problema di spazio di indirizzamento.
+	Nel formato wav per esempio il campo dell'header riferito ai dati potrà indirizzare solo 4 GB ($2^{32}-1$ bit), mentre il W64, come suggerisce il nome, avrà una lunghezza massima di $2^{64}-1$ bit
 	\audacity consente inoltre la registrazione a 16, 24 o 32 bit float con una frequenza di campionamento fino a 96 KHz.\\
 	
 
@@ -34,7 +35,7 @@
 	\label{sec:GUI}
 		Le \textsf{wxWidgets} sono librerie \textsf{C++} che consentono al programmatore di creare e gestire facilmente interfacce grafiche compilabili sulla maggior parte delle piattaforme più diffuse sia a 32 bit che a 64 bit. 
 	Questo pacchetto non è l'unico della sua tipologia; esistono infatti alternative 
-	come Tk, GTK+, etc., ma tra le altre \textsf{wxWidgets} spicca sicuramente grazie alla 
+	come Tk, GTK, etc., ma tra le altre \textsf{wxWidgets} spicca sicuramente grazie alla 
 	maturità del progetto e alla capacità di conferire alla propria \textsf{GUI} l'aspetto tipico 
 	del sistema operativo sul quale il codice verrà compilato, grazie all'utilizzo delle \emph{API} della piattaforma invece di una emulazione della interfaccia grafica. 
 	Grazie all'utilizzo di \textsf{wxWidgets}, si ha accesso a una serie di funzioni avanzate già implementate e contenute in un \textsf{wrapper} che ne \emph{incapsula} e nasconde al programmatore la dipendenza dalla singola piattaforma, fungendo da una sorta di \emph{middle-ware} e ponendo il livello di programmazione al di sopra dei dettagli di implementazione dipendenti da una specifica piattaforma.

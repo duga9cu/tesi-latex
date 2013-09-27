@@ -17,7 +17,7 @@
 	\end{enumerate}
 
 	Al capitolo \ref{sec:virtmikes} si è già analizzato lo step preliminare che consiste nella sintesi della matrice dei filtri che consentono di ottenere i microfoni virtuali.
-	Sarà quindi necessario, a monte dell'utilizzo del plugin effettuare la convoluzione tra i dati registrati dall'array e i filtri sintetizzati  attraverso un modulo esterno, come per esempio il convolutore della suite \emph{Aurora}\footnote{\;Si veda \cite{aurora}}, di nome \emph{Convolver}\footnote{\;Scaricabile gratuitamente in versione per Windows, Linux o Mac OS, dal sito\\ \url{http://pcfarina.eng.unipr.it/Public/Aurora-for-Audacity}}    
+	Sarà quindi necessario, a monte dell'utilizzo del plugin effettuare la convoluzione tra i dati registrati dall'array e i filtri sintetizzati  attraverso un modulo esterno, come per esempio il convolutore della suite \emph{Aurora}\footnote{\;Si veda \cite{aurora}}, di nome \emph{Convolver}.\footnote{\;Scaricabile gratuitamente in versione per Windows, Linux o Mac OS, dal sito\\ \url{http://pcfarina.eng.unipr.it/Public/Aurora-for-Audacity}}    
 	
 	Si procederà di seguito con la spiegazione in dettaglio dei singoli passaggi di implementazione.\\
 
@@ -31,7 +31,7 @@
   \item Un \textbf{videoclip dell'ambiente di background},
   \item le \textbf{coordinate} in \emph{pixel} delle posizioni dei singoli microfoni virtuali sulla immagine di background.
 \end{itemize}
-	Di tutti questi dati, viene controllata la coerenza in fase di configurazione\footnote{\; Di nuovo si confronti il capitolo  \ref{sec:confdlg}}.\\
+	Di tutti questi dati, viene controllata la coerenza in fase di configurazione.\footnote{\; Di nuovo si confronti il capitolo  \ref{sec:confdlg}}.\\
 
 	Per quanto riguarda la \textbf{registrazione multicanale} direttamente proveniente dall'array, è lo stesso host \audacity a farsi carico di rendere disponibile la registrazione al \emph{plug-in} tramite l'utilizzo di apposite \emph{routines}.\\
 
@@ -56,10 +56,10 @@
 	Trattandosi dell'elaborazione di un video, si è pensato di parallelizzare il \emph{precalcolo} in modo da approfittare della ripetitività del flusso di lavoro che deve analizzare i dati dividendoli in piccoli \emph{chunk} temporali corrispondenti ai frame video che si vorranno ottenere.
 	
 	Si procede dunque all'allocazione dinamica di svariati \emph{thread} paralleli che concorreranno alla formazione del video finale, calcolando un singolo frame ciascuno.
-	Per non sovraccaricare la CPU con un eccessivo numero di thread, si è avuta la cura di lanciare i singoli thread in modo che non fossero mai in esecuzione più di uno per core contemporaneamente.
+	Per non sovraccaricare la CPU con un eccessivo numero di thread, si è avuta la cura di lanciare i singoli thread in modo che non fossero mai in esecuzione più di uno per \emph{core} contemporaneamente.
 	
 	Nell'implementare questa parallelizzazione, si è utilizzata la classe fornita da \textsf{wxWidgets} chiamata \textsf{wxThread} in modo da mantenere lo stile di programmazione multipiattaforma prefissato. 
-	Si tratta di una implementazione che aderisce fedelmente allo standard \textsf{POSIX}, in modo da non stravolgere le abitudini implementative del programmatore, ma che contiene alcune classi avanzate in grado di semplificare abbastanza la gestione delle corse critiche e della mutua esclusione tra gli accessi concorrenti.
+	Si tratta di una implementazione che aderisce fedelmente allo standard \textsf{POSIX}, ma che contiene alcune classi avanzate in grado di semplificare abbastanza la gestione delle corse critiche e della mutua esclusione tra gli accessi concorrenti.
 	
 	Ogni \emph{thread} dunque si incaricherà di memorizzare in una sua struttura apposita i dati riguardanti il suo \emph{chunk} di audio e procederà con l'esecuzione di tutti i passi che verranno descritti nelle prossime sezioni.
 	Alla fine del proprio iter procedurale andrà a salvare i suoi risultati in una struttura \textsf{VideoFrame} che verrà aggiunta (nella posizione coerente con il numero di frame assegnato al thread stesso) alla struttura condivisa \textsf{video}, naturalmente rispettando i principi che regolano l'accesso concorrente.	
@@ -80,7 +80,7 @@
 	
 	Per l'implementazione della finestratura si è scelto di utilizzare la finestra di Hanning che assegna un peso $w(n)$ in funzione del numero di \emph{samples} sul totale $N$ secondo la legge
 	\begin{equation}
-		w(n)=\frac{1}{2} \left[1 - \cos \left(\frac{2\pi n}{N-1}\right)\right] ,  \;\;  0 \le n \le N-1\\
+		w(n)=\frac{1}{2} \left[1 - \cos \left(\frac{2\pi n}{N-1}\right)\right] ,  \;\;  0 \le n \le N-1.\\
 	\end{equation}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA HANNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -139,22 +139,21 @@ La prima ipotesi potrebbe essere la suddivisione in aree di forma quadrata (come
 	in questo modo, anche nel caso in cui le posizioni dei microfoni fossero disposte nella maniera più casuale possibile, si potrà sempre determinare un insieme continuo di triangoli che copra l'intera superficie. 
 	Nel 1925 è stato, infatti, dimostrato che ogni superﬁcie può essere partizionata attraverso superfici di forma triangolare, ma questo può richiedere un numero inﬁnito di triangoli.
 	Per effettuare questa operazione si è scelto quindi di utilizzare una triangolazione particolare detta di \emph{Delaunay} che è definita come segue:
-	
-	\emph{Una triangolazione di un insieme ﬁnito di punti $P \subset R^2$ viene detta di Delaunay se il cerchio circoscritto ad ogni triangolo è vuoto, ovvero nessun punto di $P$ vi giace all’interno}. 
-	
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA delaunay %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{quote}
+	\emph{Una triangolazione di un insieme ﬁnito di punti $P \subset R^2$ viene detta di Delaunay se il cerchio circoscritto ad ogni triangolo è vuoto, ovvero nessun punto di $P$ vi giace all’interno}.
+	\end{quote}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURA delaunay %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
   \centering
   \includegraphics[width = 8cm]{img/delaunay.png}
   \caption{Descrizione della proprietà dei triangoli formati con l'algoritmo di \emph{Delaunay}.\\}
   \label{fig:delaunay}
 \end{figure}
-	
 	Sono diversi gli algoritmi che consentono di determinare, dato un insieme di punti sparsi su un piano, la triangolazione di Delaunay. 
 	I principali, con complessità differente in funzione del numero di punti da triangolare, sono: 
 \begin{itemize}
 \item  l'algoritmo incrementale; 
-\item  l'algoritmo dividi et impera; 
+\item  l'algoritmo \emph{dividi et impera}; 
 \item  l'algoritmo Convex Hull. 
 \end{itemize}	
 	Per il presente lavoro di tesi si è deciso di utilizzare una libreria esterna, denominata  \textsf{Triangle++}, per implementare l'algoritmo di \emph{Delaunay}, essendo l’implementazione particolarmente impegnativa. 
@@ -180,14 +179,15 @@ La prima ipotesi potrebbe essere la suddivisione in aree di forma quadrata (come
 	Si otterrà quindi una rappresentazione dello spettro di potenza composta da un numero N di righe spettrali, corrispondente alla frequenza di \emph{Nyquist}, cioè alla metà dei campioni analizzati:
 	\begin{equation}
 \label{eq:nyquist }
-	N=\frac {sample\_length}{2} +1\\
+	N=\frac {N_l}{2} +1,\\
 	\end{equation}
-	
+	dove $N_l$ è il numero di samples audio che costituiscono il frame
 	Inoltre per il \emph{teorema di Shannon} la banda passante $B$ rappresentabile dallo spettro di potenza sarà :
 		\begin{equation}
 \label{eq:shannon }
-	B=\frac {sample\_rate}{2}\\
+	B=\frac {N_r}{2},\\
 	\end{equation}
+	dove $N_r$ è la sample rate di campionamento della registrazione
 	
 	Quindi ad ogni riga spettrale così calcolata corrisponderà un intervallo di frequenze $\Delta f$ calcolato come segue:
 	\begin{equation}
@@ -226,7 +226,7 @@ La prima ipotesi potrebbe essere la suddivisione in aree di forma quadrata (come
 	
 	Per ritradurre l'informazione in pascal e ottenere quindi un informazione dal significato acustico preciso, è necessaria una operazione di \emph{taratura} dello strumento che permetta di misurare un segnale a frequenza e SPL note a priori, in modo da poter mappare la risposta del sensore ed effettuare una opportuna calibrazione applicando un guadagno in ingresso.
 	Non si è ancora riusciti a riprodurre questo procedimento su un sensore cosi complesso come un array microfonico, perciò si è escogitato uno stratagemma intuitivo che permetta di effettuare questo adeguamento facilmente, anche se senza pretesa di precisione assoluta.
-	Non si tratta infatti di un'operazione di taratura dello strumento, se non di un semplice\emph{adeguamento} dei risultati a una condizione di \emph{verosimiglianza fisica}.
+	Non si tratta infatti di un'operazione di taratura dello strumento, se non di un semplice \emph{adeguamento} dei risultati a una condizione di \emph{verosimiglianza fisica}.
 	
 	Si rende necessario quindi misurare, durante la registrazione con l'array microfonico, un segnale di riferimento, per esempio attraverso un fonometro calibrato, dal quale risalire al livello SPL di fondoscala della registrazione.
 	Una volta individuato il picco massimo in dB sarà sufficiente fornire questo valore al \emph{plug-in} in fase di configurazione e il software si occuperà di computare questo semplice adeguamento dei risultati senza variare i rapporti energetici tra i contenuti frequenziali alle varie bande o nelle diverse zone del campo acustico.\\

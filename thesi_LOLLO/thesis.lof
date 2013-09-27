@@ -1,40 +1,40 @@
 \select@language {italian}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Esempio di mappa acustica generata dal plug-in \emph {Microphone Array Analyzer} \relax }}{10}{figure.caption.4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Esempio di mappa acustica generata dal plug-in \emph {Microphone Array Analyzer} \relax }}{11}{figure.caption.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Moto delle particelle di un fluido elastico compresse e decompresse alternativamente da un pistone, che producono l'\emph {onda sonora}.\relax }}{13}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Livello sonoro di una sorgente intermittente e relativo livello equivalente $L_{EQ}$. \relax }}{18}{figure.caption.8}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Apparato acustico umano. \relax }}{19}{figure.caption.9}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Risposta non lineare della coclea \relax }}{20}{figure.caption.10}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Grafico delle curve isofoniche \relax }}{21}{figure.caption.11}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Grafico delle curve di ponderazione \relax }}{25}{figure.caption.12}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Moto delle particelle di un fluido elastico compresse e decompresse alternativamente da un pistone, che producono l'\emph {onda sonora}.\relax }}{14}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Livello sonoro di una sorgente intermittente e relativo livello equivalente $L_{EQ}$. \relax }}{19}{figure.caption.8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Apparato acustico umano. \relax }}{20}{figure.caption.9}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Risposta non lineare della coclea \relax }}{21}{figure.caption.10}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Grafico delle curve isofoniche \relax }}{22}{figure.caption.11}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Grafico delle curve di ponderazione \relax }}{26}{figure.caption.12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Tecniche di registrazione con array discreti di tipo INA-5 \relax }}{27}{figure.caption.13}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Tecniche di registrazione con array discreti di tipo OCT surround \relax }}{27}{figure.caption.14}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Il microfono \emph {SoundField\textsuperscript {\texttrademark }} di Gerzon e Craven \relax }}{28}{figure.caption.15}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagramma polare delle armoniche \emph {Ambisonics} \relax }}{29}{figure.caption.16}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Struttura del sistema \emph {Eigenmike\textsuperscript {\texttrademark }}\tmspace +\thickmuskip {.2777em}\emph {EM32} \relax }}{30}{figure.caption.17}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Disposizione delle capsule dell'array microfonico \emph {Eigenmike\textsuperscript {\texttrademark }}\tmspace +\thickmuskip {.2777em}\emph {EM32} \relax }}{31}{figure.caption.18}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Angoli di riferimento e loro direzioni relative per la descrizione sferica rispetto al sistema di riferimento antropometrico secondo la norma ISO2631. \relax }}{32}{figure.caption.19}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Array lineare e relativo diagramma polare a 1 kHz \relax }}{36}{figure.caption.21}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Array planare e relativa mappa acustica che rappresenta i livelli sonori crescenti dal blu al rosso e in cui si riconosce una sorgente sonora come addensamento di rosso \relax }}{36}{figure.caption.22}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Array cilindrico (a), con relativa sezione verticale (b) \relax }}{37}{figure.caption.23}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Tecniche di registrazione con array discreti di tipo INA-5 \relax }}{28}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Tecniche di registrazione con array discreti di tipo OCT surround \relax }}{28}{figure.caption.14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Il microfono \emph {SoundField\textsuperscript {\texttrademark }} di Gerzon e Craven \relax }}{29}{figure.caption.15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagramma polare delle armoniche \emph {Ambisonics} \relax }}{30}{figure.caption.16}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Struttura del sistema \emph {Eigenmike\textsuperscript {\texttrademark }}\tmspace +\thickmuskip {.2777em}\emph {EM32} \relax }}{31}{figure.caption.17}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Disposizione delle capsule dell'array microfonico \emph {Eigenmike\textsuperscript {\texttrademark }}\tmspace +\thickmuskip {.2777em}\emph {EM32} \relax }}{32}{figure.caption.18}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Angoli di riferimento e loro direzioni relative per la descrizione sferica rispetto al sistema di riferimento antropometrico secondo la norma ISO2631. \relax }}{33}{figure.caption.19}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Array lineare e relativo diagramma polare a 1 kHz \relax }}{37}{figure.caption.21}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Array planare e relativa mappa acustica che rappresenta i livelli sonori crescenti dal blu al rosso e in cui si riconosce una sorgente sonora come addensamento di rosso \relax }}{37}{figure.caption.22}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Array cilindrico (a), con relativa sezione verticale (b) \relax }}{38}{figure.caption.23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ogni microfono virtuale pu\`o essere sempre descritto da una somma di convoluzioni di tutti gli ingressi per un opportuno filtro FIR \relax }}{40}{figure.caption.24}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Possibili microfoni virtuali a ordine di direttivit\`a crescente (sulla destra) calcolati a partire da armoniche sferiche \emph {Ambisonics} fino al terzo ordine (sulla sinistra). \relax }}{41}{figure.caption.25}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagramma polare di un microfono virtuale cardioide in funzione dell'ordine di direttivit\`a. \relax }}{42}{figure.caption.26}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ogni microfono virtuale pu\`o essere sempre descritto da una somma di convoluzioni di tutti gli ingressi per un opportuno filtro FIR \relax }}{41}{figure.caption.24}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Possibili microfoni virtuali a ordine di direttivit\`a crescente (sulla destra) calcolati a partire da armoniche sferiche \emph {Ambisonics} fino al terzo ordine (sulla sinistra). \relax }}{42}{figure.caption.25}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagramma polare di un microfono virtuale cardioide in funzione dell'ordine di direttivit\`a. \relax }}{43}{figure.caption.26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Interfaccia utente dell'host utilizzato, \emph {Audacity\textsuperscript {\textregistered }}\tmspace +\thickmuskip {.2777em}sotto diverse piattaforme. \relax }}{45}{figure.caption.27}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Intorno per la costruzione di interfacce grafiche \textsf {wxFormBuilder} \relax }}{48}{figure.caption.28}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Interfaccia utente dell'host utilizzato, \emph {Audacity\textsuperscript {\textregistered }}\tmspace +\thickmuskip {.2777em}sotto diverse piattaforme. \relax }}{46}{figure.caption.27}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Intorno per la costruzione di interfacce grafiche \textsf {wxFormBuilder} \relax }}{49}{figure.caption.28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Selezione dello spezzone di materiale audio da analizzare con il \emph {plug-in}. \relax }}{51}{figure.caption.29}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Messaggio di errore in caso di memoria insufficiente per le operazioni di \emph {precalcolo} \relax }}{52}{figure.caption.30}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Finestra di configurazione del modulo \emph {Microphone Array Analyzer} \relax }}{53}{figure.caption.31}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Finestra principale del modulo \emph {Microphone Array Analyzer} \relax }}{55}{figure.caption.32}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Selezione dello spezzone di materiale audio da analizzare con il \emph {plug-in}. \relax }}{53}{figure.caption.29}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Messaggio di errore in caso di memoria insufficiente per le operazioni di \emph {precalcolo} \relax }}{54}{figure.caption.30}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Finestra di configurazione del modulo \emph {Microphone Array Analyzer} \relax }}{55}{figure.caption.31}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Finestra principale del modulo \emph {Microphone Array Analyzer} \relax }}{57}{figure.caption.32}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Finestra di Hanning nel dominio del tempo per l'analisi digitale. \relax }}{63}{figure.caption.33}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Rappresentazione schematica del processo di \emph {mirroring}, necessario a garantire la continuit\`a ai bordi della mappa. \relax }}{64}{figure.caption.34}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Direzioni di puntamento delle capsule dell'\emph {Eigenmike\textsuperscript {\texttrademark }}\tmspace +\thickmuskip {.2777em}sovrapposte ad una foto panoramica del Teatro alla Scala di Milano, svolta secondo lo schema di proiezione visto nella sezione~\ref {sec:mirroring}. \relax }}{65}{figure.caption.35}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Descrizione della propriet\`a dei triangoli formati con l'algoritmo di \emph {Delaunay}. \relax }}{66}{figure.caption.36}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Finestra di Hanning nel dominio del tempo per l'analisi digitale. \relax }}{65}{figure.caption.33}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Rappresentazione schematica del processo di \emph {mirroring}, necessario a garantire la continuit\`a ai bordi della mappa. \relax }}{66}{figure.caption.34}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Direzioni di puntamento delle capsule dell'\emph {Eigenmike\textsuperscript {\texttrademark }}\tmspace +\thickmuskip {.2777em}sovrapposte ad una foto panoramica del Teatro alla Scala di Milano, svolta secondo lo schema di proiezione visto nella sezione~\ref {sec:mirroring}. \relax }}{67}{figure.caption.35}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Descrizione della propriet\`a dei triangoli formati con l'algoritmo di \emph {Delaunay}. \relax }}{68}{figure.caption.36}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
