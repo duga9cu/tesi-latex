@@ -1,0 +1,53 @@
+\select@language {italian}
+\contentsline {chapter}{\numberline {1}Premessa}{13}{chapter.1}
+\contentsline {chapter}{\numberline {2}Elementi di acustica}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduzione}{17}{section.2.1}
+\contentsline {section}{\numberline {2.2}Grandezze fondamentali}{17}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Frequenza e Periodo}{18}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Velocit\`a di propagazione e lunghezza d'onda}{19}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Onde acustiche}{20}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}La scala dei deciBel}{20}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Livello di pressione}{22}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Livello equivalente}{22}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Sistema uditivo umano}{23}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Effetti di non linearit\`a dell'orecchio umano}{25}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Bande frequenziali }{26}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Filtri di ponderazione}{29}{subsection.2.4.3}
+\contentsline {chapter}{\numberline {3}Array microfonici }{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}Array sferico: \emph {Eigenmike\textsuperscript {\texttrademark }}\tmspace +\thickmuskip {.2777em}\emph {EM32}}{34}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Composizione del sistema}{35}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Limiti intrinseci teorici del sistema}{36}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Altri array}{40}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Array lineari}{40}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Array planari}{40}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Array cilindrici}{41}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Sintesi di microfoni virtuali}{43}{chapter.4}
+\contentsline {section}{\numberline {4.1}Sistema di Elaborazione}{43}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Approccio innovativo di inversione numerica}{45}{subsection.4.1.1}
+\contentsline {chapter}{\numberline {5}Ambiente di sviluppo: l'host \emph {Audacity\textsuperscript {\textregistered }}\tmspace +\thickmuskip {.2777em}}{47}{chapter.5}
+\contentsline {section}{\numberline {5.1}Libreria per la costruzione di interfacce grafiche \textsf {wxWidgets}}{49}{section.5.1}
+\contentsline {section}{\numberline {5.2}Altre librerie}{51}{section.5.2}
+\contentsline {section}{\numberline {5.3}Libreria di codifica audio e video: \unhbox \voidb@x \hbox {\textsf {FFmpeg}}}{51}{section.5.3}
+\contentsline {chapter}{\numberline {6}Descrizione plug-in: un manuale d'uso}{53}{chapter.6}
+\contentsline {section}{\numberline {6.1}Selezione dell'intervallo temporale da analizzare}{53}{section.6.1}
+\contentsline {section}{\numberline {6.2}Finestra di configurazione}{55}{section.6.2}
+\contentsline {section}{\numberline {6.3}Interfaccia principale}{57}{section.6.3}
+\contentsline {chapter}{\numberline {7}Dettagli di Implementazione}{61}{chapter.7}
+\contentsline {section}{\numberline {7.1}Acquisizione dei dati in ingresso}{62}{section.7.1}
+\contentsline {section}{\numberline {7.2}Organizzazione del carico computazionale}{63}{section.7.2}
+\contentsline {section}{\numberline {7.3}Finestratura dei dati di ogni frame audio}{64}{section.7.3}
+\contentsline {section}{\numberline {7.4}\emph {Mirroring} dei microfoni virtuali}{65}{section.7.4}
+\contentsline {section}{\numberline {7.5}\emph {Meshing} della superficie mediante l'operazione di triangolazione di \emph {Delaunay}}{67}{section.7.5}
+\contentsline {section}{\numberline {7.6}Filtraggio in bande d'ottava}{69}{section.7.6}
+\contentsline {section}{\numberline {7.7}Applicazione del livello di fondo scala}{71}{section.7.7}
+\contentsline {section}{\numberline {7.8}Interpolazione dei valori acquisiti}{72}{section.7.8}
+\contentsline {section}{\numberline {7.9}Mappatura \emph {colormap} e \emph {auto-scale}}{73}{section.7.9}
+\contentsline {section}{\numberline {7.10}Sincronizzazione audio-video}{74}{section.7.10}
+\contentsline {section}{\numberline {7.11}Esportazione dei risultati}{75}{section.7.11}
+\contentsline {chapter}{\numberline {8}Conclusioni}{77}{chapter.8}
+\contentsline {chapter}{\numberline {A}Richiami teorici}{79}{appendix.A}
+\contentsline {section}{\numberline {A.1}Propagazione di onde sonore}{79}{section.A.1}
+\contentsline {section}{\numberline {A.2}Intensit\`a, densit\`a di energia e potenza}{80}{section.A.2}
+\contentsline {section}{\numberline {A.3}Livelli sonori}{82}{section.A.3}
+\contentsline {section}{\numberline {A.4}Curve di ponderazione}{83}{section.A.4}
+\contentsline {section}{\numberline {A.5}Trasformata di Fourier}{84}{section.A.5}
